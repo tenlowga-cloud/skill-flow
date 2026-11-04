@@ -1,0 +1,10 @@
+{
+  "name": "skill-flow",
+  "version": "0.1.0",
+  "description": "A flow that turns every prompt into the finished result you meant: it sizes the job, loads the right skills, has the strongest model plan and the fastest model write, then verifies. Ships a setup wizard that tailors it to you, your team and your tools, on any AI.",
+  "author": { "name": "skill-flow contributors" },
+  "homepage": "https://github.com/tenlowga-cloud/skill-flow",
+  "repository": "https://github.com/tenlowga-cloud/skill-flow",
+  "license": "MIT",
+  "keywords": ["skills", "workflow", "prompting", "agents", "setup", "orchestration"]
+}

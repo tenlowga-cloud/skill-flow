@@ -1,0 +1,4 @@
+profile/*.md
+!profile/README.md
+__pycache__/
+.DS_Store

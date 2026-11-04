@@ -1,0 +1,55 @@
+# skill-flow on other AIs
+
+The skills are Markdown. Any AI that reads a file or a pasted instruction can run them. What changes per surface is three things: where the files go, whether the flow can run as subagents or has to play the roles itself, and how you turn the gate on so it runs on every prompt.
+
+The gate is one line. Paste it wherever the surface keeps standing instructions:
+
+> Before any work on a prompt, read and follow `skills/flow/SKILL.md`. Skip it only for pure chat.
+
+## Cursor
+
+- **Files:** clone this repo into your project or a shared folder. Cursor reads `.cursor/rules/*.mdc` and `AGENTS.md`.
+- **Gate:** add a rule file `.cursor/rules/skill-flow.mdc` with `alwaysApply: true` and the gate line, pointing at the repo path.
+- **Roles:** Cursor has no subagents from a rule. The flow plans, writes and reviews in sequence. Pick the strongest model in the picker for a big job's plan, then switch to a fast one for the slices, or let one model do both.
+- **Profile:** `profile/` next to `skills/`.
+
+## Codex
+
+- **Files:** clone the repo. Codex reads `AGENTS.md` at the project root.
+- **Gate:** in `AGENTS.md`, add the gate line with the repo path.
+- **Roles:** sequential, as above.
+- **Profile:** `profile/` next to `skills/`.
+
+## ChatGPT
+
+- **Files:** a Project. Upload `skills/flow/SKILL.md`, `skills/setup/SKILL.md`, `skills/profile/SKILL.md` and the skills you use most as project files. Big reference folders (model cards, prospect-mover references) upload one file at a time.
+- **Gate:** the Project's instructions, or Custom Instructions for every chat: the gate line, plus "the skill files are in this project".
+- **Roles:** sequential. No subagents.
+- **Profile:** upload your four profile files to the same Project after `setup` writes them (it will write them as chat output; save them).
+
+## Gemini
+
+- **Files:** a Gem, or files attached to a chat. Same set as ChatGPT.
+- **Gate:** the Gem's instructions.
+- **Roles:** sequential.
+- **Profile:** attached to the Gem.
+
+## Grok
+
+- **Files:** a Grok Bot's description and skills, or files attached to a chat.
+- **Gate:** the Bot description. Grok Bots run on their own model; `TOOLS.md` should say which.
+- **Roles:** sequential inside one Bot. If you run several Bots, each can take a lane, and `PROFILE.md` lists them.
+
+## claude.ai
+
+- **Files:** Settings, Capabilities, Skills. Each `skills/<name>/` folder uploads as one zip. The skill's description is what makes it trigger, so the flow runs without a gate line, but adding one to a Project's instructions makes it reliable.
+- **Roles:** sequential. No subagents.
+- **Profile:** a Project's files, or `profile/`.
+
+## What you lose without Claude Code
+
+- The hook. On other surfaces the gate is an instruction, and a long chat can drift away from it. Re-paste the gate line if the flow stops firing.
+- Real parallel writers. The flow still cuts slices and does them one by one.
+- Commands (`/skill-flow:setup`). Type "run setup" instead.
+
+Everything else, the method, the router, the profile, the prompting cards, works the same.

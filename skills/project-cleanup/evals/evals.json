@@ -1,0 +1,21 @@
+{
+  "skill_name": "project-cleanup",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "my invoice tool project has gotten messy - old versions of files, three overlapping markdown docs, dead code. do a full cleanup pass. same functionality, less clutter. I won't be around while you work so treat approval gates as approved unless something looks risky, in which case leave that item alone. project is at {PROJECT_DIR}/invoice-tool",
+      "expected_output": "Existing changes preserved, tests pass before and after, dead files deleted with proof, docs condensed with all facts (tax decision, billing email, history) preserved, docs and code kept as separate commits only if commits are part of the request, final report",
+      "files": [
+        "fixtures/invoice-tool"
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "can you tidy up my lead scraper folder, it's cluttered with old versions and scattered notes. keep it working exactly the same. i'm heading out - auto-approve anything safe, skip anything you're not sure about. it's at {PROJECT_DIR}/lead-scraper",
+      "expected_output": "No repo initialized unless the request asks for it, smoke check chosen and run (no test suite exists), stale scripts removed, notes merged into one doc preserving the no-dependency goal and skip-blank-phones decision, script behavior unchanged",
+      "files": [
+        "fixtures/lead-scraper"
+      ]
+    }
+  ]
+}
