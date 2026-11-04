@@ -19,7 +19,7 @@ Then send the team this page. If memory is turned off for the organization, turn
 1. Open https://claude.ai/customize/plugins (in the desktop app: Customize, then Plugins).
 2. Click **Add**, then **Add marketplace**. Paste `tenlowga-cloud/skill-flow`. Click through; the plugin appears in the list. Click **Add** on it.
 3. Do the same once more with `pbakaus/impeccable` (the design plugin).
-4. For the website only: open Projects, make a Project called **skill-flow**, and keep it open. The wizard will give you five small files to add to its knowledge; that is where your profile lives on the web. Cowork and the desktop app write them to your computer for you.
+4. For the website only: open Projects, make a Project called **skill-flow**, and keep it open. The wizard will give you a few small files to add to its knowledge, one at a time; that is where your profile lives on the web. Cowork and the desktop app write them to your computer for you.
 5. Start a new chat (or a new Cowork task) and go to Step 2.
 
 What you get here: every skill, the commands, and in Cowork the agents and the first-run hook too. The website has no hooks, so the first message in Step 2 is what starts the wizard. The Protection Desk needs Python on a computer, so it runs in Cowork or Claude Code, not in a web chat.
