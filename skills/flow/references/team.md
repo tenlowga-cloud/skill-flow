@@ -6,13 +6,27 @@
 
 | Role | Agent | Model | Does | Never |
 |---|---|---|---|---|
-| Planner | `planner` | The strongest reasoning model you have (in Claude Code: Fable 5.1 at high effort) | Turns the rewritten prompt into a plan: slices, order, sources, skills, done-means, proof, risks. Writes each writer's brief. | Writes the deliverable. Touches files. |
-| Writer | `writer` | The fast, cheap model (in Claude Code: Sonnet 5.5) | Executes one brief: builds the real thing in its final shape, proves it, reports. | Widens its slice. Edits a file another writer owns. Asks the owner. |
-| Reviewer | `reviewer` | The strongest reasoning model you have (in Claude Code: Fable 5.1) | Gives a verdict on finished work against its done-means. Finds what's wrong, with evidence. | Builds anything. Reviews its own work. |
+| Planner | `planner` | The strongest reasoning model the owner has | Turns the rewritten prompt into a plan: slices, order, sources, skills, done-means, proof, risks. Writes each writer's brief. | Writes the deliverable. Touches files. |
+| Writer | `writer` | The fastest capable model the owner has | Executes one brief: builds the real thing in its final shape, proves it, reports. | Widens its slice. Edits a file another writer owns. Asks the owner. |
+| Reviewer | `reviewer` | The strongest reasoning model the owner has | Gives a verdict on finished work against its done-means. Finds what's wrong, with evidence. | Builds anything. Reviews its own work. |
 
-On a surface with no subagents, you play all three in sequence. Say which hat you're wearing only if the owner asks.
+## The model ladder
 
-On other AIs the models change; the roles don't. `TOOLS.md` names what the owner has. A good default: the plan and the review on the most capable model offered, the writing on the fastest.
+The roles are fixed. The models are a setting. `TOOLS.md` has a ladder for each role: the first model on the list the owner can actually run is the one you use. The agent files say `model: inherit`, so you pick the model when you launch the agent (in Claude Code, the Agent tool's `model` field). Never fail a job because the first choice is missing; step down the ladder and say which rung you used in one line at the end.
+
+Default ladders, used when `TOOLS.md` has none:
+
+| Role | Ladder (first available wins) |
+|---|---|
+| Planner | Claude Fable 5.1 at high effort, then Claude Opus 5.5, then the session's own model |
+| Writer | Claude Sonnet 5.5, then Claude Haiku 5.5, then the session's own model |
+| Reviewer | Same as the planner |
+
+On another vendor's AI the ladder names that vendor's models. `setup` asks what the owner has and writes it. Examples: on OpenAI, the top reasoning model plans and reviews and the fast model writes; on Gemini, Pro plans and Flash writes; on xAI, one Grok model does all three.
+
+**No subagents at all** (claude.ai, ChatGPT, Gemini, a Grok Bot, a plain Cursor chat): you are all three roles, in sequence, on the one model you have. Plan first and write the briefs down (in your working notes, not to the owner). Then execute each brief as if you had just received it. Then review the result as a stranger, against the done-means. The order matters more than the model: a plan written before the work and a review done after it are what catch the gaps.
+
+**A Grok Bot** runs on one model it cannot change, and has no subagents. One Bot plays all three roles in sequence. If the owner runs several Bots, `PROFILE.md` lists each as a lane and the Bot that holds the job hands slices to the others through the team room in `TOOLS.md`; that is the only way a Grok Bot gets parallel writers.
 
 ## Cutting slices
 

@@ -66,8 +66,8 @@ Once work starts, run to done. Something new comes up: decide, note it in one li
 
 **Big jobs:** the planner plans, the writers write, you own the result.
 
-1. **Planner.** Hand the `planner` agent your rewrite from step 2, the skill set from step 3 and the owner's answers from step 4. It returns a plan: the slices (one owner each, non-overlapping files or questions), the order, each slice's sources, skills, done-means and proof, and the risks. The planner is the strongest reasoning model you have; it does not write the deliverable.
-2. **Writers.** Launch one `writer` agent per independent slice, together in one message, each with the planner's brief for that slice verbatim. Writers are the fast, cheap model. They build the real thing in its final shape and report what exists, where, and how they proved it. No two writers edit the same file.
+1. **Planner.** Hand the `planner` agent your rewrite from step 2, the skill set from step 3 and the owner's answers from step 4. It returns a plan: the slices (one owner each, non-overlapping files or questions), the order, each slice's sources, skills, done-means and proof, and the risks. Launch it on the planner model from the ladder in `TOOLS.md` (first one you can run); it does not write the deliverable.
+2. **Writers.** Launch one `writer` agent per independent slice, together in one message, each with the planner's brief for that slice verbatim. Launch them on the writer model from the ladder. They build the real thing in its final shape and report what exists, where, and how they proved it. No two writers edit the same file.
 3. **You integrate.** Collect every slice, check it against its done-means, fix seams, run the whole-job proof.
 4. **Reviewer.** For work that is high-stakes, customer-facing or hard to undo, hand the finished result to the `reviewer` agent with the done-means. The reviewer never built it. Fix what it finds, re-prove, repeat until it passes.
 

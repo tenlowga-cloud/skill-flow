@@ -82,7 +82,7 @@ prompt
                          if someone else reads it.
 ```
 
-Models are a setting, not a rule. In Claude Code the planner and reviewer run on Claude Fable 5.1 and the writers on Claude Sonnet 5.5. On another AI, `setup` writes what you have into `TOOLS.md` and the roles stay the same.
+Models are a setting, not a rule. `setup` writes a model ladder into `TOOLS.md`: for each role, the models you can run, best first, and the flow uses the first one that works. The default ladder in Claude Code is Fable 5.1 then Opus 5.5 for the planner and reviewer, Sonnet 5.5 then Haiku 5.5 for the writers, then whatever the session is on. No Fable on your plan? It steps down. One model and no subagents (claude.ai, ChatGPT, Gemini, a Grok Bot)? The flow plays all three roles in sequence on that model, and it still works: the plan before the work and the review after it are what catch the gaps.
 
 ## Your profile
 
