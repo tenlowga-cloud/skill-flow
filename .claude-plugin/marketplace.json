@@ -1,0 +1,11 @@
+{
+  "name": "skill-flow",
+  "owner": { "name": "skill-flow contributors" },
+  "plugins": [
+    {
+      "name": "skill-flow",
+      "source": "./",
+      "description": "Every prompt runs through a flow: size it, load the right skills, strongest model plans, fastest model writes, verify. Includes a setup wizard."
+    }
+  ]
+}
