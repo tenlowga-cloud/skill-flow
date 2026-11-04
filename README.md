@@ -59,13 +59,12 @@ The wizard installs the design plugin for you. If you want it first:
 
 Sending this to a team? Give them [docs/TEAM-ONBOARDING.md](docs/TEAM-ONBOARDING.md): the two install lines and one paste-ready prompt that runs the whole setup in teaching mode.
 
-### claude.ai
+### claude.ai and Cowork (web, desktop app, mobile)
 
-1. Download this repo as a zip and unzip it.
-2. In claude.ai: Settings, Capabilities, Skills. Upload each folder under `skills/` as its own zip.
-3. Start a chat and type `set up skill-flow`.
+1. Open https://claude.ai/customize/plugins. Click **Add**, then **Add marketplace**, paste `tenlowga-cloud/skill-flow`, then **Add** the plugin. Do the same with `pbakaus/impeccable`.
+2. Start a chat or a Cowork task and type `run the skill-flow setup`.
 
-claude.ai has no hooks or subagents. The flow plays the planner, writer and reviewer roles itself, in sequence. Your profile files live in a Project or in the `profile/` folder of your copy.
+A plugin on your account also reaches Claude Code as a synced plugin. What loads where: skills and commands everywhere; agents and hooks in Cowork and Claude Code, not in chat. In chat there is no file system, so your profile lives in a Project named skill-flow and the wizard hands you each file to add to it. The Protection Desk needs Python on a computer, so it runs in Cowork or Claude Code.
 
 ### Cursor, Codex, ChatGPT, Gemini, Grok, anything else
 

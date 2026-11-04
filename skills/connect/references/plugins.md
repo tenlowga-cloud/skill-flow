@@ -19,7 +19,7 @@ Shell path for a setup script: `claude plugin marketplace add pbakaus/impeccable
 
 If the marketplace name differs from `impeccable` on their version, read it from `claude plugin marketplace list` and use that name after the `@`.
 
-Other surfaces: claude.ai and Cursor have no plugin install for this. Say what it does and that `pixel-proof` carries the visual check there. The project's own `npx impeccable install` also works from a project root and offers a design hook.
+claude.ai and Cowork: open https://claude.ai/customize/plugins, click **Add**, then **Add marketplace**, paste `pbakaus/impeccable`, then **Add** the plugin. Its skills load in chat and in Cowork; its hook does not load in chat. A plugin added there also syncs to Claude Code at the next session start. Cursor has no plugin install for this; say what it does and that `pixel-proof` carries the visual check there. The project's own `npx impeccable install` also works from a project root and offers a design hook.
 
 ## Any plugin from Anthropic's official marketplace
 
@@ -41,7 +41,7 @@ Before installing from a marketplace the owner does not know: open the repo, rea
 - Remove: Installed tab, Uninstall, or `claude plugin uninstall <name>@<marketplace>`.
 - A plugin installed but not working: `/plugin`, Errors tab, then the troubleshooting page it names.
 
-Cloud sessions (claude.ai/code in the browser) do not load the plugins installed on the owner's machine. Say so when the owner works there; the skills in this kit still run when the repo carries them.
+Cloud sessions (claude.ai/code in the browser) do not load the plugins installed on the owner's machine. A plugin added at claude.ai/customize/plugins is on the owner's account and reaches chat, Cowork and Claude Code; prefer that path for anyone who works in more than one place. What loads where: skills everywhere; commands everywhere (chat runs them as skills); agents and hooks in Cowork and Claude Code only; nothing in `bin/` on chat or Cowork.
 
 ## Verify any plugin
 
