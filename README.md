@@ -57,6 +57,8 @@ The wizard installs the design plugin for you. If you want it first:
 /plugin install impeccable@impeccable
 ```
 
+Sending this to a team? Give them [docs/TEAM-ONBOARDING.md](docs/TEAM-ONBOARDING.md): the two install lines and one paste-ready prompt that runs the whole setup in teaching mode.
+
 ### claude.ai
 
 1. Download this repo as a zip and unzip it.
