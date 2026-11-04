@@ -102,5 +102,5 @@ If an owner cannot use sign-in (a locked-down agency, or an automation that runs
 ## What the AI may do by default
 
 - Read contacts, deals, calendars, conversations, tasks: yes.
-- Add a note, mark a task done, draft a reply, draft a follow-up: yes, and say so.
-- Send anything, delete anything, change a stage or an appointment: only with the owner's yes for that item.
+- Add a note, mark a task done when the record shows it is done, draft a reply, draft a follow-up: yes, and say so.
+- Send anything, delete anything, change a field on a client record, change a stage, a tag or an appointment: only with the owner's yes for that item.

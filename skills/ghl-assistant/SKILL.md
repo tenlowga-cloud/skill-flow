@@ -13,7 +13,7 @@ A good executive assistant reads the inbox, the task list and the deal board bef
 
 Read `PROFILE.md`, `TOOLS.md`, `VOICE.md` and `STACK.md` from your skill-flow profile folder (`~/.claude/skill-flow/` in Claude Code, else `profile/` in this repo). `TOOLS.md` must show GoHighLevel connected; if not, run `connect` with `references/crm/gohighlevel.md` and stop here. `PROFILE.md` gives the gates, the send window, who the owner is in the CRM (their user name, so "assigned to me" means them) and which sub-account.
 
-Read `STACK.md`, section "GHL assistant", for the last sweep time and the items already waiting on the owner. Never ask the same question twice.
+Read `STACK.md`, section "GHL assistant", for the last sweep time. Then read the GoHighLevel task named "Assistant: waiting on you" (assigned to the owner, in the connected sub-account); its description is the list of questions already asked and not yet answered. Never ask the same question twice. No task yet: create it on the first sweep that has a question.
 
 ## 2. Sweep
 
@@ -34,13 +34,13 @@ Nothing new: say so in one line and stop. Quiet is fine.
 
 | Bucket | What goes here | What you do |
 |---|---|---|
-| **Do it** | Within reach and inside the gates: add a note, mark a task done when the evidence shows it is done, draft a reply, draft a follow-up, build a meeting-prep note, look something up, fill a missing field from a source | Do it. Say so in one line each. |
+| **Do it** | Within reach and inside the gates: add a note, mark a task done when the record shows the work is done, draft a reply, draft a follow-up, build a meeting-prep note, look something up | Do it. Say so in one line each. A field on a client record (address, phone, email, a custom field) is never edited here; propose the change in Ask with the source. |
 | **Draft it** | A message to a contact | Write it in `VOICE.md` through `ghost-mode` (and `prospect-mover` if a prospect). Save as a note on the contact or a draft where the account keeps them. Never send. |
 | **Ask** | Needs a decision or a fact only the owner has: a price, a yes or no on a deal, how to handle a complaint, which of two roads | One plain question with your recommended answer first. Batch them: at most 4 per sweep. |
 | **Flag** | Money, legal, a complaint, a cancellation, anything a client said that sounds like trouble | Top of the report, first line. |
 | **Skip** | Noise: automated notifications, a task someone else owns, a closed deal | Nothing. Do not list it. |
 
-A task you can finish ("call Casey back" is not yours; "send Casey the brochure" becomes a draft; "update Casey's address from the email" is yours) gets finished and marked done with a note that says what you did and when.
+A task you can finish ("call Casey back" is not yours; "send Casey the brochure" becomes a draft; "write up the call notes from yesterday's recording" is yours) gets finished and marked done with a note that says what you did and when. "Update Casey's address from the email" is an Ask: show the old value, the new value and the source, and change it on yes.
 
 ## 4. Report
 
@@ -50,7 +50,7 @@ Send it to the owner only, in `VOICE.md` style, inside the send window. On a rou
 
 ## 5. Record
 
-Update `STACK.md`, section "GHL assistant": last sweep time, items waiting on the owner (so the next sweep does not ask again), items done. No contact's personal details go in this file; the contact's name and the record id are enough.
+Update `STACK.md`, section "GHL assistant": last sweep time and a count of items waiting on the owner. Nothing else. No contact name, record id or detail ever goes in a profile file; on claude.ai that file is Project knowledge. The list of open questions lives inside GoHighLevel, in the task "Assistant: waiting on you": one line per question, with the contact and the recommended answer. Remove a line when the owner answers it.
 
 ## As a routine
 

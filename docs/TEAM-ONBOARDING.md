@@ -57,7 +57,7 @@ Here is what I want at the end:
 
 4. My profile written: PROFILE.md, TOOLS.md, VOICE.md, ROUTER.md, STACK.md. On a computer, in ~/.claude/skill-flow/. On the claude.ai website, hand them to me as files and tell me exactly how to add them to my skill-flow Project, one at a time. Capture my voice from 3 to 5 real emails or texts I give you, or pull five from my sent mail once email is connected.
 
-5. My routines scheduled on the right scheduler and read back to me: morning brief, pre-meeting notes an hour before every outside meeting, inbox triage with drafts ready in my voice, a follow-up sweep, the GoHighLevel assistant sweep if I use it, and a weekly review. Ask me what time my day starts. Then get the app on my phone: walk me through installing it (App Store or Play Store, maker Anthropic), signing in with the same account, allowing notifications, and test it with a two-minute routine so I feel the buzz. That is how the routines reach me.
+5. My routines scheduled on the right scheduler and read back to me: morning brief, pre-meeting notes an hour before every outside meeting, inbox triage with drafts ready in my voice, a follow-up sweep, the GoHighLevel assistant sweep if I use it, and a weekly review. Ask me what time my day starts. If I am in a web chat, tell me plainly that a chat cannot run a timer and walk me through the desktop app's scheduled tasks or the cloud form at claude.ai/code/routines, one click at a time, with the prompt filled in for me. Then get the app on my phone: walk me through installing it (App Store or Play Store, maker Anthropic), signing in with the same account, allowing notifications, and test it with a short one-off routine. Tell me honestly whether it buzzed or whether I open the app at the routine's time.
 
 6. If I handle insurance quotes, the Protection Desk installed and its doctor passing, so a quote drop prints a client-ready PDF without me asking.
 
@@ -74,7 +74,7 @@ Rules: never ask me for a password, token or key. Never send anything to anyone 
 - `~/.claude/CLAUDE.md`: Claude acts, decides, proves and finishes inside your hard stops (money, signatures, deleting live data, messages in your name, going live, private data leaving its room). Take one off and Claude does that too.
 - Your tools connected and tested. Your CRM too.
 - A morning brief, a note before every outside meeting, inbox drafts in your voice, a follow-up sweep, a weekly review, and if you use GoHighLevel an assistant that works your tasks, messages and deals every hour and brings you only the decisions.
-- The app on your phone with notifications on, so every routine lands as a buzz with three lines and the questions ready to tap.
+- The app on your phone with notifications on, tested once, so every routine lands with three lines and the questions ready to tap. Web chat alone cannot run a timer; routines run from the desktop app or the cloud form, and the wizard sets that up with you.
 - The skills and templates for whatever you asked to take off your plate, mapped in `~/.claude/skill-flow/BLUEPRINT.md`.
 - From then on, every prompt runs through the flow. Drop a quote and a PDF comes back. Say "connect my X" and it walks you through it. Say "every Friday..." and it schedules it.
 

@@ -55,7 +55,7 @@ The gate is one line. Paste it wherever the surface keeps standing instructions:
 - The hooks. On other surfaces the gate and the first-run check are instructions, and a long chat can drift away from them. Re-paste the gate line if the flow stops firing.
 - Real parallel writers and a model ladder. The flow still cuts slices and does them one by one, on the one model you have.
 - Commands (`/skill-flow:setup`, `/skill-flow:connect`). Type "run setup" or "connect my calendar" instead.
-- Plugins. `impeccable` installs only in Claude Code; `pixel-proof` carries the visual check elsewhere.
+- Plugins on Cursor, ChatGPT, Gemini and Grok. `impeccable` installs on Claude Code, claude.ai and Cowork (Customize, Plugins); `pixel-proof` carries the visual check on the others.
 - Cloud scheduled tasks. `routines/references/scheduling-by-surface.md` gives each surface's scheduler or the fallback.
 - The Protection Desk's reader gate, which calls the `claude` command. The desk still builds with `--reader 0`, named `_UNREVIEWED`.
 

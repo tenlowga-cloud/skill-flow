@@ -1,6 +1,6 @@
 ---
 name: connect
-description: Audits every skill, plugin, connector, MCP server, repo and tool the owner has, matches them against what the owner runs and what the flow needs, recommends what is missing (a connector, a plugin, a skill, a repo), and walks the owner through the setup one step at a time from start to finish until a live test proves it works. Covers calendar, email, code hosts, notes and vaults, CRMs (GoHighLevel through a Private Integration Token, HubSpot, Salesforce and others), team chat, browsers, meeting recorders and the impeccable plugin. Can run the setup with the owner in a live browser. Use on "connect my tools", "connect my CRM", "what am I missing", "install this plugin", "add this repo", "set up GoHighLevel", "/connect", when a skill reports a tool is not connected, or when setup reaches its connect step.
+description: Audits every skill, plugin, connector, MCP server, repo and tool the owner has, matches them against what the owner runs and what the flow needs, recommends what is missing (a connector, a plugin, a skill, a repo), and walks the owner through the setup one step at a time from start to finish until a live test proves it works. Covers calendar, email, code hosts, notes and vaults, CRMs (GoHighLevel by signing in through HighLevel's official MCP, HubSpot, Salesforce and others), team chat, browsers, meeting recorders and the impeccable plugin. Can run the setup with the owner in a live browser. Use on "connect my tools", "connect my CRM", "what am I missing", "install this plugin", "add this repo", "set up GoHighLevel", "/connect", when a skill reports a tool is not connected, or when setup reaches its connect step.
 ---
 
 # connect
@@ -50,7 +50,7 @@ One message: the recommendation list as a multi-select question, your pick first
 Open the guide for the tool:
 
 - Connectors (calendar, email, code host, notes, chat, browser, meetings, custom MCP): `references/connectors/<tool>.md`
-- CRMs: `references/crm/<crm>.md`. GoHighLevel: `references/crm/gohighlevel.md`, which is the Private Integration Token path.
+- CRMs: `references/crm/<crm>.md`. GoHighLevel: `references/crm/gohighlevel.md`, sign-in through HighLevel's official MCP at the address for the owner's AI; the token path is the fallback in its Advanced section only.
 - Plugins: `references/plugins.md`
 - Repos and folders: `references/repos.md`
 - Skills (someone else's, or one to build): `references/skills.md`
@@ -82,4 +82,4 @@ Three lines: what is connected now and proven, what was skipped or is waiting on
 
 ## What the AI may do with a connected tool
 
-Default, unless `PROFILE.md` says otherwise: read yes; draft yes; search yes. Send, delete, pay, sign, or change a live record only with the owner's yes to that exact item. A connection is never a licence to act in the owner's name.
+Default, unless `PROFILE.md` says otherwise: read yes; search yes; draft yes; add a note or mark a task done when the record shows the work is done, yes, and say so. Send, delete, pay, sign, change a field on a client record, move a stage, or change an appointment only with the owner's yes to that exact item. A connection is never a licence to act in the owner's name.

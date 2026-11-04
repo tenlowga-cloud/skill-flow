@@ -82,14 +82,14 @@ Now the clicking part. Run the `connect` skill in setup mode:
 2. Ask one multi-select question: which missing ones do you want now? Your pick first: the ones the chosen routines need.
 3. For each yes, open the matching guide in `connect/references/connectors/` or `connect/references/crm/` and walk it one step at a time: say the step, wait for "done" or the screenshot, verify what they see, then the next step. Finish with the guide's verify prompt and show the real result. A connection is not done until the test prompt returns real data.
 4. **CRM.** If round 2 said GoHighLevel: connect it now, no question. Walk `connect/references/crm/gohighlevel.md`: add HighLevel's official MCP for their AI (Claude: `https://services.leadconnectorhq.com/mcp/anthropic/v2`; ChatGPT and Codex: `.../mcp/openai/v2/`; Cursor: `.../mcp/cursor/v2`), they sign in with their GoHighLevel login, pick the business, approve the permissions, then verify with a contacts read and a tasks read. Then ask one question: "Want me to be your assistant inside GoHighLevel, checking your tasks, messages and deals every hour and bringing you only the decisions?" (Recommended: yes.) On yes, add the GHL assistant routine to the round 5 picks; `ghl-assistant` is the skill. Any other CRM goes through its guide in `connect/references/crm/`. Offer the live-browser walkthrough (`connect/references/crm/live-browser-walkthrough.md`) when a browser tool is available: you open the page and point, they click the parts that involve a login.
-5. **Plugins.** Install `impeccable` (it makes anything a person sees pass the design bar). Tell them to run these two lines in Claude Code and wait for each to finish:
+5. **Plugins.** Install `impeccable` (it makes anything a person sees pass the design bar). First check whether it is already there: the account pass (section 5) saw the plugins list on claude.ai and Cowork; on Claude Code, `claude plugin list`. Already there: say so and move on. Missing, on claude.ai or Cowork: walk `connect/references/plugins.md`, the claude.ai path (Customize, Plugins, Add, Add marketplace, `pbakaus/impeccable`, Add). Missing, on Claude Code in a terminal: they type these two lines and wait for each to finish:
 
    ```
    /plugin marketplace add pbakaus/impeccable
    /plugin install impeccable@impeccable
    ```
 
-   If the second line opens a details pane, they pick "Install for you". Then `/reload-plugins` if asked. On a surface without plugins, say what `impeccable` does and that `pixel-proof` covers the check there. Any other plugin `connect` recommends follows the same path, one at a time.
+   If the second line opens a details pane, they pick "Install for you". Then `/reload-plugins` if asked. On Cursor and other surfaces with no plugins, say what `impeccable` does and that `pixel-proof` covers the check there. Any other plugin `connect` recommends follows the same path, one at a time.
 6. **Repos and folders.** If their code or notes live in a repo or folder the AI cannot see yet, walk `connect/references/repos.md`: clone or attach it, confirm you can read the first page they named in round 2.
 7. **Protection Desk.** If round 1 said insurance or financial services, or they said quotes come through their day, install the Protection Desk per `protection-desk/SKILL.md`, "Install", and run its doctor until every line passes.
 
@@ -117,7 +117,7 @@ Save nothing private that a profile file does not need: no contact details, no c
 
 ## 10. Schedule the routines
 
-For each routine picked in round 6 whose tools are now connected, run `routines`: it picks the right scheduler for the surface (`routines/references/scheduling-by-surface.md`), fills the prompt from the library, sets the time the owner gave, and schedules it. Read back the schedule list and show it. A routine whose tool is missing goes in `STACK.md` as "waiting on <tool>" with the one step that unblocks it.
+For each routine picked in round 5 whose tools are now connected, run `routines`: it picks the right scheduler for the surface (`routines/references/scheduling-by-surface.md`), fills the prompt from the library, sets the time the owner gave, and schedules it. Read back the schedule list and show it. A routine whose tool is missing goes in `STACK.md` as "waiting on <tool>" with the one step that unblocks it.
 
 ### The phone
 
