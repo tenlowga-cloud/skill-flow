@@ -1,6 +1,6 @@
 ---
 name: setup
-description: First-run wizard for skill-flow. Runs on the first prompt after install and whenever a profile file is missing. Finds out which surface and model it is on, audits every skill, plugin, connector and tool the owner already has, asks short clickable questions in five rounds (who they are and what they run, team and where things live, how they like to work and what needs their yes, their AIs and models, the routines they want), offers the CRM connection and walks it through start to finish (GoHighLevel uses a Private Integration Token), installs the impeccable plugin, captures their writing voice, writes the five profile files and the operating file, schedules the routines they picked, then hands off to blueprint to build the rest from one prompt. Use on "set up", "setup", "tailor this to me", "connect my tools", "/setup", or the first prompt after install.
+description: First-run wizard for skill-flow. Runs on the first prompt after install and whenever a profile file is missing. Finds out which surface and model it is on, walks the owner through their account settings (plan, memory on, capabilities on, connectors, Owner items on a Team plan), audits every skill, plugin, connector and tool the owner already has, asks short clickable questions in five rounds (who they are and what they run, team and where things live, how they like to work and what needs their yes, their AIs and models, the routines they want), offers the CRM connection and walks it through start to finish (GoHighLevel uses a Private Integration Token), installs the impeccable plugin, captures their writing voice, writes the five profile files and the operating file, schedules the routines they picked, then hands off to blueprint to build the rest from one prompt. Use on "set up", "setup", "tailor this to me", "connect my tools", "/setup", or the first prompt after install.
 ---
 
 # setup
@@ -27,6 +27,12 @@ Before asking anything:
 - **Operating file.** Check for `~/.claude/CLAUDE.md` (or the surface's equivalent). Read it if it exists; `operating-rules` will merge with it later.
 
 Say what you found in three lines: the surface and model, the skills and plugins you can see, the tools that are connected. Write it down; `connect` and `blueprint` will use it.
+
+### The account pass (claude.ai and Cowork, before round 1)
+
+You cannot see the owner's account settings; they can. Run `references/account-check.md` as a guided walk, one switch per message: which plan and seat they have (Free, Pro, Max, Team or Enterprise; Owner or member), memory turned on (both the generate switch and the search-past-chats switch), every capability the kit uses turned on (artifacts, analysis, web search, extended thinking, browser, skills and plugins, scheduled tasks), which connectors are already connected, and that skill-flow and impeccable show in their plugins list. On a Team or Enterprise member account, collect everything that needs the Owner (User-created skills on, the two marketplaces added and set to Available to install, any organization connector, memory for the organization) and hand the member one ready-to-send message for the Owner. Record all of it in `STACK.md` under "Account". Do everything that does not depend on the Owner while you wait.
+
+On Claude Code in a terminal this pass is one question: which claude.ai plan they are signed in with, so you know which connectors and scheduled tasks exist. Memory there is `CLAUDE.md` and auto memory; nothing to flip.
 
 ## 2. Round 1: who you are and what you run
 

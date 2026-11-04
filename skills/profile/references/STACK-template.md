@@ -4,6 +4,17 @@
 
 verified: YYYY-MM-DD
 
+## Account
+
+| Item | State | Date |
+|---|---|---|
+| Plan | (Free, Pro, Max, Team, Enterprise) | |
+| Seat | (Owner or member) | |
+| Memory: generate from chats | on | |
+| Memory: search past chats | on | |
+| Artifacts, analysis, web search, extended thinking, browser, skills, scheduled tasks | on, or "off by choice: <which>" | |
+| Waiting on Owner | (none, or the items sent) | |
+
 ## Surface
 
 | Surface | Model | Profile folder | Hooks live | Subagents |

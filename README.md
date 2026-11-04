@@ -57,7 +57,7 @@ The wizard installs the design plugin for you. If you want it first:
 /plugin install impeccable@impeccable
 ```
 
-Sending this to a team? Give them [docs/TEAM-ONBOARDING.md](docs/TEAM-ONBOARDING.md): the two install lines and one paste-ready prompt that runs the whole setup in teaching mode.
+Sending this to a team? Give them [docs/TEAM-ONBOARDING.md](docs/TEAM-ONBOARDING.md): the Owner's one-time step on a Team plan, the install lines for each surface, and one paste-ready prompt that runs the whole setup in teaching mode, starting with the account pass (plan, memory on, every switch the kit needs, connectors, Owner items).
 
 ### claude.ai and Cowork (web, desktop app, mobile)
 
