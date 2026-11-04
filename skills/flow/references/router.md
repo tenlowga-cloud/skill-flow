@@ -5,8 +5,16 @@
 | The owner says or means | Call |
 |---|---|
 | Any prompt that asks for work | `flow` (this skill), always first |
-| "Set up", "tailor this to me", "connect my tools", first run | `setup` |
-| Who owns what, which project, where something lives, what matters this week | `profile` |
+| "Set up", "tailor this to me", first run, a missing profile file | `setup` |
+| "Connect my tools", "connect my CRM", "what am I missing", "install this plugin", "add this repo", a tool the job needs is not connected | `connect` |
+| "Build me what I need for", "set me up for", "take X off my plate", end of setup | `blueprint` |
+| "Stop asking me", "take the handcuffs off", "write my CLAUDE.md", "update my rules" | `operating-rules` |
+| "Every morning", "schedule", "remind me every", "what routines do I have", "stop the brief" | `routines` |
+| "Prep me for", "who am I meeting", "brief me on", an outside meeting coming up | `meeting-prep` |
+| "Go through my inbox", "who have I not replied to", "draft a reply to", "follow up with" | `inbox` |
+| A quote, illustration, declaration page, rate sheet or pasted premium appears; "protection review", "preview", "what would this cost" | `protection-desk`, unasked, through to the printed PDF |
+| Anything a person will see on a screen: a page, app, document, slide | `impeccable` (where installed) before done, then `pixel-proof` |
+| Who owns what, which project, where something lives, what matters this week, what is connected | `profile` |
 | A prompt for another AI, bot, agent, image or video model; "improve this prompt" | `prompt-improver` |
 | Anything said back to the owner, interface text, explaining something technical to a non-expert | `simple-talk` |
 | "Be blunt", "give it to me straight", "stop hedging", or the owner is about to commit to a plan, price or draft with holes | `simple-talk`, blunt setting |
@@ -25,7 +33,10 @@
 
 ## Skills that pair
 
-- `prospect-mover` always ends with `ghost-mode`; `pixel-proof` closes anything visual.
+- `prospect-mover` always ends with `ghost-mode`; `impeccable` then `pixel-proof` close anything visual.
+- `setup` calls `connect`, `operating-rules`, `routines` and `blueprint` in that order; each also runs alone afterward.
+- `meeting-prep` and `inbox` are the two routines most owners run daily; `routines` schedules them.
+- `protection-desk` fires on the drop, not on a request. It routes anything not a quote back to the flow.
 - `creative-direction` runs before the build when the look matters; `pixel-proof` after.
 - `simple-talk` and `ghost-mode` run together on interface text.
 - `planning-mode` writes the plan the owner reads; the `planner` agent writes the slices the writers run. On a big job they are the same plan, one for people and one for the team.

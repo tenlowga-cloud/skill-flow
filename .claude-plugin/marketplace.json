@@ -5,7 +5,7 @@
     {
       "name": "skill-flow",
       "source": "./",
-      "description": "Every prompt runs through a flow: size it, load the right skills, strongest model plans, fastest model writes, verify. Includes a setup wizard."
+      "description": "Claude with the handcuffs off, inside clear hard stops. First-run wizard, tool and CRM connection walkthroughs, operating file, routines, meeting prep, inbox, a quote-to-PDF trigger, and a flow on every prompt."
     }
   ]
 }

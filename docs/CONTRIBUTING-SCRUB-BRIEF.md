@@ -17,6 +17,8 @@ Files, all Markdown, all optional until setup fills them:
 | `VOICE.md` | How the owner writes: 3 to 5 real samples, banned words, sign-off, length rules |
 | `TOOLS.md` | Which AI surfaces and models they use (Claude Code, claude.ai, Cursor, ChatGPT, Gemini, Grok), which tools are connected (calendar, email, CRM, code host, chat), what each is for |
 | `ROUTER.md` | Their own skills and plugins, in the flow's table shape, plus a do-not-call list |
+| `STACK.md` | What is installed, connected, scheduled and built, what was skipped, what waits on the owner |
+| `BLUEPRINT.md` | The one-page map `blueprint` writes: what exists and how to trigger it |
 
 A skill reads a profile file like this, verbatim wording:
 
@@ -32,13 +34,14 @@ A skill reads a profile file like this, verbatim wording:
 | Any person's name (Nic, Diane, Jeff, Kenny, Carson, Barry, Caleb, Belac) | Remove. |
 | Discord room names and ids, `#eskew`, `#ai-agents`, `#tyler`, guild ids, bot ids, tokens, env var names like `DISCORD_MAVERICK_BOT_TOKEN` | Remove. A "post it where your team talks" line reads `TOOLS.md` for the room. |
 | Vault paths (`How to Work With Tyler - START HERE.md`, `Who does what`, `Decisions.md`, `Priorities.md`, `DATA-SOP`, `AGENT-SOP`, `Crew Operations Manual`, `Builds/...`, `Plans/...`, `second-brain`), `mrclean`, `~/Organization_Projects` | The matching profile file, or "the owner's notes (where `PROFILE.md` says they live)". |
-| `claude-config`, `~/.claude/skills/...`, `web-build`, `site-crew`, `crew-bus`, `wrap`, `decision-hour`, `content-factory`, `cross-vertical-copy-director`, `gpt-image-gen-skill`, `protection-desk`, `ghl-*`, `plaud-*`, `fable-max`, `fable-brainstorm`, `fable-review`, `karpathy-guidelines`, `impeccable`, `superpowers:*` | Keep only skills that ship in this repo: `flow`, `setup`, `prompt-improver`, `simple-talk`, `profile`, `planning-mode`, `project-cleanup`, `ghost-mode`, `creative-direction`, `prospect-mover`, `pixel-proof`. Agents: `planner`, `writer`, `reviewer`. For a removed skill, name the generic job instead ("a UI design pass", "a copy pass", "a debugging pass") so the flow can route it to the user's own skill via `ROUTER.md`. |
+| `claude-config`, `~/.claude/skills/...`, `web-build`, `site-crew`, `crew-bus`, `wrap`, `decision-hour`, `content-factory`, `cross-vertical-copy-director`, `gpt-image-gen-skill`, `protection-desk`, `ghl-*`, `plaud-*`, `fable-max`, `fable-brainstorm`, `fable-review`, `karpathy-guidelines`, `impeccable`, `superpowers:*` | Keep only skills that ship in this repo: `flow`, `setup`, `connect`, `blueprint`, `operating-rules`, `routines`, `meeting-prep`, `inbox`, `protection-desk` (the bridge skill only; the desk itself is a separate licensed tool), `prompt-improver`, `simple-talk`, `profile`, `planning-mode`, `project-cleanup`, `ghost-mode`, `creative-direction`, `prospect-mover`, `pixel-proof`. Agents: `planner`, `writer`, `reviewer`. `impeccable` may be named: it is a public plugin the kit installs. For a removed skill, name the generic job instead ("a UI design pass", "a copy pass", "a debugging pass") so the flow can route it to the user's own skill via `ROUTER.md`. |
 | Dated orders: `(Tyler, 2026-10-14: "...")`, `Decisions, 2026-...`, "master plan", "the October burn" | Remove the citation. Keep the rule if it is a good general rule; cut it if it only made sense for him. |
 | The WOW bar, "95%", "9/10+" | Keep the idea as "the quality bar in `PROFILE.md`" with a sane default: right the first time, complete, proven, no homework for the owner. |
 | Insurance-only content (carriers, riders, underwriting, regulated riders, `lens-insurance`, `tyler-house-rules`) | Drop the file, or keep it as `references/lens-example.md` clearly labeled as one vertical's worked example the user can copy for their own. |
 | Model names as hard defaults (Opus 5.5, Sonnet 5.5, Fable 5.1, Grok 4.7) | Keep them only in `prompt-improver`'s model cards and the three agent files. Elsewhere say "the planner", "the writer", "the model in use (see `TOOLS.md`)". |
 | "3 lines max" to Tyler | "Short by default; the owner's length rule is in `VOICE.md`." Default when unset: lead with the answer, then the catch, then the next step. |
-| Hooks the user may not have (`prompt-gate.sh`, conductor, Stop hook, room-log) | Mention only this repo's own `hooks/prompt-gate.sh`. Everything else: "where there is no hook, run this anyway." |
+| Hooks the user may not have (conductor, Stop hook, room-log, workspace guard) | Mention only this repo's own `hooks/prompt-gate.sh` and `hooks/session-start.sh`. Everything else: "where there is no hook, run this anyway." |
+| A specific CRM location id, sub-account name, token prefix tied to one business, webhook URL | Remove. The CRM guides use placeholders the owner replaces in their own terminal. |
 
 ## Keep
 

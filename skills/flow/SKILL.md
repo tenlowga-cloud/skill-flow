@@ -23,6 +23,21 @@ The gate's weight matches the job, not the prompt length.
 
 If you can't tell, treat it as standard and upgrade the moment a second independent part appears.
 
+**No profile yet?** If `PROFILE.md` is missing from the profile folder, this is the owner's first run. Run `setup` before the work, start to finish, unless the prompt is pure chat. Setup is the one job that outranks the prompt.
+
+### Standing triggers (run before sizing, no prompt needed)
+
+| What appears | Run |
+|---|---|
+| A quote, illustration, declaration page, rate sheet or pasted premium numbers, as a PDF, image or text | `protection-desk`: the full desk flow and the printed PDF, unasked |
+| A screen, page, document or slide a person will see | `impeccable` (where installed) before it is called done, then `pixel-proof` |
+| A tool, connector, plugin or skill the job needs and the owner does not have | `connect`: recommend it and walk the setup through to a verified connection |
+| An outside meeting coming up, or "prep me for" | `meeting-prep` |
+| Email work: triage, follow-ups, a reply | `inbox` |
+| "Every morning", "schedule", "remind me every" | `routines` |
+| "Build me what I need for", "set me up for", "take X off my plate" | `blueprint` |
+| "Stop asking me", "take the handcuffs off", "update my rules" | `operating-rules` |
+
 ## 1. Know the model you're on
 
 Read `TOOLS.md` from your skill-flow profile folder (`~/.claude/skill-flow/` in Claude Code, else `profile/` in this repo). It names the AI surface and model the owner runs. Then read only the section for that model in `prompt-improver`'s card (`skills/prompt-improver/references/models/`): its controls (effort, verbosity, thinking, tool batching) and its pitfalls. Write the rewrite the way that maker says to prompt that model. No `TOOLS.md`: use your own model's card and say once at the end that `setup` will pin it.
@@ -37,7 +52,7 @@ A one-shot prompt gets the whole usable deliverable on the first run, with no fo
 4. **What they did not say.** The connected work a careful colleague knows is implied: the dependency to repair so the result holds, the proof that makes it real, the record to update so nobody re-derives it, the receipt they will ask for. Add it only when it serves the same result; never widen into another project.
 5. **Done means.** What exists, where, what it shows, which numbers, and which state it reached (local, saved, committed, pushed, merged, live, checked by someone else).
 6. **Proof.** How the work proves itself before the owner sees it: build, test, browser drive, a row read back, a diff, a stamped screenshot.
-7. **Out of bounds.** The gates in `PROFILE.md`. Default: money, a send to any human who is not the owner, deleting their work or live data, anything going live to customers, private data leaving its room. Everything else is standing authority.
+7. **Out of bounds.** The gates in `PROFILE.md` (repeated in the owner's operating file, which `operating-rules` wrote). Default: money, signatures, a send to any human who is not the owner, deleting their work or live data, anything going live to customers, private data leaving its room. Everything else is standing authority: decide it, do it, prove it, say it. Never ask "want me to?" for anything inside that authority.
 8. **Model controls.** From the card, named as that maker spells them.
 
 If two readings lead to different results and nothing you can find picks one, pick, and state your pick in one line at the end.
@@ -50,7 +65,7 @@ Skills are how work comes out right the first time. Do this on every job, even w
 2. **Check every line against what they meant.** Hold the step 2 rewrite, not the raw words, against each skill's description. Read the whole list; do not stop at the first hit. A skill serves the prompt when it covers the finished result, a slice of it, or the voice, format or proof the result needs.
 3. **Pick the set.** One owner skill that sets the bar, plus the support skills the result needs (voice, format, proof). Order: process skills first (planning, debugging), then the domain skill, then voice and proof. Where two overlap, `ROUTER.md` wins, then `references/router.md`. Skip the do-not-call list in `ROUTER.md`.
 4. **Load, then work.** Load each one before the work, in that order, and follow it. Its gate is the quality bar. Every writer's brief names the skills its slice needs.
-5. **No match.** Do the work directly. If the same kind of ask keeps coming back with no skill for it, say so once at the end: it is a skill worth building.
+5. **No match.** Do the work directly. If the same kind of ask keeps coming back with no skill for it, say so once at the end and offer `connect` to find or build one. If the job needs a tool the owner has not connected (`TOOLS.md` says "not connected" or the tool is absent), run `connect` for that tool first; do the part that does not need it while they click.
 
 **Cost guard.** Reading the list is free; it is already in context. Loading a skill is not. Load only skills that change the result. A quick job loads one skill at most.
 

@@ -1,31 +1,40 @@
 # skill-flow
 
-Every prompt you type runs through a flow. The flow works out what you actually meant, picks the skills that make it come out right, has your strongest model plan the job and your fastest model write it, proves the result, and hands it back short. A setup wizard tailors all of it to you, your team and your tools, on whichever AI you use.
+Claude with the handcuffs off, inside hard stops you choose.
 
-It is a set of Markdown skills. No server, no account, no telemetry.
+Install it, type one prompt, and a wizard learns who you are, audits every tool and skill you have, connects the missing ones with you step by step (your CRM included), installs the design plugin, writes your operating file so Claude acts instead of asking, schedules your morning brief and meeting prep, and builds the rest of what you need from one sentence. From then on every prompt runs through a flow: it works out what you meant, loads the right skills, has your strongest model plan and your fastest model write, proves the result, and hands it back short. Drop a quote on it and a client-ready PDF comes back without being asked.
+
+It is a set of Markdown skills, two small hooks and three agents. No server, no account, no telemetry.
 
 ## What you get
 
 | Piece | What it does |
 |---|---|
-| **flow** | The gate. Runs on every prompt that asks for work. Sizes it, rewrites it one-shot, reviews every active skill and loads the right ones, asks only when an answer changes the result, builds the team on a big job, verifies, delivers. |
-| **setup** | The wizard. Connects your tools, asks four short rounds of questions, captures your writing voice, writes your profile, tailors the router, dry-runs the flow on a real prompt. About fifteen minutes. |
-| **profile** | "Who owns this", "where does X live", "what matters this week". Answers from your profile files, never from memory. |
-| **prompt-improver** | Rewrites a rough prompt the way the target model's maker says to prompt it. Ships prompting cards for Claude, OpenAI, Gemini, Grok, image and video models. |
-| **simple-talk** | Short, plain replies to you. Has a blunt setting for when you're about to commit to something with holes in it. |
-| **ghost-mode** | Anything a person other than you will read, in your voice, with no AI tells. |
-| **prospect-mover** | Anything a prospect will see: site, quote, proposal, sequence, ad. Built to win the next step toward the close, scored, with two test variants. |
+| **setup** | The first-run wizard. Finds what you have, asks five short rounds, connects your tools and CRM, installs `impeccable`, captures your voice, writes your profile and operating file, schedules routines, hands to `blueprint`. About twenty-five minutes, mostly clicking. |
+| **operating-rules** | Writes your `CLAUDE.md`: act, decide, prove, finish. Names the only things that still need you (money, signatures, deleting live data, messages in your name, going live, private data leaving its room). |
+| **connect** | Audits skills, plugins, connectors and repos, recommends what is missing, and walks each setup through to a verified live test. Calendar, email, GitHub, notes, Slack, Discord, browser, meeting recorders, and CRMs: GoHighLevel (Private Integration Token), HubSpot, Salesforce, Pipedrive, Zoho, Close, Follow Up Boss. Can run the setup with you in a live browser. |
+| **blueprint** | The master skill. One prompt about what you want off your plate; it builds the skills, templates, routines and connections for it and writes a one-page map. |
+| **routines** | Schedules the recurring work: morning brief, pre-meeting notes, inbox triage, follow-up sweep, end-of-day wrap, weekly review, pipeline check and more, on the right scheduler for your surface. |
+| **meeting-prep** | A one-page note before every outside meeting, every fact sourced. |
+| **inbox** | Triage with a draft ready for everything that needs you, in your voice. Follow-up sweep. Drafts only; you tap send. |
+| **protection-desk** | Fires on any quote, illustration or declaration page drop and prints the client-ready PDF through the Protection Desk. Installs the desk if it is missing. |
+| **flow** | The gate on every prompt. Sizes it, rewrites it one-shot, reviews every active skill and loads the right ones, asks only when an answer changes the result, builds the team on a big job, verifies, delivers. |
+| **profile** | "Who owns this", "where does X live", "what is connected". Answers from your profile files, never from memory. |
+| **prompt-improver** | Rewrites a rough prompt the way the target model's maker says to prompt it. Cards for Claude, OpenAI, Gemini, Grok, image and video models. |
+| **simple-talk** | Short, plain replies to you. Has a blunt setting for when you are about to commit to something with holes in it. |
+| **ghost-mode** | Anything a person other than you will read, in your voice, no AI tells. |
+| **prospect-mover** | Anything a prospect will see, built to win the next step toward the close. |
 | **creative-direction** | A concept, brand, name or page that must not look generic or AI-made. |
 | **pixel-proof** | No UI change is done until it is rendered and seen at phone and desktop widths. |
 | **planning-mode** | A written plan with owners, steps, risks and proof, for a big unclear build. |
 | **project-cleanup** | A phased cleanup pass that keeps behavior and removes clutter. |
-| **planner, writer, reviewer** | Three agents. The planner (strongest reasoning model) turns the rewrite into slices and briefs. Writers (fastest model) build them. The reviewer (strongest model, never the builder) gives the verdict. |
+| **planner, writer, reviewer** | Three agents. The planner (strongest model) turns the rewrite into slices and briefs. Writers (fastest model) build them. The reviewer (strongest model, never the builder) gives the verdict. |
 
 Your own skills plug in too. `setup` writes them into a router so the flow finds them.
 
 ## Install
 
-### Claude Code (full kit: hook, agents, commands)
+### Claude Code (full kit: hooks, agents, commands)
 
 ```bash
 claude plugin marketplace add tenlowga-cloud/skill-flow
@@ -35,30 +44,68 @@ claude plugin marketplace add tenlowga-cloud/skill-flow
 claude plugin install skill-flow@skill-flow
 ```
 
-Then, in any session:
+Then start a session and type anything. The session-start hook sees there is no profile yet and runs the wizard:
 
 ```
 /skill-flow:setup
 ```
 
-The hook turns on with the plugin. From then on every prompt runs through the flow.
+The wizard installs the design plugin for you. If you want it first:
+
+```
+/plugin marketplace add pbakaus/impeccable
+/plugin install impeccable@impeccable
+```
 
 ### claude.ai
 
 1. Download this repo as a zip and unzip it.
-2. In claude.ai: Settings, Capabilities, Skills. Upload each folder under `skills/` as its own zip (`flow`, `setup`, `profile`, and the rest).
+2. In claude.ai: Settings, Capabilities, Skills. Upload each folder under `skills/` as its own zip.
 3. Start a chat and type `set up skill-flow`.
 
-claude.ai has no subagents. The flow plays the planner, writer and reviewer roles itself, in sequence. Your profile files live in a Project or in the `profile/` folder of your copy.
+claude.ai has no hooks or subagents. The flow plays the planner, writer and reviewer roles itself, in sequence. Your profile files live in a Project or in the `profile/` folder of your copy.
 
 ### Cursor, Codex, ChatGPT, Gemini, Grok, anything else
 
 The skills are plain Markdown. See [docs/other-ais.md](docs/other-ais.md) for where each surface reads them from and the one-line instruction that turns the flow on there.
 
-## How the flow works
+## The first run
+
+```
+install
+  │
+  ├─ session start ───── no profile: setup runs on your first prompt
+  │
+  ├─ setup
+  │    ├─ finds the surface, model, skills, plugins, connectors you already have
+  │    ├─ five rounds of short clickable questions
+  │    │    1 who you are, what you run, what kind of business
+  │    │    2 team, where things live, which CRM
+  │    │    3 reply style, bluntness, what needs your yes, send hours
+  │    │    4 your AIs and models, how the team should run, spend
+  │    │    5 the routines you want and when your day starts
+  │    ├─ connect: walks each tool through to a live test
+  │    │    calendar, email, notes, code host, chat, browser, recorder
+  │    │    CRM: GoHighLevel (PIT), HubSpot, Salesforce, others
+  │    │    impeccable plugin, repos, the Protection Desk if you quote
+  │    ├─ captures your voice from real samples
+  │    ├─ writes PROFILE, TOOLS, VOICE, ROUTER, STACK
+  │    ├─ operating-rules: writes your CLAUDE.md, shows the hard stops
+  │    ├─ routines: schedules what you picked
+  │    └─ blueprint: one prompt, builds the rest, writes the map
+  │
+  └─ dry run on one real prompt from your week
+```
+
+## Every prompt after that
 
 ```
 prompt
+  │
+  ├─ standing triggers ── quote drop: protection-desk, PDF printed
+  │                       a screen a person sees: impeccable, pixel-proof
+  │                       missing tool: connect
+  │                       meeting coming: meeting-prep
   │
   ├─ size it ─────────── quick: one skill, do it
   │                      standard: rewrite, pick skills, do it
@@ -82,26 +129,46 @@ prompt
                          if someone else reads it.
 ```
 
-Models are a setting, not a rule. `setup` writes a model ladder into `TOOLS.md`: for each role, the models you can run, best first, and the flow uses the first one that works. The default ladder in Claude Code is Fable 5.1 then Opus 5.5 for the planner and reviewer, Sonnet 5.5 then Haiku 5.5 for the writers, then whatever the session is on. No Fable on your plan? It steps down. One model and no subagents (claude.ai, ChatGPT, Gemini, a Grok Bot)? The flow plays all three roles in sequence on that model, and it still works: the plan before the work and the review after it are what catch the gaps.
+Models are a setting, not a rule. `setup` writes a model ladder into `TOOLS.md`: for each role, the models you can run, best first, and the flow uses the first one that works. The default ladder in Claude Code is Fable 5.1 then Opus 5.5 for the planner and reviewer, Sonnet 5.5 then Haiku 5.5 for the writers, then whatever the session is on. No Fable on your plan? It steps down. One model and no subagents? The flow plays all three roles in sequence, and it still works.
 
 ## Your profile
 
-`setup` writes four files. They are the only place anything about you lives, and they are gitignored.
+`setup` writes these. They are the only place anything about you lives, and they are gitignored.
 
 | File | Holds |
 |---|---|
 | `PROFILE.md` | You, what you run, your team (people and AIs), where things live, priorities, gates, hours, quality bar |
-| `TOOLS.md` | Which AI surfaces and models you use, which tools are connected and for what |
+| `TOOLS.md` | Which AI surfaces and models you use, which tools are connected and for what, the model ladder |
 | `VOICE.md` | How you write: samples, banned words, sign-off, length |
 | `ROUTER.md` | Your own skills in the flow's table, plus a do-not-call list |
+| `STACK.md` | What is installed, connected, scheduled and built; what was skipped; what waits on you |
+| `BLUEPRINT.md` | The one-page map of what `blueprint` built and how to trigger it |
+
+Your operating file (`~/.claude/CLAUDE.md` on Claude Code) is written from them by `operating-rules`.
 
 Claude Code: `~/.claude/skill-flow/`. Elsewhere: `profile/` in your copy of this repo. Blank templates in `skills/profile/references/`.
 
+## The hard stops
+
+Everything is standing authority except what you put on this list. The default six:
+
+1. Spending money
+2. Signatures and contracts
+3. Deleting live data
+4. Messages to clients or the public in your name (ready to send; you tap send)
+5. Code or changes going live
+6. Private data leaving where it lives
+
+Take one off and Claude does that too. Add one and Claude stops there.
+
 ## Make it yours
 
-- Add a skill of your own: put it in `ROUTER.md` with one line on when it runs. The flow checks it against every prompt from then on.
-- Change a default: `ROUTER.md` beats every house pick in `skills/flow/references/router.md`.
-- Port a private skill in: read [docs/CONTRIBUTING-SCRUB-BRIEF.md](docs/CONTRIBUTING-SCRUB-BRIEF.md). It is the contract that keeps this kit free of anyone's private details.
+- Connect another tool any time: `/skill-flow:connect <tool>`.
+- Add or change a routine: `/skill-flow:routines`.
+- Build out a new area of your work: `/skill-flow:blueprint <what you want off your plate>`.
+- Change your rules: `/skill-flow:rules`.
+- Add a skill of your own: put it in `ROUTER.md` with one line on when it runs.
+- Port a private skill in: read [docs/CONTRIBUTING-SCRUB-BRIEF.md](docs/CONTRIBUTING-SCRUB-BRIEF.md). It keeps this kit free of anyone's private details.
 
 ## Principles
 
@@ -109,8 +176,9 @@ Claude Code: `~/.claude/skill-flow/`. Elsewhere: `profile/` in your copy of this
 - One owner per result. Delegating never moves it off your desk.
 - Right the first time, proven, no homework left for the owner.
 - Gates stay with the owner: money, signatures, deleting live data, messages in their name, anything going live, private data leaving its room.
+- Secrets never pass through the chat. The owner types them into their own tools.
 - Plain words. No jargon, no em dashes, short by default.
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE). The Protection Desk is a separate tool with its own license; this kit only triggers and installs it.

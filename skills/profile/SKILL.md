@@ -12,7 +12,7 @@ A map from a question to the file that owns the answer. Open the file, answer fr
 ## How to answer
 
 1. **Pick the file** from the table below. One question, one or two files. Do not load everything.
-2. **Open it live.** Read `PROFILE.md` from your skill-flow profile folder (`~/.claude/skill-flow/` in Claude Code, else `profile/` in this repo). If it is missing, say so once and ask the one question you need, or run `setup`. The same goes for `TOOLS.md`, `VOICE.md` and `ROUTER.md`.
+2. **Open it live.** Read `PROFILE.md` from your skill-flow profile folder (`~/.claude/skill-flow/` in Claude Code, else `profile/` in this repo). If it is missing, say so once and ask the one question you need, or run `setup`. The same goes for `TOOLS.md`, `VOICE.md`, `ROUTER.md` and `STACK.md`.
 3. **Follow the pointer if the fact lives elsewhere.** `PROFILE.md` has a "Where things live" section. If the answer is in the owner's own notes, code host, CRM or docs, open that source and read the one page that owns the fact.
 4. **Answer** with the fact and where it came from (file and section). Lead with the answer, then the catch, then the next step, unless `VOICE.md` sets a length rule.
 5. **Check the date.** If `PROFILE.md` carries a `verified:` date older than 60 days, add one line saying the fact may be stale and the owner should re-check it. Do this always when the fact drives money, a client or a send.
@@ -35,6 +35,8 @@ A map from a question to the file that owns the answer. Open the file, answer fr
 | Which tool or AI surface a job starts on | `TOOLS.md` |
 | How the owner writes, banned words, sign-off | `VOICE.md` |
 | Which skill or plugin to call for a request | `ROUTER.md` |
+| What is installed, connected, scheduled or built; what is waiting on the owner | `STACK.md` |
+| What blueprint built and how to trigger each piece | `BLUEPRINT.md` |
 | Anything else | The owner's notes, where `PROFILE.md` says they live |
 
 ## Private data
