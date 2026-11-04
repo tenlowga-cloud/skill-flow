@@ -13,6 +13,7 @@ verified: YYYY-MM-DD
 | Memory: generate from chats | on | |
 | Memory: search past chats | on | |
 | Artifacts, analysis, web search, extended thinking, browser, skills, scheduled tasks | on, or "off by choice: <which>" | |
+| Claude in Chrome extension | installed, signed in, tested; or the reason not | |
 | Waiting on Owner | (none, or the items sent) | |
 
 ## Surface
