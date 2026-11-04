@@ -5,7 +5,7 @@ Claude cannot see the owner's account settings on its own. There are two ways to
 - **Talk mode:** you name the page, they open it and read back what they see, you say which switch to flip and why, they flip it, they say "done". One switch per message.
 - **Do mode (the default once the browser is proven):** install Claude in Chrome first (section 3b) and prove it works. Then you open each settings page in their browser, read the switches yourself, tell them which are off and which you would turn on and why, flip them after one yes for that page, and narrate: "Memory: both switches were off. You said yes. Turning them on. Done." A switch they turned off on purpose stays off.
 
-Order for an owner on a paid plan with desktop Chrome or Edge: section 1 (the plan), then 3b (the extension), then sections 2, 3, 4 and 5 in Do mode. Everyone else: sections 1 to 5 in Talk mode. In both modes the sign-in, the Owner list (section 6) and any greyed-out switch go to the person; never work around a switch an Owner locked.
+Order for an owner on a paid plan with desktop Chrome or Edge: section 1 (the plan), then 3b (the extension), then sections 2, 3, 4 and 5 in Do mode. Everyone else: sections 1 to 5 in Talk mode. If the extension will not connect in 3b, the Claude in Chrome switch in Settings may be off: do section 3 in Talk mode and turn that switch on, then retry 3b. In both modes the sign-in, the Owner list (section 6) and any greyed-out switch go to the person; never work around a switch an Owner locked.
 
 Why it matters: a skill that needs memory, web search, a connector or Cowork does nothing if the account has it off. Twenty minutes of setup is wasted if the first routine fails on a switch nobody checked.
 
@@ -68,7 +68,7 @@ Ask first: "Are you on a computer with Chrome or Edge right now?" No: record "br
 
 Record in `STACK.md`: Claude in Chrome installed, signed in, verified, date.
 
-If it fails: Add to Chrome is greyed out or blocked means a company policy, ask the IT person or the Owner. "Browser extension is not connected" almost always means the extension and Claude are signed in to different accounts or organizations; sign out of the extension and back in with the same one, then restart Chrome. The first time it connects, Chrome sometimes has to restart before it sees the connection.
+If it fails: Add to Chrome is greyed out or blocked means a company policy, ask the IT person or the Owner. If it installs but will not sign in or connect, open Settings, Capabilities in Talk mode and make sure the Claude in Chrome switch is on (section 3), then retry. "Browser extension is not connected" almost always means the extension and Claude are signed in to different accounts or organizations; sign out of the extension and back in with the same one, then restart Chrome. The first time it connects, Chrome sometimes has to restart before it sees the connection.
 
 ## 4. Connectors (the account's, not the plugin's)
 

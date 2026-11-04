@@ -93,5 +93,5 @@ Pass: Claude says the heading is "Example Domain". For a real test with you: "Op
 
 - Look at pages, take screenshots, read what is on screen: yes.
 - Click through and fill forms for a setup you asked for: yes, narrating each move (Do mode), or one step at a time with you clicking (Talk mode). Saving a form or flipping a switch needs your yes first.
-- Buy, pay, submit a final form, send a message, or delete anything: only after you say yes to that exact action.
+- Buy, pay, submit a final form, send a message, or delete anything: you do these yourself. Claude stops at that screen and waits for you.
 - Passwords, codes and card numbers: you type them. Claude does not.
