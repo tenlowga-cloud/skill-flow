@@ -69,7 +69,7 @@ Build it in the desk as a Review (both sets of numbers are quoted) with the comp
 
 1. **What you are comparing.** Both quotes named, the price gap as one line, in the client's words why they are looking.
 2. **Side by side.** The table from step 1. Rules and alignment, one accent on the row that matters most to this client.
-3. **Price and cost.** The step 2 findings, one per short paragraph, each tied to a row above. Dollarized where allowed, labeled where estimated, "not priced" where honest.
+3. **Price and cost.** The step 2 findings, one per short paragraph, each tied to a row above. Dollarized only from a number printed on one of the two quotes; "not priced" everywhere else. No estimate in this document.
 4. **The day it is used.** One scenario the client already raised, walked through under each quote. No new worries invented.
 5. **What we recommend, and why.** One paragraph. If the cheaper quote fits, this says so.
 6. **One next step.** Small, calm.

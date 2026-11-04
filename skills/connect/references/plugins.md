@@ -12,7 +12,7 @@ Steps. The owner types each line in Claude Code and waits for it to finish:
    They should see: `Successfully added marketplace: impeccable`.
 2. `/plugin install impeccable@impeccable`
    A details pane opens. They pick **Install for you (user scope)**. If the pane says `Run /reload-plugins to apply`, Claude Code runs it; if it warns about the cache, they run `/reload-plugins --force`.
-3. Verify: type `/` and look for `/impeccable`. Then `/impeccable init` once in a project with a UI, which writes its design notes file.
+3. Verify: type `/` and look for `/impeccable`. Then, inside a project folder the owner builds in, `/impeccable document` once, which writes its design notes file (DESIGN.md); fill it from `BRAND.md` once the brand intake has run. (`/impeccable init` writes a product file from code and is for a codebase.)
 4. Record it in `STACK.md`.
 
 Shell path for a setup script: `claude plugin marketplace add pbakaus/impeccable` then `claude plugin install impeccable@impeccable`.

@@ -27,11 +27,11 @@ Read `BRAND.md` from your skill-flow profile folder (`~/.claude/skill-flow/` in 
 
 ## 2. Check the desk is installed
 
-Look for the desk folder: `~/.claude/skills/protection-desk/` (Windows: `C:\Users\<you>\.claude\skills\protection-desk`), or the path in `STACK.md`. Inside it, `desk.py` and its own `SKILL.md`.
+The desk is Python on a computer. It runs in Claude Code or in Cowork on the desktop app, not in a web or phone chat.
 
-Not there: go to "Install" below, finish it, then come back. Never improvise a document without the desk; its gates are the point.
+**In a web or phone chat:** say so in one line, read the quote and report what it contains (carrier, coverage, premium, term, anything odd) so the owner has the picture now, then tell them to open Cowork or Claude Code and drop it again for the document. Never build the document by hand in chat. Stop here.
 
-The desk is Python on a computer. It runs in Claude Code or in Cowork on the desktop app, not in a web or phone chat. A quote dropped into a web chat: say so in one line, read the quote and report what it contains (carrier, coverage, premium, term, anything odd) so the owner has the picture now, then tell them to open Cowork or Claude Code and drop it again for the document. Never build the document by hand in chat.
+**On Claude Code or Cowork:** look for the desk folder: `~/.claude/skills/protection-desk/` (Windows: `C:\Users\<you>\.claude\skills\protection-desk`), or the path in `STACK.md`. Inside it, `desk.py` and its own `SKILL.md`. Not there: go to "Install" below, finish it, then come back. Never improvise a document without the desk; its gates are the point.
 
 ## 3. Run the desk's own flow
 

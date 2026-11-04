@@ -47,7 +47,7 @@ The gate is one line. Paste it wherever the surface keeps standing instructions:
 - **Files:** the plugin, from https://claude.ai/customize/plugins, **Add**, **Add marketplace**, `tenlowga-cloud/skill-flow`. Skills and commands load in chat; Cowork also loads the agents and hooks. The one-zip-per-skill upload under Settings, Capabilities, Skills still works if plugins are blocked for your organization.
 - **Gate:** chat has no hooks, so the skill descriptions do the triggering; add the gate line to the skill-flow Project's instructions to make it reliable. Cowork runs the hooks.
 - **Roles:** chat is sequential, no subagents. Cowork runs the three agents.
-- **Profile:** chat cannot write files, so the five profile files live in a Project named skill-flow; the wizard hands you each one to add. Cowork writes them to `~/.claude/skill-flow/` on your computer.
+- **Profile:** chat cannot write files, so the profile files live in a Project named skill-flow; the wizard hands you each one to add. Cowork writes them to `~/.claude/skill-flow/` on your computer.
 - **Operating file:** chat: the Project's instructions. Cowork: `~/.claude/CLAUDE.md`.
 
 ## What you lose without Claude Code
