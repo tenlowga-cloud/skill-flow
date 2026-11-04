@@ -50,8 +50,15 @@ The gate is one line. Paste it wherever the surface keeps standing instructions:
 
 ## What you lose without Claude Code
 
-- The hook. On other surfaces the gate is an instruction, and a long chat can drift away from it. Re-paste the gate line if the flow stops firing.
+- The hooks. On other surfaces the gate and the first-run check are instructions, and a long chat can drift away from them. Re-paste the gate line if the flow stops firing.
 - Real parallel writers and a model ladder. The flow still cuts slices and does them one by one, on the one model you have.
-- Commands (`/skill-flow:setup`). Type "run setup" instead.
+- Commands (`/skill-flow:setup`, `/skill-flow:connect`). Type "run setup" or "connect my calendar" instead.
+- Plugins. `impeccable` installs only in Claude Code; `pixel-proof` carries the visual check elsewhere.
+- Cloud scheduled tasks. `routines/references/scheduling-by-surface.md` gives each surface's scheduler or the fallback.
+- The Protection Desk's reader gate, which calls the `claude` command. The desk still builds with `--reader 0`, named `_UNREVIEWED`.
+
+## The operating file on other surfaces
+
+`operating-rules` writes your "act, don't ask" file wherever the surface keeps standing instructions: Cursor `.cursor/rules/operating-rules.mdc` (`alwaysApply: true`), Codex and Grok CLI `AGENTS.md`, ChatGPT Custom Instructions or a Project, Gemini a Gem, claude.ai a Project or your preferences. The hard stops travel with it.
 
 Everything else, the method, the router, the profile, the prompting cards, works the same.

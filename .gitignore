@@ -1,4 +1,6 @@
 profile/*.md
 !profile/README.md
+profile/meetings/
+*.local.json
 __pycache__/
 .DS_Store

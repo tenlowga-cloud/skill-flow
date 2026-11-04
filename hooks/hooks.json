@@ -1,6 +1,17 @@
 {
-  "description": "skill-flow: remind the model to run the flow on every prompt that asks for work.",
+  "description": "skill-flow: on session start, detect a first run and the state of the profile, operating file and design plugin; on every prompt, remind the model to run the flow and its standing triggers.",
   "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/bin/sh \"${CLAUDE_PLUGIN_ROOT}/hooks/session-start.sh\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
     "UserPromptSubmit": [
       {
         "hooks": [
