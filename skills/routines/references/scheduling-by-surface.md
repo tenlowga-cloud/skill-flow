@@ -31,9 +31,9 @@ A routine that sends to anyone other than the owner stops at a draft unless the 
 - The cloud session has no access to the owner's files. Keep PROFILE.md, TOOLS.md and VOICE.md somewhere the task can read (a repo or a connected drive), or paste the key facts into the prompt.
 - Check the first run by hand with "Run now" (verify the button name) and read the output before trusting it.
 
-## Claude Code Desktop scheduled tasks
+## Desktop app scheduled tasks (the same feature Road A below walks for chat owners)
 
-- In the Desktop app: Code tab, then Scheduled in the sidebar, then New task. The label may read Schedule or Routines in newer versions (verify). Choose a local task.
+- In the Desktop app: click the **Code** tab first, then Scheduled in that sidebar, then New task. The label may read Schedule or Routines in newer versions (verify). Choose a local task.
 - Runs on the owner's machine. It can read local files, such as the profile files.
 - The app must be open and the computer awake. A missed run does not happen while the machine sleeps.
 - Use this when the routine needs local files and the owner keeps the machine on during work hours.
@@ -48,10 +48,10 @@ A routine that sends to anyone other than the owner stops at a draft unless the 
 
 A web or mobile chat cannot run a prompt on a timer. A chat-only owner has two real roads, both without a terminal. Pick with them, teaching mode, one step per message:
 
-**Road A, the desktop app (Cowork scheduled tasks). Recommended when they have a Mac or Windows computer.**
+**Road A, the desktop app's scheduled tasks. Recommended when they have a Mac or Windows computer.**
 
 1. "Install the Claude desktop app from https://claude.ai/download and sign in with the same account. You should see your chats."
-2. "Look in the left sidebar for Scheduled (it may read Schedule, Routines or Tasks depending on your version). Click it. You should see a New task button." If they cannot find it, ask them to read the sidebar labels aloud and match by meaning.
+2. "At the top or side of the app, click the **Code** tab. The sidebar changes. Look there for Scheduled (it may read Schedule, Routines or Tasks depending on your version). Click it. You should see a New task button." If they cannot find it, ask them to read the sidebar labels aloud and match by meaning.
 3. "Click New task. A form opens with a name, a prompt box, and a schedule."
 4. Give them the routine's name and the filled prompt (section "Filling the prompt for a chat owner" below) to paste. Then the schedule: pick the preset (Daily, Weekdays, Hourly, Weekly) and the time in their time zone.
 5. "Save. You should see the task in the list with its next run time. Read me that time."
@@ -82,6 +82,8 @@ Top priority this week: [one line].
 ```
 
 Show the owner the filled block before they paste it. It is theirs to read and correct.
+
+A scheduled run also cannot write `STACK.md`. Any routine that keeps state between runs (the GoHighLevel assistant's last sweep time and open questions) keeps it inside the tool it works in (a GoHighLevel task), never in a profile file. The live session updates `STACK.md` the next time the owner talks to Claude.
 
 **What the owner will see.** The result lands in the app (desktop task history or the cloud task's History) and, where the app sends notifications for finished tasks, as a notification on the phone. Whether a phone notification arrives on completion is not confirmed for every version (verify); the phone step tests it once and records the answer.
 

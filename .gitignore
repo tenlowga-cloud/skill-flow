@@ -1,6 +1,7 @@
 profile/*.md
 !profile/README.md
 profile/meetings/
+profile/brand/
 *.local.json
 __pycache__/
 .DS_Store

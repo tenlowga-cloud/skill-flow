@@ -37,6 +37,7 @@ A map from a question to the file that owns the answer. Open the file, answer fr
 | Which skill or plugin to call for a request | `ROUTER.md` |
 | What is installed, connected, scheduled or built; what is waiting on the owner | `STACK.md` |
 | What blueprint built and how to trigger each piece | `BLUEPRINT.md` |
+| The owner's logo, colors, fonts and brand rules | `BRAND.md` |
 | Anything else | The owner's notes, where `PROFILE.md` says they live |
 
 ## Private data

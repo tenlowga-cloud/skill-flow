@@ -25,7 +25,7 @@ The gate is one line. Paste it wherever the surface keeps standing instructions:
 - **Files:** a Project. Upload `skills/flow/SKILL.md`, `skills/setup/SKILL.md`, `skills/profile/SKILL.md` and the skills you use most as project files. Big reference folders (model cards, prospect-mover references) upload one file at a time.
 - **Gate:** the Project's instructions, or Custom Instructions for every chat: the gate line, plus "the skill files are in this project".
 - **Roles:** sequential. No subagents.
-- **Profile:** upload your four profile files to the same Project after `setup` writes them (it will write them as chat output; save them).
+- **Profile:** upload your profile files (`PROFILE`, `TOOLS`, `VOICE`, `ROUTER`, `STACK`, `BRAND`) to the same Project after `setup` writes them (it will write them as chat output; save them).
 
 ## Gemini
 

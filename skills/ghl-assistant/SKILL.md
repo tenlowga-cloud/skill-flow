@@ -13,7 +13,7 @@ A good executive assistant reads the inbox, the task list and the deal board bef
 
 Read `PROFILE.md`, `TOOLS.md`, `VOICE.md` and `STACK.md` from your skill-flow profile folder (`~/.claude/skill-flow/` in Claude Code, else `profile/` in this repo). `TOOLS.md` must show GoHighLevel connected; if not, run `connect` with `references/crm/gohighlevel.md` and stop here. `PROFILE.md` gives the gates, the send window, who the owner is in the CRM (their user name, so "assigned to me" means them) and which sub-account.
 
-Read `STACK.md`, section "GHL assistant", for the last sweep time. Then read the GoHighLevel task named "Assistant: waiting on you" (assigned to the owner, in the connected sub-account); its description is the list of questions already asked and not yet answered. Never ask the same question twice. No task yet: create it on the first sweep that has a question.
+Read the last sweep time: `STACK.md`, section "GHL assistant", in a live session; on a scheduled run that cannot read files, the first line of the GoHighLevel task "Assistant: waiting on you". Then read that task (assigned to the owner, in the connected sub-account); its description is the list of questions already asked and not yet answered. Never ask the same question twice. No task yet: create it on the first sweep that has a question.
 
 ## 2. Sweep
 
@@ -54,7 +54,9 @@ Update `STACK.md`, section "GHL assistant": last sweep time and a count of items
 
 ## As a routine
 
-The GHL assistant routine in `routines/references/routine-library.md` runs this skill hourly on weekdays inside work hours, and once at the start of the day for the full picture. With the phone app and notifications on (`setup`, the phone step), the owner gets each report as a notification and answers from their phone.
+The GHL assistant routine in `routines/references/routine-library.md` runs this skill hourly on weekdays inside work hours, and once at the start of the day for the full picture. With the phone app installed (`setup`, the phone step), each report is waiting in the app, and where the phone test showed notifications arrive on finish, it buzzes; the owner answers from their phone either way.
+
+**Chat owners.** A routine scheduled from claude.ai cannot read or write `STACK.md`. For them, the last sweep time is the first line of the "Assistant: waiting on you" task's description, and the routine prompt carries the profile block inline (`routines/references/scheduling-by-surface.md`, "Filling the prompt for a chat owner"). `STACK.md` is updated by the live session when the owner next talks to Claude.
 
 ## Rules that do not move
 
@@ -67,4 +69,4 @@ The GHL assistant routine in `routines/references/routine-library.md` runs this 
 
 ## What good looks like
 
-Monday 8am. Sweep finds: 3 overdue tasks, 2 unanswered texts, 1 new lead, 1 deal with no activity in 9 days, 1 appointment at 10. Claude: marks one task done (the address update, from the email on the contact), drafts replies to both texts and a welcome to the new lead, writes the 10am meeting note, drafts a nudge on the stalled deal. Report: "Three drafts and your 10am note are ready. One decision: the stalled deal, do we offer the lower tier (recommended) or hold? Two tasks need you: both are calls." The owner taps twice from their phone.
+Monday 8am. Sweep finds: 3 overdue tasks, 2 unanswered texts, 1 new lead, 1 deal with no activity in 9 days, 1 appointment at 10. Claude: marks one task done (the call notes the owner asked for, written from yesterday's recording and saved on the contact), drafts replies to both texts and a welcome to the new lead, writes the 10am meeting note, drafts a nudge on the stalled deal, and puts the address change (old value, new value, the email it came from) in Ask. Report: "Three drafts and your 10am note are ready. Two decisions: the stalled deal, do we offer the lower tier (recommended) or hold; and Casey's new address from Tuesday's email, update it (recommended)? One task needs you: a call." The owner taps three times from their phone.

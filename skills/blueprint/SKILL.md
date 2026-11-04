@@ -11,7 +11,7 @@ One prompt in. A working system out. The owner says what they want off their pla
 
 ## 1. Read everything first
 
-Read `PROFILE.md`, `TOOLS.md`, `VOICE.md`, `ROUTER.md` and `STACK.md` from your skill-flow profile folder (`~/.claude/skill-flow/` in Claude Code, else `profile/` in this repo). If `PROFILE.md` is missing, run `setup` first; a blueprint built on no profile is a guess.
+Read `PROFILE.md`, `TOOLS.md`, `VOICE.md`, `ROUTER.md`, `STACK.md` and `BRAND.md` from your skill-flow profile folder (`~/.claude/skill-flow/` in Claude Code, else `profile/` in this repo). If `PROFILE.md` is missing, run `setup` first; a blueprint built on no profile is a guess.
 
 Read the owner's first page from `PROFILE.md`, Where things live, if one is named. Read the live skill list. Hold the owner's one prompt against all of it.
 
@@ -52,7 +52,7 @@ A skill you write for the owner follows this kit's own rules:
 - Frontmatter `name` and `description`; the description says when to trigger, in the owner's words, under 1,024 characters.
 - A short SKILL.md: what it does, the steps, the gate, what good looks like. References in `references/` for anything long.
 - It reads the profile files by the exact wording this kit uses, never hardcodes a name, a path or a tool the profile already holds.
-- Voice through `ghost-mode` for anything a person other than the owner reads; `prospect-mover` if a prospect reads it; `impeccable` and `pixel-proof` if a person sees it on a screen.
+- Voice through `ghost-mode` for anything a person other than the owner reads; `prospect-mover` if a prospect reads it; `BRAND.md` plus the design bar (`protection-desk/references/design-bar.md`), `impeccable` and `pixel-proof` if a person sees it on a page or a screen. A template a client will see is built in the brand and scored before it is called built.
 - No secrets, no client data, no contact details in the skill. Those live in the owner's systems.
 - Test it once on a real prompt before you call it built.
 

@@ -19,6 +19,7 @@ Files, all Markdown, all optional until setup fills them:
 | `ROUTER.md` | Their own skills and plugins, in the flow's table shape, plus a do-not-call list |
 | `STACK.md` | What is installed, connected, scheduled and built, what was skipped, what waits on the owner |
 | `BLUEPRINT.md` | The one-page map `blueprint` writes: what exists and how to trigger it |
+| `BRAND.md` and `brand/` | Logo, colors, fonts, brand rules and their sources |
 
 A skill reads a profile file like this, verbatim wording:
 

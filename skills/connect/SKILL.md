@@ -18,7 +18,7 @@ Then look at the live surface, not the files:
 | Check | How |
 |---|---|
 | Skills | The skill list the session shows, plus `~/.claude/skills/` and the owner's own folder. Note each skill's purpose in five words. |
-| Plugins | Claude Code: `claude plugin list` in the shell, or `/plugin`, Installed tab. Elsewhere: none. |
+| Plugins | Claude Code: `claude plugin list` in the shell, or `/plugin`, Installed tab. claude.ai and Cowork: Customize, Plugins (the owner reads the list back). Cursor and others: none. |
 | Connectors and MCP servers | Claude Code: `/mcp` and `claude mcp list`. claude.ai: Settings, Connectors. Cursor: `~/.cursor/mcp.json`. |
 | Repos and folders | What the session can read: the working directory, attached repos, a vault path from `PROFILE.md`. |
 | Browser | A browser tool (Claude in Chrome, browser-use, Playwright) the session can drive. |
@@ -36,7 +36,7 @@ Hold the audit against three things:
 
 The recommendation list is the gaps, ranked by how many jobs each one unblocks. Keep it short: the top 3 to 5, each with one line on what it unlocks for this owner. Never recommend something `STACK.md` says they skipped on purpose, unless a new job needs it; then say why it came back.
 
-Plugins to recommend by default on Claude Code:
+Plugins to recommend by default on Claude Code, claude.ai and Cowork:
 
 - **impeccable** (`pbakaus/impeccable`): the design bar for anything a person sees. Always.
 - Anything in Anthropic's official marketplace that matches a tool they use (run `/plugin` and read the Discover tab; do not guess names).

@@ -2,7 +2,7 @@
 
 A plugin is a folder of skills, commands, hooks and agents that Claude Code installs as one unit. Install at user scope unless the owner says the plugin is for one project only.
 
-## impeccable (install for every owner on Claude Code)
+## impeccable (install for every owner on Claude Code, claude.ai and Cowork)
 
 What it unlocks: a design bar for anything a person sees. `/impeccable critique` scores a screen, `audit` checks accessibility, performance and responsive behavior, `polish`, `adapt` and `harden` finish it, and it flags generic AI-made patterns before they ship. The flow calls it on every page, app, document or slide a person will look at.
 

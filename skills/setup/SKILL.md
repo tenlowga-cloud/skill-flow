@@ -1,6 +1,6 @@
 ---
 name: setup
-description: First-run wizard for skill-flow. Runs on the first prompt after install and whenever a profile file is missing. Reads the surface and model, walks the owner through their account (plan, memory on, every switch, connectors, Owner items on a Team plan), audits the skills, plugins and tools they have, asks five short rounds of clickable questions (who they are, team and where things live, how they work and what needs their yes, their AIs and models, the routines they want), asks whether they use GoHighLevel and signs them in if so, connects every other tool start to finish, installs impeccable, captures their voice, writes the profile files and the operating file, schedules routines, puts the app on their phone with notifications on, then hands to blueprint. Use on "set up", "setup", "tailor this to me", "connect my tools", "/setup", or the first prompt after install.
+description: First-run wizard for skill-flow. Runs on the first prompt after install and whenever a profile file is missing. Reads the surface and model, walks the owner through their account (plan, memory on, every switch, connectors, Owner items on a Team plan), audits the skills, plugins and tools they have, asks five short rounds of clickable questions (who they are, team and where things live, how they work and what needs their yes, their AIs and models, the routines they want), asks whether they use GoHighLevel and signs them in if so, connects every other tool start to finish, installs impeccable, captures their brand (logo, colors, fonts, with upgrades recommended) and their voice, writes the profile files and the operating file, schedules routines, puts the app on their phone with notifications on, then hands to blueprint. Use on "set up", "setup", "tailor this to me", "connect my tools", "/setup", or the first prompt after install.
 ---
 
 # setup
@@ -82,7 +82,7 @@ Now the clicking part. Run the `connect` skill in setup mode:
 2. Ask one multi-select question: which missing ones do you want now? Your pick first: the ones the chosen routines need.
 3. For each yes, open the matching guide in `connect/references/connectors/` or `connect/references/crm/` and walk it one step at a time: say the step, wait for "done" or the screenshot, verify what they see, then the next step. Finish with the guide's verify prompt and show the real result. A connection is not done until the test prompt returns real data.
 4. **CRM.** If round 2 said GoHighLevel: connect it now, no question. Walk `connect/references/crm/gohighlevel.md`: add HighLevel's official MCP for their AI (Claude: `https://services.leadconnectorhq.com/mcp/anthropic/v2`; ChatGPT and Codex: `.../mcp/openai/v2/`; Cursor: `.../mcp/cursor/v2`), they sign in with their GoHighLevel login, pick the business, approve the permissions, then verify with a contacts read and a tasks read. Then ask one question: "Want me to be your assistant inside GoHighLevel, checking your tasks, messages and deals every hour and bringing you only the decisions?" (Recommended: yes.) On yes, add the GHL assistant routine to the round 5 picks; `ghl-assistant` is the skill. Any other CRM goes through its guide in `connect/references/crm/`. Offer the live-browser walkthrough (`connect/references/crm/live-browser-walkthrough.md`) when a browser tool is available: you open the page and point, they click the parts that involve a login.
-5. **Plugins.** Install `impeccable` (it makes anything a person sees pass the design bar). First check whether it is already there: the account pass (section 5) saw the plugins list on claude.ai and Cowork; on Claude Code, `claude plugin list`. Already there: say so and move on. Missing, on claude.ai or Cowork: walk `connect/references/plugins.md`, the claude.ai path (Customize, Plugins, Add, Add marketplace, `pbakaus/impeccable`, Add). Missing, on Claude Code in a terminal: they type these two lines and wait for each to finish:
+5. **Plugins.** Install `impeccable` (it makes anything a person sees pass the design bar). First check whether it is already there: the account pass (`references/account-check.md`, section 5) saw the plugins list on claude.ai and Cowork; on Claude Code, `claude plugin list`. Already there: say so and move on. Missing, on claude.ai or Cowork: walk `connect/references/plugins.md`, the claude.ai path (Customize, Plugins, Add, Add marketplace, `pbakaus/impeccable`, Add). Missing, on Claude Code in a terminal: they type these two lines and wait for each to finish:
 
    ```
    /plugin marketplace add pbakaus/impeccable
@@ -94,6 +94,10 @@ Now the clicking part. Run the `connect` skill in setup mode:
 7. **Protection Desk.** If round 1 said insurance or financial services, or they said quotes come through their day, install the Protection Desk per `protection-desk/SKILL.md`, "Install", and run its doctor until every line passes.
 
 A tool they skip is fine; mark it "not connected" in `TOOLS.md` so skills do not go looking for it, and note which routines it blocks.
+
+## 7b. Capture the brand
+
+Run `references/brand-intake.md`: ask for the logo, brand guidelines, website or anything printed; read the colors, fonts and rules from them (or sample, or build a starter and mark it so); hold the fonts against the design bar (`../protection-desk/references/design-bar.md`) and recommend a modern licensable sibling where the brand font is dated, with a side-by-side line and one question; write `BRAND.md`; lock it into the Protection Desk brand folder, impeccable's design notes and every client-facing skill. Everything a client ever sees from this owner uses this file. Do it before `blueprint`, which builds the templates.
 
 ## 8. Capture the voice
 
@@ -110,6 +114,7 @@ Fill the templates in `skills/profile/references/` and save them to the profile 
 - `VOICE.md` from step 8.
 - `ROUTER.md` from round 4 and the step 1 audit: one row per owner skill or plugin in the flow's table shape, the bluntness answer as a router rule, a "Do not call" list for anything they named as off limits.
 - `STACK.md` from steps 1, 6 and 7: what is installed, what is connected, what was recommended and skipped, which routines are scheduled and where. `connect` and `blueprint` read it so they never recommend the same thing twice.
+- `BRAND.md` from step 7b, with the logo files beside it in `brand/`.
 
 Then run `operating-rules`: it writes the owner's operating file (`~/.claude/CLAUDE.md` on Claude Code) from these answers and installs it. Show the owner the six hard stops it contains and say plainly: everything else, Claude now just does.
 
@@ -121,7 +126,7 @@ For each routine picked in round 5 whose tools are now connected, run `routines`
 
 ### The phone
 
-Then run `references/phone.md`: install the Claude app (or their AI's app) on their phone, sign in with the same account, allow notifications, test with a two-minute one-off routine, and tell them how tomorrow morning will feel. This is what turns a routine into a buzz in their pocket with the three lines and the questions ready to tap.
+Then run `references/phone.md`: install the Claude app (or their AI's app) on their phone, sign in with the same account, allow notifications, test once with a short one-off routine, and tell them honestly how tomorrow morning will feel: a buzz if the test buzzed, otherwise the brief waiting in the app at its time. Either way the three lines and the questions are ready to tap.
 
 ## 11. Hand off to blueprint
 
