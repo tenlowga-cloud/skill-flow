@@ -46,6 +46,25 @@ Say: "Stay in Settings. Open Capabilities (or Features; the label differs by ver
 
 Anything they do not want on, record as "off by choice" in `STACK.md` and never offer again without a reason.
 
+## 3b. Claude in Chrome: install the extension
+
+The switch in Settings only allows it. The extension is what does the work. It is how Claude clicks through a setup with the owner, fills forms, and checks that a connection really works, so install it before the connectors and every walkthrough after this can run live. About three minutes. Teaching mode, one step per message.
+
+Needs: a paid plan (Pro, Max, Ultra, Team or Enterprise) and desktop Google Chrome or Microsoft Edge. Not a phone, not Safari, not Firefox. On Enterprise an Owner may have to allow it first (Organization settings, Claude in Chrome, https://claude.ai/admin-settings/browser-extension; it is off by default where HIPAA is on). On Team an admin can block it. A Free plan skips this section and uses the written guides.
+
+Ask first: "Are you on a computer with Chrome or Edge right now?" No: record "browser: no desktop Chrome, written guides only" in `STACK.md` and move on.
+
+1. "Open Chrome. Go to https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn. You should see a page called Claude, published by Anthropic, with an Add to Chrome button. Check it says Anthropic: copycat extensions exist."
+2. "Click Add to Chrome, then Add extension in the box that pops up. You should see a small puzzle-piece icon at the top right of Chrome."
+3. "Click the puzzle piece. Find Claude in the list and click the pin so it stays on your toolbar."
+4. "Click the Claude icon. A side panel opens. Sign in with the same Claude account you are using here. If you belong to more than one organization, pick the same one."
+5. Verify: "On any open page, type into the side panel: What is the title of this page? You should see a real answer." Pass is a correct title. On Claude Code, also run `/chrome`; the status should read Enabled and the extension Installed.
+6. Say how it behaves: "When a page asks for a password, a code or a card number, Claude stops and you type it. It asks before it acts on a new site. You can see everything it does in the window."
+
+Record in `STACK.md`: Claude in Chrome installed, signed in, verified, date.
+
+If it fails: Add to Chrome is greyed out or blocked means a company policy, ask the IT person or the Owner. "Browser extension is not connected" almost always means the extension and Claude are signed in to different accounts or organizations; sign out of the extension and back in with the same one, then restart Chrome. The first time it connects, Chrome sometimes has to restart before it sees the connection.
+
 ## 4. Connectors (the account's, not the plugin's)
 
 Say: "Open https://claude.ai/customize/connectors. Tell me which ones show Connected." Match against what the chosen routines need. Everything missing goes to `connect`, which walks each one. On Team or Enterprise, a connector that is not in the list at all has to be added by an Owner at Organization settings, Connectors, before a member can connect it; add those to the Owner list.

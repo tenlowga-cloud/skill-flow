@@ -21,10 +21,10 @@ Claude opens or controls a browser window. It takes a screenshot, tells you what
 
 ### Option A: Claude in Chrome (best for walking through a setup with you)
 
-1. In Chrome, install the **Claude in Chrome** extension from the Chrome Web Store. Search that exact name. Check the publisher is Anthropic.
-2. Click the puzzle-piece icon, pin the extension, and sign in with your claude.ai account.
-3. In your terminal, start Claude Code with `claude --chrome`. Or inside a session type `/chrome`.
-4. You should see Claude Code report that Chrome is connected.
+1. In desktop Chrome or Edge, open https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn and click **Add to Chrome**. Check the publisher is Anthropic. It needs a paid plan (Pro, Max, Ultra, Team or Enterprise), version 1.0.36 or later for Claude Code, and it does not work on phones or other browsers.
+2. Click the puzzle-piece icon, pin the extension, and sign in with the same claude.ai account (and organization) that Claude uses.
+3. In your terminal, start Claude Code with `claude --chrome`. Or inside a session type `/chrome`. Sign in with `/login`; an API key or a long-lived token will not connect.
+4. You should see `/chrome` report Status: Enabled and Extension: Installed.
 
 ### Option B: browser-use
 
@@ -48,7 +48,7 @@ Manage: `claude mcp list`, `claude mcp get playwright`, `claude mcp remove playw
 2. Click the extension icon. A side panel opens. Type or speak the task there.
 3. Claude acts on the tab you have open.
 
-The extension may be in beta, and labels may differ by version. Look for "Claude" in your Chrome extensions menu.
+Labels may differ by version. Look for "Claude" in your Chrome extensions menu. Anthropic's own page: https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome
 
 ## 5. Cursor
 
@@ -83,7 +83,7 @@ Pass: Claude says the heading is "Example Domain". For a real test with you: "Op
 
 ## 7. If it fails
 
-- **Extension says not connected.** Reload the Chrome tab. Sign in to claude.ai in the extension. Run `/chrome` again.
+- **Extension says not connected.** The usual cause is that the extension and Claude are signed in to different accounts or organizations. Sign out of the extension and back in with the same one, restart Chrome, then run `/chrome` and choose Reconnect extension. Run `/status` in Claude Code to see which organization it uses.
 - **Chrome "Allow" box never appears.** Look in the Chrome window behind your terminal. Click **Allow**.
 - **Playwright fails to start.** Node.js is missing. Install it from nodejs.org and retry.
 - **Page asks to prove you are human.** Do the check yourself in the window, then tell Claude to continue.
