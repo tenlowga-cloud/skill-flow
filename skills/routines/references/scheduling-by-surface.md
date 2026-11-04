@@ -13,7 +13,7 @@ Pick where the routine will run, then follow that section.
 | Polling for a few hours | No | Any | `/loop` inside a session |
 | No scheduler on the surface | Any | Any | Calendar reminder that opens the prompt, or OS scheduler running the CLI |
 
-Default for a non-technical owner: cloud scheduled task. It needs no setup on their machine.
+Default for a non-technical owner on claude.ai or Cowork: the "claude.ai chat" section below, Road A (desktop app) or Road B (the cloud web form). Neither needs a terminal. Default for a Claude Code owner: the cloud scheduled task through `/schedule`.
 
 ## The send rule (applies to every surface)
 
@@ -31,9 +31,9 @@ A routine that sends to anyone other than the owner stops at a draft unless the 
 - The cloud session has no access to the owner's files. Keep PROFILE.md, TOOLS.md and VOICE.md somewhere the task can read (a repo or a connected drive), or paste the key facts into the prompt.
 - Check the first run by hand with "Run now" (verify the button name) and read the output before trusting it.
 
-## Claude Code Desktop scheduled tasks
+## Desktop app scheduled tasks (the same feature Road A below walks for chat owners)
 
-- In the Desktop app: Code tab, then Scheduled in the sidebar, then New task. The label may read Schedule or Routines in newer versions (verify). Choose a local task.
+- In the Desktop app: click the **Code** tab first, then Scheduled in that sidebar, then New task. The label may read Schedule or Routines in newer versions (verify). Choose a local task.
 - Runs on the owner's machine. It can read local files, such as the profile files.
 - The app must be open and the computer awake. A missed run does not happen while the machine sleeps.
 - Use this when the routine needs local files and the owner keeps the machine on during work hours.
@@ -44,11 +44,48 @@ A routine that sends to anyone other than the owner stops at a draft unless the 
 - Session-scoped. Stops when the session closes. Expires after 7 days.
 - Good for polling ("check the inbox every 20 minutes today"). Not for daily routines.
 
-## claude.ai scheduled tasks
+## claude.ai chat: there is no scheduler inside a chat
 
-- If the plan has it, find it in claude.ai settings. Look for Scheduled tasks or Tasks. The label may differ (verify).
-- Same rules as cloud: runs only with the connectors enabled for it.
-- If the owner cannot find it, use the cloud scheduled task above.
+A web or mobile chat cannot run a prompt on a timer. A chat-only owner has two real roads, both without a terminal. Pick with them, teaching mode, one step per message:
+
+**Road A, the desktop app's scheduled tasks. Recommended when they have a Mac or Windows computer.**
+
+1. "Install the Claude desktop app from https://claude.ai/download and sign in with the same account. You should see your chats."
+2. "At the top or side of the app, click the **Code** tab. The sidebar changes. Look there for Scheduled (it may read Schedule, Routines or Tasks depending on your version). Click it. You should see a New task button." If they cannot find it, ask them to read the sidebar labels aloud and match by meaning.
+3. "Click New task. A form opens with a name, a prompt box, and a schedule."
+4. Give them the routine's name and the filled prompt (section "Filling the prompt for a chat owner" below) to paste. Then the schedule: pick the preset (Daily, Weekdays, Hourly, Weekly) and the time in their time zone.
+5. "Save. You should see the task in the list with its next run time. Read me that time."
+6. Run it once now if the form offers it; otherwise wait for the first run. Open the result together.
+   Runs on their computer, so the computer must be on and the app open at the time. Say that plainly.
+
+**Road B, the cloud (claude.ai/code/routines). Recommended when the computer is often off.**
+
+This page is a web form. No terminal, no code. The owner does not need a repository; if the form asks for one, pick none or skip (verify the exact control on their version).
+
+1. "Open https://claude.ai/code/routines in your browser, signed in with the same account. You should see a page with a New task button."
+2. "Click New task. A dialog opens with a name, a prompt box, a schedule, and Advanced settings."
+3. Give them the name and the filled prompt to paste.
+4. "Set the schedule: pick Daily or Weekly and the time. The clock is your local time."
+5. "Open Advanced settings, then the Connectors tab. Every connector you have is ticked. Untick the ones this routine does not need." Name the ones to keep from the routine's Needs line.
+6. "Save. You should see the task in the list. Read me its next run time."
+7. The first run opens as a session in the task's History. Read it together.
+   Runs in the cloud with the computer off. Pro, Max, Team and Enterprise plans. Minimum interval one hour.
+
+**Filling the prompt for a chat owner.** A scheduled run cannot read a Project or a file on the owner's computer. So the prompt carries the facts inline. Take the library prompt and replace "Read PROFILE.md, TOOLS.md and VOICE.md" with a short block, written from those files, no secrets, no client names:
+
+```
+About the owner: [name], [role], runs [business]. Address them as [address]. Time zone [zone]. Work hours [hours]. Client messages may send [window], otherwise never.
+Tools you may use: [calendar name], [email], [CRM and sub-account]. Not connected: [list].
+Gates (never do these without the owner's yes): spend money, sign anything, delete live data, send to anyone but the owner, change a client record, go live.
+Voice for anything written: [three rules from VOICE.md]. Never use: [banned words].
+Top priority this week: [one line].
+```
+
+Show the owner the filled block before they paste it. It is theirs to read and correct.
+
+A scheduled run also cannot write `STACK.md`. Any routine that keeps state between runs (the GoHighLevel assistant's last sweep time and open questions) keeps it inside the tool it works in (a GoHighLevel task), never in a profile file. The live session updates `STACK.md` the next time the owner talks to Claude.
+
+**What the owner will see.** The result lands in the app (desktop task history or the cloud task's History) and, where the app sends notifications for finished tasks, as a notification on the phone. Whether a phone notification arrives on completion is not confirmed for every version (verify); the phone step tests it once and records the answer.
 
 ## Other surfaces
 

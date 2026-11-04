@@ -30,7 +30,8 @@ If you can't tell, treat it as standard and upgrade the moment a second independ
 | What appears | Run |
 |---|---|
 | A quote, illustration, declaration page, rate sheet or pasted premium numbers, as a PDF, image or text | `protection-desk`: the full desk flow and the printed PDF, unasked |
-| A screen, page, document or slide a person will see | `impeccable` (where installed) before it is called done, then `pixel-proof` |
+| A second, cheaper quote; "they found it cheaper"; "can you beat this" | `protection-desk` with `references/price-vs-cost.md`: the side-by-side, the dollarized cost, the honest close |
+| A screen, page, document, post or slide a person will see | `BRAND.md` first, then the design bar (`protection-desk/references/design-bar.md`): `impeccable` (where installed) before it is called done, then `pixel-proof`. Under 9 of 10 does not ship. |
 | A tool, connector, plugin or skill the job needs and the owner does not have | `connect`: recommend it and walk the setup through to a verified connection |
 | An outside meeting coming up, or "prep me for" | `meeting-prep` |
 | Email work: triage, follow-ups, a reply | `inbox` |

@@ -25,7 +25,7 @@ The gate is one line. Paste it wherever the surface keeps standing instructions:
 - **Files:** a Project. Upload `skills/flow/SKILL.md`, `skills/setup/SKILL.md`, `skills/profile/SKILL.md` and the skills you use most as project files. Big reference folders (model cards, prospect-mover references) upload one file at a time.
 - **Gate:** the Project's instructions, or Custom Instructions for every chat: the gate line, plus "the skill files are in this project".
 - **Roles:** sequential. No subagents.
-- **Profile:** upload your four profile files to the same Project after `setup` writes them (it will write them as chat output; save them).
+- **Profile:** upload your profile files (`PROFILE`, `TOOLS`, `VOICE`, `ROUTER`, `STACK`, `BRAND`) to the same Project after `setup` writes them (it will write them as chat output; save them).
 
 ## Gemini
 
@@ -47,7 +47,7 @@ The gate is one line. Paste it wherever the surface keeps standing instructions:
 - **Files:** the plugin, from https://claude.ai/customize/plugins, **Add**, **Add marketplace**, `tenlowga-cloud/skill-flow`. Skills and commands load in chat; Cowork also loads the agents and hooks. The one-zip-per-skill upload under Settings, Capabilities, Skills still works if plugins are blocked for your organization.
 - **Gate:** chat has no hooks, so the skill descriptions do the triggering; add the gate line to the skill-flow Project's instructions to make it reliable. Cowork runs the hooks.
 - **Roles:** chat is sequential, no subagents. Cowork runs the three agents.
-- **Profile:** chat cannot write files, so the five profile files live in a Project named skill-flow; the wizard hands you each one to add. Cowork writes them to `~/.claude/skill-flow/` on your computer.
+- **Profile:** chat cannot write files, so the profile files live in a Project named skill-flow; the wizard hands you each one to add. Cowork writes them to `~/.claude/skill-flow/` on your computer.
 - **Operating file:** chat: the Project's instructions. Cowork: `~/.claude/CLAUDE.md`.
 
 ## What you lose without Claude Code
@@ -55,7 +55,7 @@ The gate is one line. Paste it wherever the surface keeps standing instructions:
 - The hooks. On other surfaces the gate and the first-run check are instructions, and a long chat can drift away from them. Re-paste the gate line if the flow stops firing.
 - Real parallel writers and a model ladder. The flow still cuts slices and does them one by one, on the one model you have.
 - Commands (`/skill-flow:setup`, `/skill-flow:connect`). Type "run setup" or "connect my calendar" instead.
-- Plugins. `impeccable` installs only in Claude Code; `pixel-proof` carries the visual check elsewhere.
+- Plugins on Cursor, ChatGPT, Gemini and Grok. `impeccable` installs on Claude Code, claude.ai and Cowork (Customize, Plugins); `pixel-proof` carries the visual check on the others.
 - Cloud scheduled tasks. `routines/references/scheduling-by-surface.md` gives each surface's scheduler or the fallback.
 - The Protection Desk's reader gate, which calls the `claude` command. The desk still builds with `--reader 0`, named `_UNREVIEWED`.
 

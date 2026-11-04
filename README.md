@@ -18,7 +18,7 @@ It is a set of Markdown skills, two small hooks and three agents. No server, no 
 | **routines** | Schedules the recurring work: morning brief, pre-meeting notes, inbox triage, follow-up sweep, end-of-day wrap, weekly review, pipeline check and more, on the right scheduler for your surface. |
 | **meeting-prep** | A one-page note before every outside meeting, every fact sourced. |
 | **inbox** | Triage with a draft ready for everything that needs you, in your voice. Follow-up sweep. Drafts only; you tap send. |
-| **protection-desk** | Fires on any quote, illustration or declaration page drop and prints the client-ready PDF through the Protection Desk. Installs the desk if it is missing. |
+| **protection-desk** | Fires on any quote, illustration or declaration page drop and prints the client-ready PDF through the Protection Desk, in your brand, scored by `impeccable` against a design bar that fails anything that looks like AI made it. Problems and solutions first, value plain, price once. A cheaper competing quote gets the side-by-side: the price today against the cost later, honestly. Installs the desk if it is missing. |
 | **flow** | The gate on every prompt. Sizes it, rewrites it one-shot, reviews every active skill and loads the right ones, asks only when an answer changes the result, builds the team on a big job, verifies, delivers. |
 | **profile** | "Who owns this", "where does X live", "what is connected". Answers from your profile files, never from memory. |
 | **prompt-improver** | Rewrites a rough prompt the way the target model's maker says to prompt it. Cards for Claude, OpenAI, Gemini, Grok, image and video models. |
@@ -94,7 +94,8 @@ install
   │    ├─ writes PROFILE, TOOLS, VOICE, ROUTER, STACK
   │    ├─ operating-rules: writes your CLAUDE.md, shows the hard stops
   │    ├─ routines: schedules what you picked
-  │    ├─ phone: the app installed, notifications on, tested with a buzz
+  │    ├─ phone: the app installed, notifications on, tested once
+  │    ├─ brand: logo, colors, fonts on file; dated fonts upgraded with a yes
   │    └─ blueprint: one prompt, builds the rest, writes the map
   │
   └─ dry run on one real prompt from your week
@@ -145,6 +146,7 @@ Models are a setting, not a rule. `setup` writes a model ladder into `TOOLS.md`:
 | `VOICE.md` | How you write: samples, banned words, sign-off, length |
 | `ROUTER.md` | Your own skills in the flow's table, plus a do-not-call list |
 | `STACK.md` | What is installed, connected, scheduled and built; what was skipped; what waits on you |
+| `BRAND.md` | Your logo, colors, fonts and brand rules; every client-facing document, quote and post locks onto it |
 | `BLUEPRINT.md` | The one-page map of what `blueprint` built and how to trigger it |
 
 Your operating file (`~/.claude/CLAUDE.md` on Claude Code) is written from them by `operating-rules`.

@@ -50,6 +50,14 @@ What `connect` offered that the owner did not take, and why, so it is not offere
 | Morning brief | cloud scheduled task | weekdays 7:35 | | | scheduled |
 | Pre-meeting notes | | | | | waiting on CRM |
 
+## Brand
+
+| Item | Value | Date |
+|---|---|---|
+| Source | guidelines, logo sampled, website sampled, or starter | |
+| Fonts | kept, or upgraded to (names) with the owner's yes | |
+| Locked into | Protection Desk brand key (name), impeccable design notes (yes or no) | |
+
 ## Phone
 
 | Item | State | Date |
@@ -63,7 +71,7 @@ What `connect` offered that the owner did not take, and why, so it is not offere
 |---|---|
 | Sub-account | (name) |
 | Last sweep | YYYY-MM-DD HH:MM |
-| Waiting on the owner | (contact and record, one line each) |
+| Waiting on the owner | (a count only; the list itself lives in a GoHighLevel task named "Assistant: waiting on you") |
 
 ## Built by blueprint
 
@@ -74,4 +82,4 @@ What `connect` offered that the owner did not take, and why, so it is not offere
 
 One line each with the exact next step.
 
-- (example) Connect GoHighLevel: open the sub-account, Settings, Private Integrations.
+- (example) Connect GoHighLevel: claude.ai/customize/connectors, Add custom connector, sign in.

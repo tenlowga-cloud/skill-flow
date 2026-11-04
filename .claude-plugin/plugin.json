@@ -1,7 +1,7 @@
 {
   "name": "skill-flow",
   "version": "0.2.0",
-  "description": "Takes the handcuffs off Claude inside clear hard stops. A first-run wizard learns who you are, audits and connects your tools and CRM (GoHighLevel through a Private Integration Token), installs the design plugin, writes your operating file, schedules your routines (morning brief, pre-meeting notes, inbox triage) and builds the rest from one prompt. Then every prompt runs through a flow: size it, load the right skills, strongest model plans, fastest model writes, prove it. A quote drop prints a client-ready PDF unasked.",
+  "description": "Takes the handcuffs off Claude inside clear hard stops. A first-run wizard learns who you are, audits and connects your tools and CRM (GoHighLevel by signing in through HighLevel's official MCP), installs the design plugin, writes your operating file, schedules your routines (morning brief, pre-meeting notes, inbox triage) and builds the rest from one prompt. Then every prompt runs through a flow: size it, load the right skills, strongest model plans, fastest model writes, prove it. A quote drop prints a client-ready PDF unasked.",
   "author": { "name": "skill-flow contributors" },
   "homepage": "https://github.com/tenlowga-cloud/skill-flow",
   "repository": "https://github.com/tenlowga-cloud/skill-flow",

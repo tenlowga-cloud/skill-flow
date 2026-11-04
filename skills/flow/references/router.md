@@ -14,7 +14,8 @@
 | "Go through my inbox", "who have I not replied to", "draft a reply to", "follow up with" | `inbox` |
 | "Check my GoHighLevel", "what's on my plate", "work my tasks", "any new leads", "did anyone message me", the GHL routine fires | `ghl-assistant` |
 | A quote, illustration, declaration page, rate sheet or pasted premium appears; "protection review", "preview", "what would this cost" | `protection-desk`, unasked, through to the printed PDF |
-| Anything a person will see on a screen: a page, app, document, slide | `impeccable` (where installed) before done, then `pixel-proof` |
+| Anything a person will see on a screen or a page: a site, app, document, quote, post, slide | `BRAND.md` and the design bar (`protection-desk/references/design-bar.md`), `impeccable` (where installed) before done, then `pixel-proof`; 9 of 10 or it does not ship |
+| "They found it cheaper", a second quote beside the owner's, "can you beat this" | `protection-desk`, `references/price-vs-cost.md` |
 | Who owns what, which project, where something lives, what matters this week, what is connected | `profile` |
 | A prompt for another AI, bot, agent, image or video model; "improve this prompt" | `prompt-improver` |
 | Anything said back to the owner, interface text, explaining something technical to a non-expert | `simple-talk` |

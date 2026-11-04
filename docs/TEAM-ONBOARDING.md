@@ -19,7 +19,7 @@ Then send the team this page. If memory is turned off for the organization, turn
 1. Open https://claude.ai/customize/plugins (in the desktop app: Customize, then Plugins).
 2. Click **Add**, then **Add marketplace**. Paste `tenlowga-cloud/skill-flow`. Click through; the plugin appears in the list. Click **Add** on it.
 3. Do the same once more with `pbakaus/impeccable` (the design plugin).
-4. For the website only: open Projects, make a Project called **skill-flow**, and keep it open. The wizard will give you five small files to add to its knowledge; that is where your profile lives on the web. Cowork and the desktop app write them to your computer for you.
+4. For the website only: open Projects, make a Project called **skill-flow**, and keep it open. The wizard will give you a few small files to add to its knowledge, one at a time; that is where your profile lives on the web. Cowork and the desktop app write them to your computer for you.
 5. Start a new chat (or a new Cowork task) and go to Step 2.
 
 What you get here: every skill, the commands, and in Cowork the agents and the first-run hook too. The website has no hooks, so the first message in Step 2 is what starts the wizard. The Protection Desk needs Python on a computer, so it runs in Cowork or Claude Code, not in a web chat.
@@ -55,11 +55,11 @@ Here is what I want at the end:
 
 3. The impeccable plugin installed (pbakaus/impeccable) so anything you build that a person sees passes a design check.
 
-4. My profile written: PROFILE.md, TOOLS.md, VOICE.md, ROUTER.md, STACK.md. On a computer, in ~/.claude/skill-flow/. On the claude.ai website, hand them to me as files and tell me exactly how to add them to my skill-flow Project, one at a time. Capture my voice from 3 to 5 real emails or texts I give you, or pull five from my sent mail once email is connected.
+4. My brand on file: ask me for my logo, brand guidelines or website, read my colors and fonts from them, tell me if my fonts look dated and show me a modern one side by side before you change anything, and lock the brand into every document, quote and post you ever make for me. Anything a client sees has to look like it came from my business and from the year 2090, no AI look, scored 9 of 10 or better before I see it. Then my profile written: PROFILE.md, TOOLS.md, VOICE.md, ROUTER.md, STACK.md, BRAND.md. On a computer, in ~/.claude/skill-flow/. On the claude.ai website, hand them to me as files and tell me exactly how to add them to my skill-flow Project, one at a time. Capture my voice from 3 to 5 real emails or texts I give you, or pull five from my sent mail once email is connected.
 
-5. My routines scheduled on the right scheduler and read back to me: morning brief, pre-meeting notes an hour before every outside meeting, inbox triage with drafts ready in my voice, a follow-up sweep, the GoHighLevel assistant sweep if I use it, and a weekly review. Ask me what time my day starts. Then get the app on my phone: walk me through installing it (App Store or Play Store, maker Anthropic), signing in with the same account, allowing notifications, and test it with a two-minute routine so I feel the buzz. That is how the routines reach me.
+5. My routines scheduled on the right scheduler and read back to me: morning brief, pre-meeting notes an hour before every outside meeting, inbox triage with drafts ready in my voice, a follow-up sweep, the GoHighLevel assistant sweep if I use it, and a weekly review. Ask me what time my day starts. If I am in a web chat, tell me plainly that a chat cannot run a timer and walk me through the desktop app's scheduled tasks or the cloud form at claude.ai/code/routines, one click at a time, with the prompt filled in for me. Then get the app on my phone: walk me through installing it (App Store or Play Store, maker Anthropic), signing in with the same account, allowing notifications, and test it with a short one-off routine. Tell me honestly whether it buzzed or whether I open the app at the routine's time.
 
-6. If I handle insurance quotes, the Protection Desk installed and its doctor passing, so a quote drop prints a client-ready PDF without me asking.
+6. If I handle insurance quotes, the Protection Desk installed and its doctor passing, so a quote drop prints a client-ready PDF in my brand without me asking: problems and solutions first, the value we bring said plainly, the price once at the end. When a client brings a cheaper quote, build the two side by side and walk the price today against the cost later, honestly, and tell me if the cheaper one actually fits.
 
 7. Then run `blueprint` on one sentence from me about what I want off my plate this year, build the skills, templates and routines for it, and write BLUEPRINT.md so I can see everything that now exists and how to trigger it.
 
@@ -74,7 +74,7 @@ Rules: never ask me for a password, token or key. Never send anything to anyone 
 - `~/.claude/CLAUDE.md`: Claude acts, decides, proves and finishes inside your hard stops (money, signatures, deleting live data, messages in your name, going live, private data leaving its room). Take one off and Claude does that too.
 - Your tools connected and tested. Your CRM too.
 - A morning brief, a note before every outside meeting, inbox drafts in your voice, a follow-up sweep, a weekly review, and if you use GoHighLevel an assistant that works your tasks, messages and deals every hour and brings you only the decisions.
-- The app on your phone with notifications on, so every routine lands as a buzz with three lines and the questions ready to tap.
+- The app on your phone with notifications on, tested once, so every routine lands with three lines and the questions ready to tap. Web chat alone cannot run a timer; routines run from the desktop app or the cloud form, and the wizard sets that up with you.
 - The skills and templates for whatever you asked to take off your plate, mapped in `~/.claude/skill-flow/BLUEPRINT.md`.
 - From then on, every prompt runs through the flow. Drop a quote and a PDF comes back. Say "connect my X" and it walks you through it. Say "every Friday..." and it schedules it.
 

@@ -30,11 +30,11 @@ Then inside the app: "Open the app's settings (your profile picture or the menu)
 
 ## 4. Test it
 
-Schedule a one-off routine two minutes out ("in 2 minutes, send me the line: phone test passed") on the surface that runs the owner's routines. Wait. "Did your phone buzz with that line?" Yes: record "phone: notifications on, tested" in `STACK.md`. No: go back to step 3, check the phone's Focus or Do Not Disturb mode, and try once more. Still no: record "phone: app installed, notifications unverified" and the one thing to check, and move on; the routines still land in the app.
+Whether a finished routine sends a phone notification is not confirmed for every app version, so test it instead of promising it. On the surface that runs the owner's routines, schedule a one-off a few minutes out ("in 5 minutes, send me the line: phone test passed"). Claude Code and the cloud form take a one-off; the desktop app's form may offer only recurring presets (verify), in which case make a one-time task for the next quarter hour and delete it after. Wait. "Did your phone buzz with that line?" Yes: record "phone: notifications on, tested" in `STACK.md`. No buzz but the line is in the app: record "phone: app installed, results land in the app, no push on finish" and tell them the honest version of step 5: open the app at the routine's time. No line anywhere: the routine itself failed; go back to `routines` and fix it before touching the phone again.
 
 ## 5. Tell them how it will feel
 
-"Tomorrow at [time] your phone will buzz with the morning brief. Open it, read the three lines, tap the questions. That is the whole routine. Everything else is already done when you see it."
+If the test buzzed: "Tomorrow at [time] your phone will buzz with the morning brief. Open it, read the three lines, tap the questions. That is the whole routine. Everything else is already done when you see it." If it did not: "Tomorrow at [time] the morning brief will be waiting in the app. Open Claude, it is the newest item. Three lines, then the questions."
 
 ## Rules
 
