@@ -10,7 +10,7 @@ It is a set of Markdown skills, two small hooks and three agents. No server, no 
 
 | Piece | What it does |
 |---|---|
-| **setup** | The first-run wizard. Finds what you have, asks five short rounds, connects your tools and CRM, installs `impeccable`, captures your voice, writes your profile and operating file, schedules routines, hands to `blueprint`. About twenty-five minutes, mostly clicking. |
+| **setup** | The first-run wizard. Finds what you have, asks five short rounds, connects your tools and CRM, installs `impeccable`, captures your voice, writes your profile and operating file, schedules routines, hands to `blueprint`. About twenty-five minutes, mostly clicking. Runs in teaching mode: one step per message, every term defined once, "you should see ...", wait for done, numbered steps, no blame. Built for someone who has never opened a terminal. |
 | **operating-rules** | Writes your `CLAUDE.md`: act, decide, prove, finish. Names the only things that still need you (money, signatures, deleting live data, messages in your name, going live, private data leaving its room). |
 | **connect** | Audits skills, plugins, connectors and repos, recommends what is missing, and walks each setup through to a verified live test. Calendar, email, GitHub, notes, Slack, Discord, browser, meeting recorders, and CRMs: GoHighLevel (Private Integration Token), HubSpot, Salesforce, Pipedrive, Zoho, Close, Follow Up Boss. Can run the setup with you in a live browser. |
 | **blueprint** | The master skill. One prompt about what you want off your plate; it builds the skills, templates, routines and connections for it and writes a one-page map. |

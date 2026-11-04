@@ -55,16 +55,16 @@ Open the guide for the tool:
 - Repos and folders: `references/repos.md`
 - Skills (someone else's, or one to build): `references/skills.md`
 
-The walkthrough rules:
+The walkthrough runs in teaching mode (`../setup/references/teaching-mode.md`): assume the owner has never done this, define every term once, say why, show what right looks like, wait, check, praise, next, and say how far along they are. The rules that matter most here:
 
-1. **One step per message.** Say what to click or type, and what they should see. Wait for "done", a screenshot, or a paste of what they see. Then verify it matches before the next step.
+1. **One step per message.** Say what to click or type, and what they should see. Wait for "done", a screenshot, or a paste of what they see. Then verify it matches before the next step. Number the steps ("Step 3 of 7").
 2. **Secrets never come through the chat.** A token, key or password is typed by the owner into their own terminal, password manager or the tool's secret field. If they paste one into the chat anyway, say so once, tell them to rotate it, and carry on with the rotated one. Never echo it back.
 3. **Show, don't tell, when you can.** With a browser tool available, offer the live walkthrough (`references/crm/live-browser-walkthrough.md`): you open the page and point to the exact button, they do the clicks that involve a login or a secret, you verify each screen. Never type a password or token yourself. Never screenshot a page while a token is visible.
 4. **Verify with real data.** Every guide ends with a test prompt. Run it. A pass is real data back (tomorrow's real events, the three newest real contacts). A blank or an error is not done; go to the guide's "If it fails" and keep going.
 5. **Least privilege first.** Read-only scopes before write scopes. Add write later when a job needs it, and say which job.
 6. **Record it.** Update `TOOLS.md` (state, what it is for) and `STACK.md` (connected today, the verify prompt that passed). Say the true state in one line.
 
-Two identical failures on a step: change the approach (a different surface, a different auth path, the live browser) or hand the owner the exact error and the vendor's support page. Never loop.
+Two identical failures on a step: change the approach (a different surface, a different auth path, the live browser) or hand the owner the exact error and the vendor's support page. Never loop. If the owner is lost (a question instead of "done", a screenshot that does not match, "I don't see that"), stop, ask what is on their screen in their own words, and restart from where they actually are. If they say stop, record "paused at step N" in `STACK.md` with the exact next step.
 
 ## 5. Build what does not exist
 
