@@ -1,6 +1,11 @@
 # The account pass: read the account, flip the switches
 
-Claude cannot see the owner's account settings. The owner can. So this pass is a guided walk: you name the page, they open it and read back what they see, you say which switch to flip and why, they flip it, they say "done". Teaching mode throughout (`teaching-mode.md`). One switch per message.
+Claude cannot see the owner's account settings on its own. There are two ways to read and flip them (`teaching-mode.md`, "Who does the clicking"):
+
+- **Talk mode:** you name the page, they open it and read back what they see, you say which switch to flip and why, they flip it, they say "done". One switch per message.
+- **Do mode (the default once the browser is proven):** install Claude in Chrome first (section 3b) and prove it works. Then you open each settings page in their browser, read the switches yourself, flip the ones that should be on, and narrate one line each: "Memory: both switches were off. Turning them on. Done."
+
+Order for an owner on a paid plan with desktop Chrome or Edge: section 1 (the plan), then 3b (the extension), then sections 2, 3, 4 and 5 in Do mode. Everyone else: sections 1 to 5 in Talk mode. In both modes the sign-in, the Owner list (section 6) and any greyed-out switch go to the person; never work around a switch an Owner locked.
 
 Why it matters: a skill that needs memory, web search, a connector or Cowork does nothing if the account has it off. Twenty minutes of setup is wasted if the first routine fails on a switch nobody checked.
 

@@ -6,6 +6,8 @@ Say to the owner first: "GoHighLevel has an official plug for AI assistants. You
 
 Then, before anything: "A sub-account is one business inside your GoHighLevel. You will pick it during sign-in. If you run several, pick the one you work in most; we can add others later."
 
+**Who does what.** With Claude in Chrome proven (`skills/setup/references/teaching-mode.md`, Do mode), Claude does the claude.ai clicks in the owner's browser: opens the connectors page, adds the custom connector with the address below, presses Connect. The owner handles the GoHighLevel sign-in, picks the business, reads the permissions screen and taps Allow. Claude never types the password and never taps Allow. Without the browser, the steps below are a Talk mode walk, one per message.
+
 ## Step 1 of 4. Pick the door for their AI
 
 Each AI has its own address. Use the one that matches where the owner is talking to you right now:

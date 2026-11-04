@@ -48,6 +48,8 @@ A routine that sends to anyone other than the owner stops at a draft unless the 
 
 A web or mobile chat cannot run a prompt on a timer. A chat-only owner has two real roads, both without a terminal. Pick with them, teaching mode, one step per message:
 
+**Who does the clicking.** Road B is a web page. With Claude in Chrome proven (`skills/setup/references/teaching-mode.md`, Do mode), Claude fills the form in the owner's browser: opens claude.ai/code/routines, New task, enters the name and the filled prompt, sets the schedule, unticks the connectors the routine does not need, and saves. The owner reads the prompt block first, handles any sign-in, and says "yes, save it" (the one save this guide names). Road A is a desktop app, not a web page, so it stays a Talk mode walk, one step per message.
+
 **Road A, the desktop app's scheduled tasks. Recommended when they have a Mac or Windows computer.**
 
 1. "Install the Claude desktop app from https://claude.ai/download and sign in with the same account. You should see your chats."
