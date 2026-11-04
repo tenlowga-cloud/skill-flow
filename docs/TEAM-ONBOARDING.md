@@ -1,6 +1,18 @@
 # Team onboarding: install skill-flow and let Claude set itself up
 
-Send this page to anyone on the team. Twenty-five minutes, mostly clicking. Pick the Step 1 that matches how they use Claude; Step 2 is the same for everyone.
+Send this page to anyone on the team. Twenty-five minutes, mostly clicking. On a Team or Enterprise plan, the Owner does Step 0 once for everyone first. Then each person picks the Step 1 that matches how they use Claude; Step 2 is the same for everyone.
+
+## Step 0. Team or Enterprise plan: the Owner does this once
+
+Skip this on a personal Pro or Max account. On a Team or Enterprise account only an Owner can let members add plugins, so the Owner does these three things first, about five minutes:
+
+1. Open https://claude.ai/admin-settings/skills (Organization settings, Plugins & skills). Click the **Policy** tab. Turn on **User-created skills**. This is what lets members add a marketplace from Customize, Plugins. Make sure **Skills** is on too; with it off, no plugin loads for anyone.
+2. Back on the **Inventory** tab, click **Add**, then **Add marketplace**, and enter `tenlowga-cloud/skill-flow`. Do it again with `pbakaus/impeccable`. Each plugin appears in the inventory. Open the row menu on each, click **Default access**, and pick **Installed by default** (everyone gets it, can turn it off) or **Available to install** (members add it themselves).
+3. Open Organization settings, **Connectors**, and add the connectors the team will use: Google Workspace or Microsoft 365 for calendar and email, the CRM, Slack or Discord, Notion or Drive. Members connect each one with their own account afterward; the Owner only makes them available.
+
+Then send the team this page. If memory is turned off for the organization, turn it on in Organization settings as well (the label is Capabilities or Memory depending on your version); the wizard needs it.
+
+**If you are a member and not the Owner:** check https://claude.ai/customize/plugins first. If skill-flow is not in Discover and there is no **Add** button, ask your Owner to do Step 0. The wizard will give you a ready-to-send message for them when it finds anything else it needs.
 
 ## Step 1a. claude.ai or Cowork (the website or the desktop app)
 
@@ -33,6 +45,8 @@ I just installed the skill-flow plugin. Set me up completely, start to finish, a
 
 Run the `setup` skill in teaching mode. Assume I have never opened a terminal and never heard the words connector, plugin, token or CRM. One step per message. Define every term the first time you use it. Tell me why we are doing each step in one line. After every step tell me exactly what I should see, then wait for me to say "done" before the next one. Number the steps so I can see how far along we are. If I get lost, stop and ask what is on my screen.
 
+Before anything else, read my account with me: which plan I am on and whether I am an Owner or a member, then walk me through my Settings one switch at a time and turn on everything the kit needs. Memory must be on (both the switch that generates memory from my chats and the one that searches past chats). Artifacts, analysis, web search, extended thinking, the browser, skills and plugins, scheduled tasks: on. Tell me which connectors already show Connected. If I am on a Team or Enterprise plan and something needs my Owner, write me the exact message to send them and keep going on everything that does not depend on it. Record all of it in STACK.md.
+
 Here is what I want at the end:
 
 1. A clean operating file written by the `operating-rules` skill from my answers, so you act, decide, prove and finish without asking me, inside the hard stops I choose. On a computer that is ~/.claude/CLAUDE.md. On the claude.ai website, give me the text and walk me through pasting it into my skill-flow Project's instructions. Show me the hard stops when it is written. If one already exists, read it, keep what is mine, and merge.
@@ -56,6 +70,7 @@ Rules: never ask me for a password, token or key. Never send anything to anyone 
 
 ## What you will have at the end
 
+- Your account set up: memory on, every capability the kit uses on, connectors connected, and anything that needed your Owner sent to them in one message.
 - `~/.claude/CLAUDE.md`: Claude acts, decides, proves and finishes inside your hard stops (money, signatures, deleting live data, messages in your name, going live, private data leaving its room). Take one off and Claude does that too.
 - Your tools connected and tested. Your CRM too.
 - A morning brief, a note before every outside meeting, inbox drafts in your voice, a follow-up sweep, a weekly review.
@@ -65,6 +80,8 @@ Rules: never ask me for a password, token or key. Never send anything to anyone 
 ## If something goes wrong
 
 - The wizard did not start: type `/skill-flow:setup` (Claude Code, Cowork) or "run the skill-flow setup" (website).
+- A settings switch is greyed out: your Owner controls it. Send them the message the wizard wrote and carry on with the rest.
+- skill-flow is not in Discover and there is no Add button: your Owner has not done Step 0 yet. Send them this page.
 - On the website, Claude says it cannot save a file: that is expected. Ask for the file's text and add it to the skill-flow Project's knowledge yourself. Claude reads it from there next time.
 - A step is confusing: say "I'm lost" and tell Claude what is on your screen. It restarts from there.
 - You have to stop: say "stop". Claude records where you got to and picks up there next session.
