@@ -2,7 +2,7 @@
 
 ## 1. What it unlocks
 
-- A live walkthrough: Claude sees your browser and clicks through a setup page with you, one step at a time.
+- A live walkthrough in Do mode: Claude sees your browser and does the clicking through a setup page while you watch, narrating each move. You handle every sign-in, Allow screen, secret and payment.
 - Fills forms and reads web pages that need your login, such as an admin dashboard.
 - Checks that a finished setup really works, for example that a webhook or website page loads.
 
@@ -76,7 +76,7 @@ Pass: Claude says the heading is "Example Domain". For a real test with you: "Op
 ## How the AI runs a setup with you
 
 1. Claude opens the setup page and says what it sees.
-2. It says "Click Settings, then Integrations" and does it, or you do it.
+2. In Do mode it says "Opening Settings, then Integrations" and does it. In Talk mode it says "Click Settings, then Integrations" and you do it.
 3. At any password, code or payment screen, Claude stops. You type it yourself.
 4. After each step Claude takes a screenshot and confirms it matches what should have happened.
 5. At the end it runs the "Verify it works" test from the tool's guide.
@@ -92,6 +92,6 @@ Pass: Claude says the heading is "Example Domain". For a real test with you: "Op
 ## 8. What the AI may do by default
 
 - Look at pages, take screenshots, read what is on screen: yes.
-- Click through and fill forms for a setup you asked for: yes, one step at a time, telling you first.
+- Click through and fill forms for a setup you asked for: yes, narrating each move (Do mode), or one step at a time with you clicking (Talk mode). Saving a form or flipping a switch needs your yes first.
 - Buy, pay, submit a final form, send a message, or delete anything: only after you say yes to that exact action.
 - Passwords, codes and card numbers: you type them. Claude does not.

@@ -14,7 +14,7 @@ Open https://example.com in a new tab, read the main heading back to the owner, 
 ## The hard rules
 1. The AI never types a password, code, token or card number, and never screenshots or reads a page while a secret is visible.
 2. The owner never pastes a token into the chat. It goes straight into the password manager.
-3. The AI never clicks Allow, Authorize, Accept, Pay, Send, Delete, Publish or Submit for the owner. The one exception is the single save the guide names (save this connector URL, save this scheduled task, flip this account switch), and it is said out loud first.
+3. The AI never clicks Allow, Authorize, Accept, Pay, Send, Delete, Publish or Submit for the owner. The one exception is one save per guide, the one the guide names (save this connector URL, save this scheduled task), said out loud before the click. Account switches are flipped only after the owner's yes for that page.
 4. The AI acts only on sites the guide names. When the extension asks permission for a site, the owner decides.
 5. The owner's gates hold exactly as before.
 

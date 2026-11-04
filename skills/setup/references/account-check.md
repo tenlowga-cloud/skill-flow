@@ -3,7 +3,7 @@
 Claude cannot see the owner's account settings on its own. There are two ways to read and flip them (`teaching-mode.md`, "Who does the clicking"):
 
 - **Talk mode:** you name the page, they open it and read back what they see, you say which switch to flip and why, they flip it, they say "done". One switch per message.
-- **Do mode (the default once the browser is proven):** install Claude in Chrome first (section 3b) and prove it works. Then you open each settings page in their browser, read the switches yourself, flip the ones that should be on, and narrate one line each: "Memory: both switches were off. Turning them on. Done."
+- **Do mode (the default once the browser is proven):** install Claude in Chrome first (section 3b) and prove it works. Then you open each settings page in their browser, read the switches yourself, tell them which are off and which you would turn on and why, flip them after one yes for that page, and narrate: "Memory: both switches were off. You said yes. Turning them on. Done." A switch they turned off on purpose stays off.
 
 Order for an owner on a paid plan with desktop Chrome or Edge: section 1 (the plan), then 3b (the extension), then sections 2, 3, 4 and 5 in Do mode. Everyone else: sections 1 to 5 in Talk mode. In both modes the sign-in, the Owner list (section 6) and any greyed-out switch go to the person; never work around a switch an Owner locked.
 
@@ -63,7 +63,7 @@ Ask first: "Are you on a computer with Chrome or Edge right now?" No: record "br
 2. "Click Add to Chrome, then Add extension in the box that pops up. You should see a small puzzle-piece icon at the top right of Chrome."
 3. "Click the puzzle piece. Find Claude in the list and click the pin so it stays on your toolbar."
 4. "Click the Claude icon. A side panel opens. Sign in with the same Claude account you are using here. If you belong to more than one organization, pick the same one."
-5. Verify: "On any open page, type into the side panel: What is the title of this page? You should see a real answer." Pass is a correct title. On Claude Code, also run `/chrome`; the status should read Enabled and the extension Installed.
+5. Verify the extension: "On any open page, type into the side panel: What is the title of this page? You should see a real answer." Pass is a correct title. This proves the extension, not this session. Whether this session can drive the browser is the separate prove-it test in `teaching-mode.md`; a plain claude.ai web or mobile chat cannot, and stays in Talk mode. On Claude Code, also run `/chrome`; the status should read Enabled and the extension Installed.
 6. Say how it behaves: "When a page asks for a password, a code or a card number, Claude stops and you type it. It asks before it acts on a new site. You can see everything it does in the window."
 
 Record in `STACK.md`: Claude in Chrome installed, signed in, verified, date.

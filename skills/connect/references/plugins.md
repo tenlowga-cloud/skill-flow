@@ -19,7 +19,7 @@ Shell path for a setup script: `claude plugin marketplace add pbakaus/impeccable
 
 If the marketplace name differs from `impeccable` on their version, read it from `claude plugin marketplace list` and use that name after the `@`.
 
-claude.ai and Cowork: open https://claude.ai/customize/plugins, click **Add**, then **Add marketplace**, paste `pbakaus/impeccable`, then **Add** the plugin. Its skills load in chat and in Cowork; its hook does not load in chat. A plugin added there also syncs to Claude Code at the next session start. Cursor has no plugin install for this; say what it does and that `pixel-proof` carries the visual check there. The project's own `npx impeccable install` also works from a project root and offers a design hook.
+claude.ai and Cowork (in Do mode Claude does these clicks and the owner handles any sign-in; in Talk mode the owner clicks): open https://claude.ai/customize/plugins, click **Add**, then **Add marketplace**, paste `pbakaus/impeccable`, then **Add** the plugin. Its skills load in chat and in Cowork; its hook does not load in chat. A plugin added there also syncs to Claude Code at the next session start. Cursor has no plugin install for this; say what it does and that `pixel-proof` carries the visual check there. The project's own `npx impeccable install` also works from a project root and offers a design hook.
 
 ## Any plugin from Anthropic's official marketplace
 

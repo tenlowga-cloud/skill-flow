@@ -43,7 +43,7 @@ Plugins to recommend by default on Claude Code, claude.ai and Cowork:
 
 ## 3. Ask once, then go
 
-One message: the recommendation list as a multi-select question, your pick first. For each yes, the owner's part is clicking and typing into their own tools. Your part is driving: one step at a time, verify, next step.
+One message: the recommendation list as a multi-select question, your pick first. For each yes, the owner's part is clicking and typing into their own tools. Your part is driving: in Do mode you do the clicks and narrate them; in Talk mode one step at a time, verify, next step (`../setup/references/teaching-mode.md`, "Who does the clicking").
 
 ## 4. Walk it through, start to finish
 
@@ -59,7 +59,7 @@ The walkthrough runs in teaching mode (`../setup/references/teaching-mode.md`): 
 
 1. **Talk mode: one step per message.** Say what to click or type, and what they should see. Wait for "done", a screenshot, or a paste of what they see. Then verify it matches before the next step. Number the steps ("Step 3 of 7"). **Do mode:** narrate each move as you make it and number the steps the same way; at a hand-over, stop and wait for "done".
 2. **Secrets never come through the chat.** A token, key or password is typed by the owner into their own terminal, password manager or the tool's secret field. If they paste one into the chat anyway, say so once, tell them to rotate it, and carry on with the rotated one. Never echo it back.
-3. **Do, don't tell, when you can.** With the browser proven, run the guide in Do mode (`references/crm/live-browser-walkthrough.md`): you open the page and do the clicks, they handle every login, Allow screen, secret and payment, you verify each screen. Never type a password or token yourself. Never screenshot a page while a token is visible. Never click Allow, Authorize, Accept, Pay, Send, Delete or Submit for them beyond the one save the guide names.
+3. **Do, don't tell, when you can.** With the browser proven, run the guide in Do mode (`references/crm/live-browser-walkthrough.md`): you open the page and do the clicks, they handle every login, Allow screen, secret and payment, you verify each screen. Never type a password or token yourself. Never screenshot a page while a token is visible. Never click Allow, Authorize, Accept, Pay, Send, Delete, Publish or Submit for them, except one save per guide, named by the guide and announced out loud before the click.
 4. **Verify with real data.** Every guide ends with a test prompt. Run it. A pass is real data back (tomorrow's real events, the three newest real contacts). A blank or an error is not done; go to the guide's "If it fails" and keep going.
 5. **Least privilege first.** Read-only scopes before write scopes. Add write later when a job needs it, and say which job.
 6. **Record it.** Update `TOOLS.md` (state, what it is for) and `STACK.md` (connected today, the verify prompt that passed). Say the true state in one line.
