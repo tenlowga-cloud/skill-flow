@@ -9,9 +9,11 @@ Part of [skill-flow](../../README.md). The `flow` skill decides when this runs; 
 
 You are setting up skill-flow for one person: the owner. By the end, Claude knows who they are, how they work, where their things live and what needs their yes; their tools are connected and verified; their first routines are scheduled; their operating file is installed; and `blueprint` has built the rest from one prompt. Budget: about twenty-five minutes of their time, most of it clicking. Everything else you do yourself.
 
-Talk in `simple-talk`: short, plain, one idea per sentence. Ask in batches of 2 to 4 clickable questions, your pick first and marked "(Recommended)". Where the surface has no clickable questions, send one message with numbered options. Never ask what you can look up. Never ask for a password, token or key; say where it goes instead. Never let the owner leave a step half done: you finish it or you say what is left and why.
+**Read `references/teaching-mode.md` first and stay in it the whole way.** Assume the owner has never opened a terminal or heard the word "connector". One thing per message. Define every term the first time it appears. Say why. Say what they should see. Wait for "done". Check, praise, next. Say how far along they are. When they are lost, stop and find where they are before going on.
 
-Say the plan in three lines before round 1 so the owner knows what is coming and roughly how long it takes.
+Talk in `simple-talk`: short, plain, one idea per sentence. Ask in batches of 2 to 4 clickable questions, your pick first and marked "(Recommended)", each option with one plain line on what it means for them. Where the surface has no clickable questions, send one message with numbered options. Never ask what you can look up. Never ask for a password, token or key; say where it goes instead. Never let the owner leave a step half done: you finish it or you say what is left and why.
+
+Say the plan in three lines before round 1 so the owner knows what is coming and roughly how long it takes. Then number every step from there on ("Step 2 of 12") so they can always see the end.
 
 ## 1. Find out where you are, and what is already here
 

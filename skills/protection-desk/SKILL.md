@@ -50,7 +50,7 @@ Then say it back in three lines: the document, the catch (an audit item, a reade
 
 ## Install
 
-The Protection Desk is licensed separately. The owner gets it from its maker as a folder or a repository. Then:
+The Protection Desk is licensed separately. The owner gets it from its maker as a folder or a repository. Walk the install in teaching mode (`../setup/references/teaching-mode.md`): one step per message, define "terminal" and "Python" the first time, say what they should see after each command, wait for "done". Then:
 
 1. Put the folder at `~/.claude/skills/protection-desk/` and keep that folder name. If it came as a repository, clone it there (`connect/references/repos.md`).
 2. Open a terminal in that folder and run `python desk.py doctor`. Walk each FAIL with its printed fix: Python 3.10 or newer, Poppler (`pdftotext`), a PDF renderer (Chrome or Edge), the `claude` command for the reader, `pypdf` for the clean-room test.
