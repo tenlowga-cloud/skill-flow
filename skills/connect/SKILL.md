@@ -1,6 +1,6 @@
 ---
 name: connect
-description: Audits every skill, plugin, connector, MCP server, repo and tool the owner has, matches them against what the owner runs and what the flow needs, recommends what is missing (a connector, a plugin, a skill, a repo), and walks the owner through the setup one step at a time from start to finish until a live test proves it works. Covers calendar, email, code hosts, notes and vaults, CRMs (GoHighLevel by signing in through HighLevel's official MCP, HubSpot, Salesforce and others), team chat, browsers, meeting recorders and the impeccable plugin. Can run the setup with the owner in a live browser. Use on "connect my tools", "connect my CRM", "what am I missing", "install this plugin", "add this repo", "set up GoHighLevel", "/connect", when a skill reports a tool is not connected, or when setup reaches its connect step.
+description: Audits every skill, plugin, connector, MCP server, repo and tool the owner has, matches them against what the owner runs and what the flow needs, recommends what is missing (a connector, a plugin, a skill, a repo), and runs the setup with the owner from start to finish until a live test proves it works, doing the clicking in their browser once it is proven or walking them through one step at a time. Covers calendar, email, code hosts, notes and vaults, CRMs (GoHighLevel by signing in through HighLevel's official MCP, HubSpot, Salesforce and others), team chat, browsers, meeting recorders and the impeccable plugin. Can run the setup with the owner in a live browser. Use on "connect my tools", "connect my CRM", "what am I missing", "install this plugin", "add this repo", "set up GoHighLevel", "/connect", when a skill reports a tool is not connected, or when setup reaches its connect step.
 ---
 
 # connect
@@ -43,7 +43,7 @@ Plugins to recommend by default on Claude Code, claude.ai and Cowork:
 
 ## 3. Ask once, then go
 
-One message: the recommendation list as a multi-select question, your pick first. For each yes, the owner's part is clicking and typing into their own tools. Your part is driving: one step at a time, verify, next step.
+One message: the recommendation list as a multi-select question, your pick first. For each yes, the owner's part is clicking and typing into their own tools. Your part is driving: in Do mode you do the clicks and narrate them; in Talk mode one step at a time, verify, next step (`../setup/references/teaching-mode.md`, "Who does the clicking").
 
 ## 4. Walk it through, start to finish
 
@@ -55,11 +55,11 @@ Open the guide for the tool:
 - Repos and folders: `references/repos.md`
 - Skills (someone else's, or one to build): `references/skills.md`
 
-The walkthrough runs in teaching mode (`../setup/references/teaching-mode.md`): assume the owner has never done this, define every term once, say why, show what right looks like, wait, check, praise, next, and say how far along they are. The rules that matter most here:
+The walkthrough runs in teaching mode (`../setup/references/teaching-mode.md`): assume the owner has never done this, define every term once, say why, show what right looks like, and say how far along they are. Who does the clicking depends on whether the browser is proven. If Claude in Chrome is installed, signed in and proven, work in Do mode: you do the clicks in their browser and narrate one line each, and hand over at every sign-in, Allow screen, secret, payment and gate. If not, work in Talk mode: they click, one step per message. The rules that matter most here:
 
-1. **One step per message.** Say what to click or type, and what they should see. Wait for "done", a screenshot, or a paste of what they see. Then verify it matches before the next step. Number the steps ("Step 3 of 7").
+1. **Talk mode: one step per message.** Say what to click or type, and what they should see. Wait for "done", a screenshot, or a paste of what they see. Then verify it matches before the next step. Number the steps ("Step 3 of 7"). **Do mode:** narrate each move as you make it and number the steps the same way; at a hand-over, stop and wait for "done".
 2. **Secrets never come through the chat.** A token, key or password is typed by the owner into their own terminal, password manager or the tool's secret field. If they paste one into the chat anyway, say so once, tell them to rotate it, and carry on with the rotated one. Never echo it back.
-3. **Show, don't tell, when you can.** With a browser tool available, offer the live walkthrough (`references/crm/live-browser-walkthrough.md`): you open the page and point to the exact button, they do the clicks that involve a login or a secret, you verify each screen. Never type a password or token yourself. Never screenshot a page while a token is visible.
+3. **Do, don't tell, when you can.** With the browser proven, run the guide in Do mode (`references/crm/live-browser-walkthrough.md`): you open the page and do the clicks, they handle every login, Allow screen, secret and payment, you verify each screen. Never type a password or token yourself. Never screenshot a page while a token is visible. Never click Allow, Authorize, Accept, Pay, Send, Delete, Publish or Submit for them, except one save per guide, named by the guide and announced out loud before the click.
 4. **Verify with real data.** Every guide ends with a test prompt. Run it. A pass is real data back (tomorrow's real events, the three newest real contacts). A blank or an error is not done; go to the guide's "If it fails" and keep going.
 5. **Least privilege first.** Read-only scopes before write scopes. Add write later when a job needs it, and say which job.
 6. **Record it.** Update `TOOLS.md` (state, what it is for) and `STACK.md` (connected today, the verify prompt that passed). Say the true state in one line.

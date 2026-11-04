@@ -1,6 +1,11 @@
 # The account pass: read the account, flip the switches
 
-Claude cannot see the owner's account settings. The owner can. So this pass is a guided walk: you name the page, they open it and read back what they see, you say which switch to flip and why, they flip it, they say "done". Teaching mode throughout (`teaching-mode.md`). One switch per message.
+Claude cannot see the owner's account settings on its own. There are two ways to read and flip them (`teaching-mode.md`, "Who does the clicking"):
+
+- **Talk mode:** you name the page, they open it and read back what they see, you say which switch to flip and why, they flip it, they say "done". One switch per message.
+- **Do mode (the default once the browser is proven):** install Claude in Chrome first (section 3b) and prove it works. Then you open each settings page in their browser, read the switches yourself, tell them which are off and which you would turn on and why, flip them after one yes for that page, and narrate: "Memory: both switches were off. You said yes. Turning them on. Done." A switch they turned off on purpose stays off.
+
+Order for an owner on a paid plan with desktop Chrome or Edge: section 1 (the plan), then 3b (the extension), then sections 2, 3, 4 and 5 in Do mode. Everyone else: sections 1 to 5 in Talk mode. If the extension will not connect in 3b, the Claude in Chrome switch in Settings may be off: do section 3 in Talk mode and turn that switch on, then retry 3b. In both modes the sign-in, the Owner list (section 6) and any greyed-out switch go to the person; never work around a switch an Owner locked.
 
 Why it matters: a skill that needs memory, web search, a connector or Cowork does nothing if the account has it off. Twenty minutes of setup is wasted if the first routine fails on a switch nobody checked.
 
@@ -58,12 +63,12 @@ Ask first: "Are you on a computer with Chrome or Edge right now?" No: record "br
 2. "Click Add to Chrome, then Add extension in the box that pops up. You should see a small puzzle-piece icon at the top right of Chrome."
 3. "Click the puzzle piece. Find Claude in the list and click the pin so it stays on your toolbar."
 4. "Click the Claude icon. A side panel opens. Sign in with the same Claude account you are using here. If you belong to more than one organization, pick the same one."
-5. Verify: "On any open page, type into the side panel: What is the title of this page? You should see a real answer." Pass is a correct title. On Claude Code, also run `/chrome`; the status should read Enabled and the extension Installed.
+5. Verify the extension: "On any open page, type into the side panel: What is the title of this page? You should see a real answer." Pass is a correct title. This proves the extension, not this session. Whether this session can drive the browser is the separate prove-it test in `teaching-mode.md`; a plain claude.ai web or mobile chat cannot, and stays in Talk mode. On Claude Code, also run `/chrome`; the status should read Enabled and the extension Installed.
 6. Say how it behaves: "When a page asks for a password, a code or a card number, Claude stops and you type it. It asks before it acts on a new site. You can see everything it does in the window."
 
 Record in `STACK.md`: Claude in Chrome installed, signed in, verified, date.
 
-If it fails: Add to Chrome is greyed out or blocked means a company policy, ask the IT person or the Owner. "Browser extension is not connected" almost always means the extension and Claude are signed in to different accounts or organizations; sign out of the extension and back in with the same one, then restart Chrome. The first time it connects, Chrome sometimes has to restart before it sees the connection.
+If it fails: Add to Chrome is greyed out or blocked means a company policy, ask the IT person or the Owner. If it installs but will not sign in or connect, open Settings, Capabilities in Talk mode and make sure the Claude in Chrome switch is on (section 3), then retry. "Browser extension is not connected" almost always means the extension and Claude are signed in to different accounts or organizations; sign out of the extension and back in with the same one, then restart Chrome. The first time it connects, Chrome sometimes has to restart before it sees the connection.
 
 ## 4. Connectors (the account's, not the plugin's)
 

@@ -1,10 +1,10 @@
 # Connector walkthroughs
 
-One guide per tool. Each takes a business owner from zero to a working, tested connection. Claude reads the guide and walks the owner through it one step at a time.
+One guide per tool. Each takes a business owner from zero to a working, tested connection. Claude reads the guide and runs it with the owner.
 
 ## How Claude should use these files
 
-- Give the owner one step at a time. Wait for them to say it worked before the next step.
+- Who clicks depends on the mode (`skills/setup/references/teaching-mode.md`, "Who does the clicking"). In Do mode, with the browser proven, Claude does the clicks in the owner's browser, narrates each move, and hands over at every sign-in, Allow screen, secret and payment. In Talk mode, give the owner one step at a time and wait for them to say it worked before the next step. The steps below read as Talk mode; in Do mode, Claude is the one doing "click" and "type".
 - Each step is something they click or type, then what they should see.
 - Never ask the owner to paste a token, password or secret into chat. Tell them which window or field it goes in.
 - Finish with the "Verify it works" test. A connection is not done until the test passes.

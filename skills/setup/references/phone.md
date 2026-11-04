@@ -2,6 +2,8 @@
 
 A routine that runs at 7:30 is useless if the owner sees it at noon. The phone is how the morning brief, the meeting note and the GoHighLevel sweep reach them where they are. Do this step after the first routine is scheduled, in teaching mode, one step per message.
 
+This whole step is a hand-over. The app and its notification prompt live on the phone, outside the browser, so it stays in Talk mode: one step per message, wait for "done".
+
 ## 1. Install the app
 
 Ask which phone. Then:

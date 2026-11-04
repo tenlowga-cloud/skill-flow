@@ -1,6 +1,6 @@
 # CRM connection walkthroughs
 
-The AI reads one guide aloud, one step at a time, until the connection is verified. Each step is something the owner clicks or types, then what they should see.
+The AI runs one guide until the connection is verified. In Do mode (the browser proven, `skills/setup/references/teaching-mode.md`) the AI does the clicks and narrates them, and the owner handles every sign-in, Allow screen and secret. In Talk mode the AI reads the guide aloud one step at a time. Each step is something to click or type, then what should be on screen.
 
 ## Index
 
@@ -34,7 +34,7 @@ If the owner is not sure, ask them to read the web address in the browser bar wh
 
 ## Standing rules (every guide)
 
-1. Go one step at a time. Wait for the owner to say it is done and what they see before the next step.
+1. Talk mode: go one step at a time, and wait for the owner to say it is done and what they see before the next step. Do mode: narrate each move, and wait for "done" at every hand-over.
 2. Never ask the owner to paste a token, key, or password into the chat. Tell them where it goes: a terminal command they type themselves, their password manager, an environment variable, or the tool's own secret field.
 3. If a token is shown only once, the owner saves it in their password manager before closing the page. Wait for a "saved" from them.
 4. Start with read-only access. Add write access later, when the owner asks for it.

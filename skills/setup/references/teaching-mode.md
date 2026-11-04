@@ -4,7 +4,36 @@ The owner may have never opened a terminal, never heard the word "connector", an
 
 `setup` and `connect` run in this mode from the first message. Any skill that walks the owner through clicks does too.
 
+## Who does the clicking: three lanes
+
+Teaching does not mean the owner does all the clicking. Once Claude can drive their browser, Claude does the work and the owner learns by watching it done, with a one-line narration of each move. The owner keeps the keyboard only where only a person should.
+
+**Do mode (the default once the browser is proven).** Claude opens the page in the owner's own browser and does the clicks: reads the screen, flips the switch, fills the field, saves the form. One line of narration per move, in plain words, so they learn the path: "Opening Settings, Capabilities. Reading the switches." Then the next move. No waiting for "done" between moves that carry no secret.
+
+**Account switches get one yes per page.** Read the page, then tell the owner which switches are off and which should be on for this kit: "On this page, web search and extended thinking are off. I would turn both on so the research and planning skills work. Okay?" Flip them after one yes for that page, and narrate: "Turning them on. Done." A switch the owner turned off on purpose stays off, and is recorded in `STACK.md` as "off by choice". A switch that is greyed out belongs to an Owner; never work around it.
+
+**Hand-over (always the owner).** Claude stops, says plainly what is on screen and why it is handing over, and waits for "done":
+- a sign-in, password, 2-step code or CAPTCHA
+- an Allow, Authorize or consent screen: the owner reads the permissions and taps Allow
+- a token, key or secret shown on screen (rule 9; never read it, never screenshot it)
+- a payment, a plan change, accepting terms, anything that spends money
+- the phone: installing the app and its notification prompt happen on the phone, not in the browser
+- a yes to anything in the owner's gates: send, delete, sign, go live, private data leaving its room
+
+**Talk mode (the fallback).** When Claude cannot drive a browser: a Free plan, a phone, Safari or Firefox, a company computer that blocks extensions, or the extension is not signed in. Then the whole walk is one step per message with the ten rules below.
+
+**Prove it before switching.** After Claude in Chrome is installed and signed in (`account-check.md`, section 3b), prove the browser works before leaving Talk mode. Open a harmless page (https://example.com) in a new tab and read its heading back to the owner. On Claude Code, `/chrome` must also show Enabled. Pass: switch, and say so in one line: "I can drive your browser now, so I will do the clicking and tell you what I am doing. Say 'slow down' any time and I go back to one step at a time." Fail, or the session itself cannot call a browser tool: stay in Talk mode and say why in one line. Record the mode in `STACK.md`. Two different things get called "working": the extension passing its own test in its side panel (`account-check.md`, section 3b, step 5) proves the extension, not this session. A plain claude.ai web or mobile chat has no browser tool, so this prove-it test fails there and Talk mode is correct, even though the extension is installed and signed in. Only a session that actually opens the page and reads the heading back has proved it.
+
+**Limits in Do mode that never move.**
+- Never type a password, code, token or card number. Never read or screenshot a page while a secret is visible.
+- Never click Allow, Authorize, Accept, Pay, Send, Delete, Publish or Submit for the owner, except one save per guide: the save the guide itself names (save this connector URL, save this scheduled task), announced out loud before the click. Flipping an account switch is allowed only after the owner's yes for that page (see above).
+- Never act on a site the guide did not name. The extension asks the owner's permission per site; when it asks, tell the owner what and why, and let them allow it.
+- The owner's gates (`PROFILE.md`) hold exactly as before.
+- If the page does not look like the guide, stop clicking, say what you see, and drop to Talk mode for that step.
+
 ## The ten rules
+
+Full force in Talk mode and at every hand-over. In Do mode keep rules 2, 3, 4, 6, 8 and 10 as narration: define the word, say why, say what the screen shows, say what happened, use their words, say how far along.
 
 1. **One thing per message.** One click, one thing to type, or one question. Never "do A, then B, then C". If the step has three parts, it is three messages.
 2. **Say what it is before you say what to do.** The first time a word appears (connector, plugin, token, scope, terminal, repo, CRM, sub-account, MCP), define it in one plain sentence, then move on. "A token is a long password that lets one app talk to another. We will keep it in your password manager." Never define it twice; never skip it once.

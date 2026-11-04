@@ -14,6 +14,7 @@ verified: YYYY-MM-DD
 | Memory: search past chats | on | |
 | Artifacts, analysis, web search, extended thinking, browser, skills, scheduled tasks | on, or "off by choice: <which>" | |
 | Claude in Chrome extension | installed, signed in, tested; or the reason not | |
+| Working mode | Do (browser proven) or Talk (and why) | |
 | Waiting on Owner | (none, or the items sent) | |
 
 ## Surface
