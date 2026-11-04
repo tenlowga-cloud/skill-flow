@@ -1,6 +1,6 @@
 ---
 name: setup
-description: First-run wizard for skill-flow. Runs on the first prompt after install and whenever a profile file is missing. Finds out which surface and model it is on, walks the owner through their account settings (plan, memory on, capabilities on, connectors, Owner items on a Team plan), audits every skill, plugin, connector and tool the owner already has, asks short clickable questions in five rounds (who they are and what they run, team and where things live, how they like to work and what needs their yes, their AIs and models, the routines they want), offers the CRM connection and walks it through start to finish (GoHighLevel uses a Private Integration Token), installs the impeccable plugin, captures their writing voice, writes the five profile files and the operating file, schedules the routines they picked, then hands off to blueprint to build the rest from one prompt. Use on "set up", "setup", "tailor this to me", "connect my tools", "/setup", or the first prompt after install.
+description: First-run wizard for skill-flow. Runs on the first prompt after install and whenever a profile file is missing. Reads the surface and model, walks the owner through their account (plan, memory on, every switch, connectors, Owner items on a Team plan), audits the skills, plugins and tools they have, asks five short rounds of clickable questions (who they are, team and where things live, how they work and what needs their yes, their AIs and models, the routines they want), asks whether they use GoHighLevel and signs them in if so, connects every other tool start to finish, installs impeccable, captures their voice, writes the profile files and the operating file, schedules routines, puts the app on their phone with notifications on, then hands to blueprint. Use on "set up", "setup", "tailor this to me", "connect my tools", "/setup", or the first prompt after install.
 ---
 
 # setup
@@ -50,7 +50,7 @@ The answer to question 3 decides which skills `blueprint` builds and which routi
 1. Who else works with you, people and AIs? Name, what they own, how to reach them. "Just me" is fine. (free text)
 2. Where do things live? Code, notes, CRM, docs, chat, files. Name the tool or folder for each. (free text)
 3. If you keep notes or a vault, which page should an AI read first? (free text or "none")
-4. Which CRM do you use, if any? Options: GoHighLevel; HubSpot; Salesforce; another CRM or none (say which).
+4. Do you use GoHighLevel? Options: yes, GoHighLevel (Recommended if they do: the AI gets a full assistant for it); another CRM (say which: HubSpot, Salesforce, Pipedrive, Zoho, Close, Follow Up Boss, other); no CRM.
 
 Skip anything you already found in step 1.
 
@@ -70,7 +70,7 @@ Skip anything you already found in step 1.
 
 ## 6. Round 5: the routines you want
 
-Show the short list from `routines/references/routine-library.md` that fits their business type, with the default time for each. Ask one multi-select question: which do you want running? Recommended set for a client business: morning brief, pre-meeting notes, inbox triage, follow-up sweep, weekly review. For a builder: morning brief, pull request watch, weekly review. Then one free-text question: what time does your day start, and when do you want the morning brief?
+Show the short list from `routines/references/routine-library.md` that fits their business type, with the default time for each. Ask one multi-select question: which do you want running? Recommended set for a client business: morning brief, pre-meeting notes, inbox triage, follow-up sweep, weekly review, and the GoHighLevel assistant sweep if they use GoHighLevel. For a builder: morning brief, pull request watch, weekly review. Then one free-text question: what time does your day start, and when do you want the morning brief?
 
 Record the picks. You schedule them in step 10, after the tools they need are connected.
 
@@ -81,7 +81,7 @@ Now the clicking part. Run the `connect` skill in setup mode:
 1. Show the audit table from step 1: tool kind, what the flow uses it for, connected or missing, and which of the routines they picked needs it.
 2. Ask one multi-select question: which missing ones do you want now? Your pick first: the ones the chosen routines need.
 3. For each yes, open the matching guide in `connect/references/connectors/` or `connect/references/crm/` and walk it one step at a time: say the step, wait for "done" or the screenshot, verify what they see, then the next step. Finish with the guide's verify prompt and show the real result. A connection is not done until the test prompt returns real data.
-4. **CRM.** If round 2 named a CRM, ask: connect it now? (Recommended: yes.) GoHighLevel goes through `connect/references/crm/gohighlevel.md`: open the sub-account, Settings, Private Integrations, create the integration, pick read-only scopes first, copy the token into their password manager, find the Location ID, add the server from their own terminal, verify with a contacts read. Offer the live-browser walkthrough (`connect/references/crm/live-browser-walkthrough.md`) when a browser tool is available: you open the page and point, they click the parts that involve a login or a secret.
+4. **CRM.** If round 2 said GoHighLevel: connect it now, no question. Walk `connect/references/crm/gohighlevel.md`: add HighLevel's official MCP for their AI (Claude: `https://services.leadconnectorhq.com/mcp/anthropic/v2`; ChatGPT and Codex: `.../mcp/openai/v2/`; Cursor: `.../mcp/cursor/v2`), they sign in with their GoHighLevel login, pick the business, approve the permissions, then verify with a contacts read and a tasks read. Then ask one question: "Want me to be your assistant inside GoHighLevel, checking your tasks, messages and deals every hour and bringing you only the decisions?" (Recommended: yes.) On yes, add the GHL assistant routine to the round 5 picks; `ghl-assistant` is the skill. Any other CRM goes through its guide in `connect/references/crm/`. Offer the live-browser walkthrough (`connect/references/crm/live-browser-walkthrough.md`) when a browser tool is available: you open the page and point, they click the parts that involve a login.
 5. **Plugins.** Install `impeccable` (it makes anything a person sees pass the design bar). Tell them to run these two lines in Claude Code and wait for each to finish:
 
    ```
@@ -118,6 +118,10 @@ Save nothing private that a profile file does not need: no contact details, no c
 ## 10. Schedule the routines
 
 For each routine picked in round 6 whose tools are now connected, run `routines`: it picks the right scheduler for the surface (`routines/references/scheduling-by-surface.md`), fills the prompt from the library, sets the time the owner gave, and schedules it. Read back the schedule list and show it. A routine whose tool is missing goes in `STACK.md` as "waiting on <tool>" with the one step that unblocks it.
+
+### The phone
+
+Then run `references/phone.md`: install the Claude app (or their AI's app) on their phone, sign in with the same account, allow notifications, test with a two-minute one-off routine, and tell them how tomorrow morning will feel. This is what turns a routine into a buzz in their pocket with the three lines and the questions ready to tap.
 
 ## 11. Hand off to blueprint
 

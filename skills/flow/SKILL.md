@@ -34,6 +34,7 @@ If you can't tell, treat it as standard and upgrade the moment a second independ
 | A tool, connector, plugin or skill the job needs and the owner does not have | `connect`: recommend it and walk the setup through to a verified connection |
 | An outside meeting coming up, or "prep me for" | `meeting-prep` |
 | Email work: triage, follow-ups, a reply | `inbox` |
+| GoHighLevel tasks, messages, deals, leads; "what's on my plate" | `ghl-assistant` |
 | "Every morning", "schedule", "remind me every" | `routines` |
 | "Build me what I need for", "set me up for", "take X off my plate" | `blueprint` |
 | "Stop asking me", "take the handcuffs off", "update my rules" | `operating-rules` |

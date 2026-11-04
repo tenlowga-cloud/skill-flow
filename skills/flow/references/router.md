@@ -12,6 +12,7 @@
 | "Every morning", "schedule", "remind me every", "what routines do I have", "stop the brief" | `routines` |
 | "Prep me for", "who am I meeting", "brief me on", an outside meeting coming up | `meeting-prep` |
 | "Go through my inbox", "who have I not replied to", "draft a reply to", "follow up with" | `inbox` |
+| "Check my GoHighLevel", "what's on my plate", "work my tasks", "any new leads", "did anyone message me", the GHL routine fires | `ghl-assistant` |
 | A quote, illustration, declaration page, rate sheet or pasted premium appears; "protection review", "preview", "what would this cost" | `protection-desk`, unasked, through to the printed PDF |
 | Anything a person will see on a screen: a page, app, document, slide | `impeccable` (where installed) before done, then `pixel-proof` |
 | Who owns what, which project, where something lives, what matters this week, what is connected | `profile` |

@@ -50,6 +50,21 @@ What `connect` offered that the owner did not take, and why, so it is not offere
 | Morning brief | cloud scheduled task | weekdays 7:35 | | | scheduled |
 | Pre-meeting notes | | | | | waiting on CRM |
 
+## Phone
+
+| Item | State | Date |
+|---|---|---|
+| App installed, same account | yes or no | |
+| Notifications | on and tested, or the one thing to check | |
+
+## GHL assistant
+
+| Item | Value |
+|---|---|
+| Sub-account | (name) |
+| Last sweep | YYYY-MM-DD HH:MM |
+| Waiting on the owner | (contact and record, one line each) |
+
 ## Built by blueprint
 
 | Thing | Kind | Where | Triggered by | Date |
