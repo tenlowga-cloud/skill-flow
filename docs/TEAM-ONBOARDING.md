@@ -2,6 +2,31 @@
 
 Send this page to anyone on the team. Twenty-five minutes, mostly clicking. On a Team or Enterprise plan, the Owner does Step 0 once for everyone first. Then each person picks the Step 1 that matches how they use Claude; Step 2 is the same for everyone.
 
+## The fastest way: one paste
+
+Open Claude (Claude Code, Cowork, the desktop app, or claude.ai) and paste this. It reads this repo, works out which Claude you are on, installs the plugin, and runs the setup. The steps further down are the same thing written out, for anyone who wants to see them or whose Claude stalls.
+
+```text
+Read the skill-flow repo, install it for me, and set me up. Do not stop until it is done.
+
+1. Read https://github.com/tenlowga-cloud/skill-flow: the README.md and docs/TEAM-ONBOARDING.md. Tell me in three lines what it is and what it will do for me.
+
+2. Work out which Claude I am using right now: Claude Code in a terminal or editor, Cowork or the Claude desktop app, or claude.ai in a browser or on a phone. Say which, in one line.
+
+3. Install the plugin the way docs/TEAM-ONBOARDING.md says for this surface:
+   - Claude Code: run `claude plugin marketplace add tenlowga-cloud/skill-flow`, then `claude plugin install skill-flow@skill-flow`, then reload plugins, or tell me to open a fresh session and paste this again.
+   - Cowork, the desktop app, or claude.ai: go to https://claude.ai/customize/plugins, Add, Add marketplace, enter tenlowga-cloud/skill-flow, then Add the plugin. If I am on a Team or Enterprise plan and there is no Add button, my Owner has to do Step 0 on that page first: write me the message to send them, and keep going on everything that does not depend on it.
+   - Add pbakaus/impeccable the same way.
+
+4. Then do everything the Step 2 prompt on docs/TEAM-ONBOARDING.md says, exactly as if I had pasted it: my account, memory and settings, the Claude in Chrome extension, my tools and CRM (GoHighLevel by signing in), my brand, my voice, my operating file, my routines, the app on my phone, and the blueprint.
+
+5. If the plugin's skills are not available in this session after the install (some surfaces load them only in a new chat), read skills/setup/SKILL.md and the files it points to in the repo and follow them directly, and tell me if I should open a fresh chat instead.
+
+How to work with me: plain words, define every term once, say why. Once Claude in Chrome is installed and you have proved you can drive my browser, do the clicking yourself and tell me what you are doing in one line per move, and hand me the keyboard for sign-ins, Allow screens, passwords, codes, payments and the phone. Until then, or on a phone or web chat, walk me through one step at a time and wait for me to say "done". Number the steps. If I say "slow down", go back to one step at a time.
+
+Rules: never ask me to paste a password, token or key into this chat. Never send, delete, spend, sign or go live without my yes. Record what we finish, and what we skip and why, in STACK.md. Start now with the three-line summary.
+```
+
 ## Step 0. Team or Enterprise plan: the Owner does this once
 
 Skip this on a personal Pro or Max account. On a Team or Enterprise account only an Owner can let members add plugins, so the Owner does these three things first, about five minutes:
