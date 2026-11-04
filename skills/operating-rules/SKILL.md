@@ -18,7 +18,8 @@ Then look for an existing operating file:
 | Surface | Where it lives |
 |---|---|
 | Claude Code | `~/.claude/CLAUDE.md` (global) and `CLAUDE.md` in the project root |
-| claude.ai | A Project's instructions, or Settings, Profile, "What personal preferences should Claude consider" |
+| claude.ai chat | The skill-flow Project's instructions (preferred), or Settings, Profile, "What personal preferences should Claude consider" |
+| Cowork | `~/.claude/CLAUDE.md` on the owner's computer, same as Claude Code |
 | Cursor | `.cursor/rules/*.mdc` with `alwaysApply: true`, or `AGENTS.md` |
 | Codex, Grok CLI | `AGENTS.md` in the project root |
 | ChatGPT | Custom Instructions, or a Project's instructions |
