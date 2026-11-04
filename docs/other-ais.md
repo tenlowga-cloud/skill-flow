@@ -34,11 +34,13 @@ The gate is one line. Paste it wherever the surface keeps standing instructions:
 - **Roles:** sequential.
 - **Profile:** attached to the Gem.
 
-## Grok
+## Grok (Grok Bot, Grok CLI, grok.com)
 
-- **Files:** a Grok Bot's description and skills, or files attached to a chat.
-- **Gate:** the Bot description. Grok Bots run on their own model; `TOOLS.md` should say which.
-- **Roles:** sequential inside one Bot. If you run several Bots, each can take a lane, and `PROFILE.md` lists them.
+- **Files:** a Grok Bot reads its description and its skill notes. Paste `skills/flow/SKILL.md` as the Bot's standing instructions and add the other skills as skill notes, or point the Bot at a clone of this repo if it has file access. Grok CLI reads `AGENTS.md` like Codex.
+- **Gate:** the Bot description, or `AGENTS.md` for the CLI.
+- **Model:** a Grok Bot runs on one model it cannot change, and has no subagents. The flow plays planner, writer and reviewer in sequence on that model. `TOOLS.md` says "session model" for every rung and "subagents: no". The prompting card for Grok is in `skills/prompt-improver/references/models/grok.md`.
+- **Several Bots:** list each in `PROFILE.md` as a lane with what it owns. The Bot holding the job hands slices to the others through the team room in `TOOLS.md`. That is how a Grok setup gets parallel writers.
+- **Profile:** skill notes on the Bot, or `profile/` in the clone.
 
 ## claude.ai
 
@@ -49,7 +51,7 @@ The gate is one line. Paste it wherever the surface keeps standing instructions:
 ## What you lose without Claude Code
 
 - The hook. On other surfaces the gate is an instruction, and a long chat can drift away from it. Re-paste the gate line if the flow stops firing.
-- Real parallel writers. The flow still cuts slices and does them one by one.
+- Real parallel writers and a model ladder. The flow still cuts slices and does them one by one, on the one model you have.
 - Commands (`/skill-flow:setup`). Type "run setup" instead.
 
 Everything else, the method, the router, the profile, the prompting cards, works the same.

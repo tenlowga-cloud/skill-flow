@@ -63,6 +63,7 @@ Each round is one message. Record every answer; you write the files in step 5.
 **Round 4: your AIs and your bar.**
 1. Which AI surfaces do you use, and which model on each? Options (multi-select): Claude Code; claude.ai; Cursor; ChatGPT; Gemini; Grok; other. For each, ask the model if they know it; otherwise read it from the surface.
 2. On a big job, how should the team run? Options: strongest model plans, fastest model writes (Recommended); one model does everything; ask me each time.
+   Then build the model ladder for `TOOLS.md`: for each role (planner, writer, reviewer), list the models they can actually run on their main surface, best first. Read the surface's model picker where you can. Claude Code: offer Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5 and keep only the ones their plan has. One model only (a Grok Bot, a free plan, a single-model app): every row says "session model" and subagents are "no"; the flow then plays the roles in sequence.
 3. Spend: Options: cheapest model that does the job well, escalate when it fails (Recommended); best model always; set a monthly cap (ask the number).
 4. Do you already have skills, plugins or custom instructions you want the flow to use? Paste names or a folder. (free text or "no")
 
@@ -90,7 +91,7 @@ Save nothing private that a profile file does not need: no contact details, no c
 Go through the kit's skills once with the answers in hand and note, in `ROUTER.md`, any default the owner changed:
 
 - Reply length and bluntness (`simple-talk`).
-- Which lane plans and which writes (`flow` step 5, `agents/`). On a surface without subagents, say so: the flow plays the roles itself.
+- The model ladder and whether subagents exist (`flow` step 5, `agents/`). On a surface without subagents, or with one model, say so plainly: the flow plays the three roles in sequence, and that still works.
 - Spend stance, so `flow` picks effort to match.
 - Send windows and gates, so `ghost-mode` and `prospect-mover` know when a draft stays a draft.
 - Their own skills, so step 3 of `flow` finds them.
