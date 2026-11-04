@@ -36,12 +36,12 @@ Every cell is a transcription or "not stated". Then write the **price gap** (mon
 
 ## 2. Find the cost
 
-For each row where the quotes differ, ask: what does this difference cost the client in the year it matters? Dollarize only where the desk's engines or the quotes' own numbers allow; otherwise describe the gap in one plain sentence and mark it "not priced".
+For each row where the quotes differ, ask: what does this difference cost the client in the year it matters? Dollarize only from numbers printed on one of the two quotes (a renewal premium, a rider charge, a benefit amount); otherwise describe the gap in one plain sentence and mark it "not priced". No engine estimate enters this document. It is a Review of two real quotes, and the wall between quoted and estimated numbers holds here as everywhere in the desk.
 
 Typical places the cost hides:
 
 - **The guarantee ends sooner.** A 10-year level term beside a 20-year one: show the renewal premium the cheaper policy prints for year 11, if printed, beside the owner's year-11 premium. If not printed, "the premium at year 11 is not shown; the policy says it is set at renewal."
-- **Less coverage.** Same premium, smaller face: the survivor-need gap from the desk's calculator (a Preview-regime number, labeled as such, shown only in the scenario section, never beside quoted figures).
+- **Less coverage.** Same premium, smaller face: state the difference in coverage as the quotes print it (one number, from the table) and describe in one sentence what that gap means in the scenario the client raised, marked "not priced". Never put a survivor-need estimate in this document: it is a Review, and a Review carries only transcribed figures. If the owner wants the gap priced, build a separate Preview from the desk's calculator and hand both over as two documents.
 - **A missing rider.** Waiver of premium, child rider, chronic illness, conversion: name what it would have done in the scenario the client already worried about.
 - **Renewability or conversion lost.** The right to convert without new underwriting is worth the most to the person whose health changes. Say that in one sentence, with their own words about health or family history if they gave any.
 - **Exclusions and waiting periods.** Verbatim, side by side.

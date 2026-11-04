@@ -33,7 +33,7 @@ Fill `skills/profile/references/BRAND-template.md` into the profile folder (or h
 ## 5. Lock it in
 
 - **Protection Desk:** if installed, create `brands/<key>/` from `brands/example/` with `brand.json` filled from `BRAND.md` (agency name, logo path, palette, the standard panel in the owner's words, the producer block from `PROFILE.md`), set `"brand": "<key>"` in `desk.local.json`, build the sample once and open the PDF with the owner. The desk refuses to build while a placeholder remains, so finish every field.
-- **impeccable:** run `/impeccable init` in the owner's project where it exists and point its design notes at `BRAND.md`. On surfaces without it, `BRAND.md` is what `pixel-proof` and the design bar read.
+- **impeccable:** on Claude Code or Cowork, inside a project folder the owner builds in, run `/impeccable document` so it writes its design notes (DESIGN.md) and fill them from `BRAND.md`; `/impeccable init` writes a product file from code and is for a codebase, not for the brand. On claude.ai chat there is no project folder: skip this; `BRAND.md` in the Project is what the design pass reads. On surfaces without impeccable, `BRAND.md` is what `pixel-proof` and the design bar read.
 - **prospect-mover, creative-direction, content, blueprint templates:** they read `BRAND.md` by name. Nothing else to do.
 
 Record in `STACK.md`: brand on file, source, fonts kept or upgraded, date.

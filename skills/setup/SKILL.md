@@ -13,7 +13,7 @@ You are setting up skill-flow for one person: the owner. By the end, Claude know
 
 Talk in `simple-talk`: short, plain, one idea per sentence. Ask in batches of 2 to 4 clickable questions, your pick first and marked "(Recommended)", each option with one plain line on what it means for them. Where the surface has no clickable questions, send one message with numbered options. Never ask what you can look up. Never ask for a password, token or key; say where it goes instead. Never let the owner leave a step half done: you finish it or you say what is left and why.
 
-Say the plan in three lines before round 1 so the owner knows what is coming and roughly how long it takes. Then number every step from there on ("Step 2 of 12") so they can always see the end.
+Say the plan in three lines before round 1 so the owner knows what is coming and roughly how long it takes. Then number every step from there on ("Step 2 of 13") so they can always see the end; count the steps you will actually run for this owner and use that number.
 
 ## 1. Find out where you are, and what is already here
 

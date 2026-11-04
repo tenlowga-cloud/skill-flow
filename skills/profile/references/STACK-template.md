@@ -50,6 +50,14 @@ What `connect` offered that the owner did not take, and why, so it is not offere
 | Morning brief | cloud scheduled task | weekdays 7:35 | | | scheduled |
 | Pre-meeting notes | | | | | waiting on CRM |
 
+## Brand
+
+| Item | Value | Date |
+|---|---|---|
+| Source | guidelines, logo sampled, website sampled, or starter | |
+| Fonts | kept, or upgraded to (names) with the owner's yes | |
+| Locked into | Protection Desk brand key (name), impeccable design notes (yes or no) | |
+
 ## Phone
 
 | Item | State | Date |

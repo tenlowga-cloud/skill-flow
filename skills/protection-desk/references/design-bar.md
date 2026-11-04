@@ -34,13 +34,13 @@ Keep the mood, modernize the cut. All licensable (Google Fonts or SIL OFL) unles
 | Brand font reads as | Mood to keep | Recommend for display | Recommend for text |
 |---|---|---|---|
 | Times New Roman, Georgia, Cambria | classic serif, trusted | Cormorant Garamond, Playfair Display, Fraunces | Source Serif 4, Literata, Newsreader |
-| Arial, Helvetica, Calibri, Verdana | plain sans, neutral | Inter Tight, Manrope, Space Grotesk | Inter, Mulish, Source Sans 3 |
+| Arial, Helvetica, Calibri, Verdana | plain sans, neutral | Manrope, Space Grotesk, Instrument Sans | Mulish, Source Sans 3, Figtree |
 | Montserrat, Raleway, Lato (2010s web) | friendly geometric | Outfit, Plus Jakarta Sans, Sora | Figtree, Nunito Sans, DM Sans |
 | A script or decorative face | warmth, personality | keep it for the logo only; headings in Fraunces or Cormorant Garamond | Mulish or Source Serif 4 |
 | A condensed or industrial face | strength, trades | Barlow Condensed, Oswald (headings only) | Barlow, IBM Plex Sans |
-| Monospace or tech | precision, software | Space Grotesk, IBM Plex Sans | IBM Plex Sans, Inter |
+| Monospace or tech | precision, software | Space Grotesk, IBM Plex Sans | IBM Plex Sans, Mulish |
 
-Numbers always get tabular figures. If the text face has none, numbers go in the display face or in Inter.
+Numbers always get tabular figures. If the text face has none, numbers go in the display face or in IBM Plex Sans. Inter and Roboto are left off this table on purpose: impeccable's detector flags them as overused, so recommending them would fail the kit's own pass.
 
 Show the owner one line in the old and the new before changing anything. Record kept or upgraded in `BRAND.md`.
 
@@ -48,7 +48,7 @@ Show the owner one line in the old and the new before changing anything. Record 
 
 1. **Build** with the brand (`BRAND.md`, the desk's `brands/<key>/brand.json`).
 2. **Render** to PNG per page (`pixel-proof`): phone width too if it will ever be on a screen.
-3. **impeccable critique** on the rendered pages (or the HTML before PDF): score, ranked gaps. Under 9: fix the worst gap, rebuild, re-score. Then **audit** (contrast, overflow, orphaned headers, misaligned pairs), **polish**, **harden** (long names, big numbers, missing logo, grayscale print).
+3. **impeccable critique** on the rendered pages (or the HTML before PDF): score, ranked gaps. Under 9: fix the worst gap, rebuild, re-score. Then **audit** (contrast, overflow, orphaned headers, misaligned pairs), **polish**, **harden** (long names, big numbers, missing logo, grayscale print). Where a style fix lives: in the desk, only `brands/<key>/brand.json` (palette, fonts, logo, panel copy) or the desk's own theme or CSS file if the desk exposes one; never its page templates, its locked blocks (disclosure, estimate banner, producer footer) or any copy that came from the intake. Outside the desk, in the owner's `BRAND.md` and the template being built. A gap that cannot be fixed from those places is reported to the owner with the exact file it would need, not patched in a template.
 4. **Tells sweep**: read the page as a stranger against the list above. One hit fails.
 5. **Brand check**: colors match `BRAND.md` hex for hex; legal name exact; logo untouched; one accent per page.
 6. **Record** the score and the fixes in the document's notes file for the owner. The owner sees the PDF rendered in chat, three lines, and the score.
