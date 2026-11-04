@@ -1,106 +1,106 @@
 # Connect GoHighLevel
 
-Method: a Private Integration Token (PIT) plus GoHighLevel's official MCP server.
-Time: about 10 minutes. You need: admin access to the sub-account, a password manager, and a terminal (Claude Code) or the claude.ai app.
+Method: HighLevel's official MCP server. You sign in with your GoHighLevel login, pick the business, approve what the AI may do. No token to make or rotate. About 5 minutes.
 
-Say to the owner: "A sub-account is one business inside your GoHighLevel. The token only opens that one business. Good."
+Say to the owner first: "GoHighLevel has an official plug for AI assistants. You sign in once, pick which business the AI may see, and tick what it may do. Nothing to copy or paste."
 
-## Step 1. Open the right sub-account
-1. Log in to GoHighLevel.
-2. Switch into the sub-account (the location) you want the AI to use. If you only see an agency view, use the sub-account switcher at the top and pick the business.
-You should see that business's own dashboard, not the agency dashboard.
+Then, before anything: "A sub-account is one business inside your GoHighLevel. You will pick it during sign-in. If you run several, pick the one you work in most; we can add others later."
 
-## Step 2. Find Private Integrations
-1. Click Settings (bottom left).
-2. Look for Private Integrations in the Settings menu. It is sometimes under Other Settings or Integrations. The label may vary by version.
-You should see a page with a Create new integration button.
-If you cannot find it, you may be at the agency level. A PIT is made per sub-account, not for the agency. Go back to Step 1.
+## Step 1 of 4. Pick the door for their AI
 
-## Step 3. Create the integration
-1. Click Create new integration.
-2. Name: type "Claude assistant".
-3. Description: "Read access for my AI assistant".
+Each AI has its own address. Use the one that matches where the owner is talking to you right now:
 
-## Step 4. Pick scopes (least privilege)
-A scope is a permission. "Readonly" means the AI can look but not change anything. "Write" means it can add or edit. Start with look-only.
+| AI | Address |
+|---|---|
+| Claude (claude.ai, Cowork, Claude Code) | `https://services.leadconnectorhq.com/mcp/anthropic/v2` |
+| ChatGPT, Codex, other OpenAI clients | `https://services.leadconnectorhq.com/mcp/openai/v2/` |
+| Cursor | `https://services.leadconnectorhq.com/mcp/cursor/v2` |
+| Grok Bot | The official HighLevel app in the Bot's app catalog |
 
-Tick these read-only scopes:
-- contacts.readonly (view contacts)
-- opportunities.readonly (view deals)
-- calendars.readonly (view calendars)
-- conversations.readonly (view message history)
-- locations.readonly (view business settings)
+Source: HighLevel's docs, marketplace.gohighlevel.com/docs/other/mcp.
 
-Leave write scopes off for now. Later, if you want the AI to add notes or tasks, come back and tick the matching write scopes. Scopes can be edited later without a new token.
-You should see the five scopes ticked. Click Create.
+## Step 2 of 4. Add it
 
-## Step 5. Save the token NOW
-The token is shown once. It starts with "pit-".
-1. Click the copy button.
-2. Open your password manager. Make a new entry called "GoHighLevel PIT, [business name]". Paste the token into the password field.
-3. Put today's date in the notes. Rotate this token every 90 days (GoHighLevel's recommendation).
-4. Tell me "saved". Only then close the page.
-Never paste the token into this chat.
+### claude.ai or Cowork
 
-## Step 6. Find the Location ID
-1. Settings, then Business Profile. Copy the Location ID shown there.
-2. Or read the browser address: the text right after /location/ is the Location ID.
-Add it to the same password manager entry. It identifies your business account. Keep it out of public code and screenshots.
-
-## Step 7. Connect to the AI
-
-Official endpoint: https://services.leadconnectorhq.com/mcp/ with headers Authorization: Bearer <PIT> and locationId: <Location ID>. Per HighLevel's docs the locationId header is optional; a location can also be named in a prompt. Source: https://marketplace.gohighlevel.com/docs/other/mcp
+1. "Open https://claude.ai/customize/connectors. You should see your list of connectors."
+2. "Click **Add custom connector**. A small form opens asking for a URL."
+3. "Paste exactly: `https://services.leadconnectorhq.com/mcp/anthropic/v2` and click **Add** (or **Connect**). You should see GoHighLevel, or LeadConnector, appear in your list with a Connect button."
+4. Go to Step 3.
 
 ### Claude Code
-Type this yourself in your own terminal. The token stays out of the chat:
+
+Type this in your own terminal:
+
 ```
-read -s GHL_PIT      # paste the token, press Enter (nothing shows)
-GHL_LOC="PASTE_LOCATION_ID_HERE"
-claude mcp add --transport http gohighlevel https://services.leadconnectorhq.com/mcp/ \
-  --header "Authorization: Bearer $GHL_PIT" \
-  --header "locationId: $GHL_LOC"
+claude mcp add --transport http gohighlevel https://services.leadconnectorhq.com/mcp/anthropic/v2
 ```
-You should see "Added HTTP MCP server gohighlevel". Run `claude mcp list`: gohighlevel should show as connected.
+
+You should see `Added HTTP MCP server gohighlevel`. Then type `/mcp` inside Claude Code, pick gohighlevel, and choose sign in. A browser opens. Go to Step 3.
 
 ### Cursor
-Open ~/.cursor/mcp.json in an editor. Type this yourself, replacing the placeholders:
-```
-{
-  "mcpServers": {
-    "gohighlevel": {
-      "url": "https://services.leadconnectorhq.com/mcp/",
-      "headers": {
-        "Authorization": "Bearer YOUR_PIT_HERE",
-        "locationId": "YOUR_LOCATION_ID_HERE"
-      }
-    }
-  }
-}
-```
-Never commit this file to a repository. Restart Cursor.
 
-### claude.ai custom connector
-Settings, Connectors, Add custom connector. Enter the URL https://services.leadconnectorhq.com/mcp/. Custom header fields are not available in every version of the form (verify). If there is no header field, use Claude Code or Cursor.
+Open `~/.cursor/mcp.json` (every project) or `.cursor/mcp.json` (one project) and add:
 
-## Verify it works
+```
+{ "mcpServers": { "gohighlevel": { "url": "https://services.leadconnectorhq.com/mcp/cursor/v2" } } }
+```
+
+Save. Cursor prompts you to sign in. Go to Step 3.
+
+### ChatGPT
+
+1. Settings, then Security and login (or Apps and connectors; the label varies), turn on **Developer mode**.
+2. Create a new connector or plugin and paste `https://services.leadconnectorhq.com/mcp/openai/v2/` as the server URL.
+3. Complete the sign-in. In a new chat, turn it on from the tools menu. Go to Step 3.
+
+## Step 3 of 4. Sign in and choose
+
+1. "A GoHighLevel sign-in page opens. Sign in with your usual GoHighLevel login. I am not watching this screen."
+2. "It asks which sub-account (business) the AI may use. Pick the one you work in. You should see its name selected."
+3. "It shows a list of permissions. Read them to me by group (contacts, conversations, opportunities, calendars, tasks). Approve them. This is what the AI will be allowed to look at and do. We keep sending and deleting as your call anyway."
+4. "Click Allow (or Authorize). The page says connected and sends you back."
+
+You should see: the connector shows **Connected** in claude.ai, or `claude mcp list` shows gohighlevel connected, or Cursor shows a green dot.
+
+If they run several businesses: HighLevel is rolling out one sign-in for many sub-accounts (the bulk install). Until it shows up, the connection is per sub-account, and the AI can name the sub-account in a prompt when more than one is connected.
+
+## Step 4 of 4. Verify it works
+
 Ask: "List the 3 most recent contacts in my GoHighLevel."
-Pass: three real contact names from your account. Check one on GoHighLevel's Contacts page.
+Pass: three real contact names from the account. Check one against the Contacts page.
+
+Then: "What tasks are assigned to me in GoHighLevel?" Pass: real tasks, or "none" when there are none.
+
+Record in `TOOLS.md` (CRM: GoHighLevel, connected, sub-account name) and `STACK.md` (date, the verify prompt that passed). Then offer the `ghl-assistant` skill: "Want me to watch your GoHighLevel for tasks, messages and deals and work them for you every hour?"
+
+## What the AI can reach
+
+Four tools that cover more than 550 operations: contacts (with tasks, notes, tags), conversations and messages, opportunities and pipelines, calendars and appointments, and more. The AI searches for the operation it needs and runs it against the sub-account you chose.
 
 ## If it fails
-1. 401: the token is expired, mistyped, or from a different sub-account. Check you copied the whole "pit-" token. If unsure, create a new one (Step 3) and update the connection.
-2. Empty results: the Location ID is wrong or belongs to another business. Re-copy it from Business Profile.
-3. Agency token by mistake: a PIT must come from inside the sub-account (Step 1).
-4. Permission error on one action: a scope is missing. Open the integration, tick the scope, save, retry. No new token needed.
-5. Server missing from the list: restart the AI app, then run `claude mcp list` again.
+
+1. The connector will not add: check the URL is exact, including `/v2` (and the trailing slash on the OpenAI one). Try a fresh chat.
+2. Sign-in loops or errors: sign in to GoHighLevel in the same browser first, then click Connect again.
+3. Connected but empty results: the wrong sub-account was picked. Disconnect, connect again, pick the right business.
+4. "Permission denied" on one action: that permission was not approved at sign-in. Disconnect, connect again, approve it.
+5. Claude Code: "is Anthropic-hosted and doesn't support local OAuth" means you used a claude.ai connector URL by mistake; this one supports local sign-in, so re-run the add command exactly.
+
+## Advanced: token path
+
+If an owner cannot use sign-in (a locked-down agency, or an automation that runs with no person present), HighLevel's older endpoint `https://services.leadconnectorhq.com/mcp/` takes a Private Integration Token. Settings, Private Integrations, create one with read-only scopes first, token straight into the password manager, then `claude mcp add --transport http gohighlevel https://services.leadconnectorhq.com/mcp/ --header "Authorization: Bearer <token>" --header "locationId: <Location ID>"`, typed by the owner in their own terminal. Rotate it every 90 days. Never paste it into a chat.
 
 ## Hard rules for GoHighLevel
-- The AI never sends a message, text, or email to a contact.
+
+- The AI never sends a message, text or email to a contact without the owner's yes for that exact message.
 - The AI never deletes anything without the owner's exact yes for that item.
 - A workflow test-fire is not proof. Open the contact record and check the data landed.
 - One write lane means one audit trail. Let one tool (the AI or a workflow) write a given field, not both.
 - A custom field key must match exactly (case and underscores). A wrong key silently drops the data.
+- Pipeline stage changes, appointment changes and tag changes on a client: tell the owner first, do it on yes.
 
 ## What the AI may do by default
-- Read contacts, deals, calendars, conversations: yes.
-- Draft notes, follow-up texts, and emails for the owner: yes.
-- Send anything, delete anything, or change a pipeline stage: only with the owner's yes for that item.
+
+- Read contacts, deals, calendars, conversations, tasks: yes.
+- Add a note, mark a task done, draft a reply, draft a follow-up: yes, and say so.
+- Send anything, delete anything, change a stage or an appointment: only with the owner's yes for that item.

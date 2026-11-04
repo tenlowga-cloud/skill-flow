@@ -10,9 +10,10 @@ It is a set of Markdown skills, two small hooks and three agents. No server, no 
 
 | Piece | What it does |
 |---|---|
-| **setup** | The first-run wizard. Finds what you have, asks five short rounds, connects your tools and CRM, installs `impeccable`, captures your voice, writes your profile and operating file, schedules routines, hands to `blueprint`. About twenty-five minutes, mostly clicking. Runs in teaching mode: one step per message, every term defined once, "you should see ...", wait for done, numbered steps, no blame. Built for someone who has never opened a terminal. |
+| **setup** | The first-run wizard. Finds what you have, reads your account with you (plan, memory on, every switch), asks five short rounds, asks whether you use GoHighLevel and signs you in if so, connects your other tools, installs `impeccable`, captures your voice, writes your profile and operating file, schedules routines, puts the app on your phone with notifications on, hands to `blueprint`. About twenty-five minutes, mostly clicking. Runs in teaching mode: one step per message, every term defined once, "you should see ...", wait for done, numbered steps, no blame. Built for someone who has never opened a terminal. |
 | **operating-rules** | Writes your `CLAUDE.md`: act, decide, prove, finish. Names the only things that still need you (money, signatures, deleting live data, messages in your name, going live, private data leaving its room). |
-| **connect** | Audits skills, plugins, connectors and repos, recommends what is missing, and walks each setup through to a verified live test. Calendar, email, GitHub, notes, Slack, Discord, browser, meeting recorders, and CRMs: GoHighLevel (Private Integration Token), HubSpot, Salesforce, Pipedrive, Zoho, Close, Follow Up Boss. Can run the setup with you in a live browser. |
+| **connect** | Audits skills, plugins, connectors and repos, recommends what is missing, and walks each setup through to a verified live test. Calendar, email, GitHub, notes, Slack, Discord, browser, meeting recorders, and CRMs: GoHighLevel (sign in through HighLevel's official MCP, per-AI address for Claude, OpenAI clients and Cursor), HubSpot, Salesforce, Pipedrive, Zoho, Close, Follow Up Boss. Can run the setup with you in a live browser. |
+| **ghl-assistant** | Your executive assistant inside GoHighLevel. Every hour it reads the tasks assigned to you, unanswered messages, deals that moved or stalled, tomorrow's appointments and new leads; does what it can (notes, drafts, task updates, meeting prep); asks you one clear question when it needs a decision; never sends or deletes on its own. |
 | **blueprint** | The master skill. One prompt about what you want off your plate; it builds the skills, templates, routines and connections for it and writes a one-page map. |
 | **routines** | Schedules the recurring work: morning brief, pre-meeting notes, inbox triage, follow-up sweep, end-of-day wrap, weekly review, pipeline check and more, on the right scheduler for your surface. |
 | **meeting-prep** | A one-page note before every outside meeting, every fact sourced. |
@@ -87,12 +88,13 @@ install
   │    │    5 the routines you want and when your day starts
   │    ├─ connect: walks each tool through to a live test
   │    │    calendar, email, notes, code host, chat, browser, recorder
-  │    │    CRM: GoHighLevel (PIT), HubSpot, Salesforce, others
+  │    │    CRM: GoHighLevel (sign in), HubSpot, Salesforce, others
   │    │    impeccable plugin, repos, the Protection Desk if you quote
   │    ├─ captures your voice from real samples
   │    ├─ writes PROFILE, TOOLS, VOICE, ROUTER, STACK
   │    ├─ operating-rules: writes your CLAUDE.md, shows the hard stops
   │    ├─ routines: schedules what you picked
+  │    ├─ phone: the app installed, notifications on, tested with a buzz
   │    └─ blueprint: one prompt, builds the rest, writes the map
   │
   └─ dry run on one real prompt from your week

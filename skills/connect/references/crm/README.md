@@ -6,7 +6,7 @@ The AI reads one guide aloud, one step at a time, until the connection is verifi
 
 | CRM | Connection method | File |
 |---|---|---|
-| GoHighLevel | Official MCP server, Private Integration Token (PIT) | [gohighlevel.md](gohighlevel.md) |
+| GoHighLevel | Official MCP server, sign in with your GoHighLevel login (per-AI address: Claude, OpenAI, Cursor). Token path kept as the fallback. Pairs with the `ghl-assistant` skill. | [gohighlevel.md](gohighlevel.md) |
 | HubSpot | Official MCP server, sign in with OAuth | [hubspot.md](hubspot.md) |
 | Salesforce | Salesforce hosted MCP server, connected app (verify current status) | [salesforce.md](salesforce.md) |
 | Pipedrive | Claude connector (marketplace), sign in | [pipedrive.md](pipedrive.md) |

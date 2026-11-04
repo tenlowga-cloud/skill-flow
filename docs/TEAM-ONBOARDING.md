@@ -51,13 +51,13 @@ Here is what I want at the end:
 
 1. A clean operating file written by the `operating-rules` skill from my answers, so you act, decide, prove and finish without asking me, inside the hard stops I choose. On a computer that is ~/.claude/CLAUDE.md. On the claude.ai website, give me the text and walk me through pasting it into my skill-flow Project's instructions. Show me the hard stops when it is written. If one already exists, read it, keep what is mine, and merge.
 
-2. Every tool I use connected and proven with a live test: calendar, email, notes or docs, my code host if I have one, team chat, a browser, my meeting recorder, and my CRM. If my CRM is GoHighLevel, walk me through making a Private Integration Token one click at a time, read-only scopes first, token straight into my password manager, never into this chat. Offer the live browser walkthrough if you can drive a browser.
+2. Every tool I use connected and proven with a live test: calendar, email, notes or docs, my code host if I have one, team chat, a browser, my meeting recorder, and my CRM. Ask me if I use GoHighLevel. If I do, add HighLevel's official MCP for the AI I am using (Claude: https://services.leadconnectorhq.com/mcp/anthropic/v2; ChatGPT or Codex: https://services.leadconnectorhq.com/mcp/openai/v2/; Cursor: https://services.leadconnectorhq.com/mcp/cursor/v2), have me sign in with my GoHighLevel login and pick my business, verify with a contacts read, then set yourself up as my executive assistant inside it: watch my tasks, unanswered messages, deals assigned to me and upcoming appointments every hour, do what you can (notes, drafts, task updates, meeting prep), ask me one clear question when you need a decision, never send or delete anything yourself. Offer the live browser walkthrough if you can drive a browser.
 
 3. The impeccable plugin installed (pbakaus/impeccable) so anything you build that a person sees passes a design check.
 
 4. My profile written: PROFILE.md, TOOLS.md, VOICE.md, ROUTER.md, STACK.md. On a computer, in ~/.claude/skill-flow/. On the claude.ai website, hand them to me as files and tell me exactly how to add them to my skill-flow Project, one at a time. Capture my voice from 3 to 5 real emails or texts I give you, or pull five from my sent mail once email is connected.
 
-5. My routines scheduled on the right scheduler and read back to me: morning brief, pre-meeting notes an hour before every outside meeting, inbox triage with drafts ready in my voice, a follow-up sweep, and a weekly review. Ask me what time my day starts.
+5. My routines scheduled on the right scheduler and read back to me: morning brief, pre-meeting notes an hour before every outside meeting, inbox triage with drafts ready in my voice, a follow-up sweep, the GoHighLevel assistant sweep if I use it, and a weekly review. Ask me what time my day starts. Then get the app on my phone: walk me through installing it (App Store or Play Store, maker Anthropic), signing in with the same account, allowing notifications, and test it with a two-minute routine so I feel the buzz. That is how the routines reach me.
 
 6. If I handle insurance quotes, the Protection Desk installed and its doctor passing, so a quote drop prints a client-ready PDF without me asking.
 
@@ -73,7 +73,8 @@ Rules: never ask me for a password, token or key. Never send anything to anyone 
 - Your account set up: memory on, every capability the kit uses on, connectors connected, and anything that needed your Owner sent to them in one message.
 - `~/.claude/CLAUDE.md`: Claude acts, decides, proves and finishes inside your hard stops (money, signatures, deleting live data, messages in your name, going live, private data leaving its room). Take one off and Claude does that too.
 - Your tools connected and tested. Your CRM too.
-- A morning brief, a note before every outside meeting, inbox drafts in your voice, a follow-up sweep, a weekly review.
+- A morning brief, a note before every outside meeting, inbox drafts in your voice, a follow-up sweep, a weekly review, and if you use GoHighLevel an assistant that works your tasks, messages and deals every hour and brings you only the decisions.
+- The app on your phone with notifications on, so every routine lands as a buzz with three lines and the questions ready to tap.
 - The skills and templates for whatever you asked to take off your plate, mapped in `~/.claude/skill-flow/BLUEPRINT.md`.
 - From then on, every prompt runs through the flow. Drop a quote and a PDF comes back. Say "connect my X" and it walks you through it. Say "every Friday..." and it schedules it.
 
