@@ -41,8 +41,8 @@ Read the matching card in `references/models/` before rewriting.
 | ChatGPT, GPT-5.6, GPT-6, OpenAI API, Codex, a custom GPT | `openai.md` |
 | Grok, Grok 4.7, Grok Bot, Grok CLI, xAI API | `grok.md` |
 | Gemini, Google AI Studio, Vertex | `gemini.md` |
-| gpt-image, ChatGPT images, Nano Banana (Pro), "make me an image" | `image-models.md` |
-| Kling, Veo, "make me a video" | `video-models.md` |
+| gpt-image, ChatGPT images, Nano Banana (Pro), Grok Imagine image, grok-imagine-image, "make me an image" | `image-models.md` |
+| Kling, Veo, Grok Imagine video, grok-imagine-video, "make me a video" | `video-models.md` |
 | A workflow tool, automation node or custom app | the model set in the node config; find it or ask |
 | An IDE agent or a router | the model selected in the seat; check or ask |
 

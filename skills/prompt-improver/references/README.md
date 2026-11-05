@@ -8,7 +8,7 @@
 | `models/openai.md` | GPT-6 Astra (section 9), GPT-5.6 family, Codex, ChatGPT custom instructions |
 | `models/grok.md` | Grok 4.7 API, Grok Bot, Grok CLI |
 | `models/gemini.md` | Gemini 3.8 Flash, 3.1 Pro, 3.5 Transcribe |
-| `models/image-models.md` | OpenAI gpt-image, Nano Banana / Nano Banana Pro |
-| `models/video-models.md` | Kling VIDEO 3.0, Veo |
+| `models/image-models.md` | OpenAI gpt-image, Nano Banana / Nano Banana Pro, Grok Imagine image |
+| `models/video-models.md` | Kling VIDEO 3.0, Veo, Grok Imagine video |
 
 Refresh rule: when a maker ships a new generation, or a card's `verified:` date is older than the model being prompted, re-fetch the maker's guide (public URL only), update the card, and bump the date. Do not fork a card into a project. Keep project-specific deltas in the project's own notes.
