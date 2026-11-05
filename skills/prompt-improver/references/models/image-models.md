@@ -1,7 +1,7 @@
 ---
-family: Image models (OpenAI gpt-image, Google Nano Banana / Nano Banana Pro)
-verified: 2026-09-03
-sources: developers.openai.com (GPT Image Generation Models Prompting Guide), ai.google.dev/gemini-api/docs (image generation and models), Google Cloud Nano Banana prompting guide
+family: Image models (OpenAI gpt-image, Google Nano Banana / Nano Banana Pro, xAI Grok Imagine)
+verified: 2026-11-04
+sources: developers.openai.com (GPT Image Generation Models Prompting Guide), ai.google.dev/gemini-api/docs (image generation and models), Google Cloud Nano Banana prompting guide, docs.x.ai/developers/model-capabilities/images/generation, docs.x.ai/developers/model-capabilities/images/prompting-guide, docs.x.ai/developers/model-capabilities/imagine
 ---
 # Prompting card: Image models
 
@@ -74,4 +74,37 @@ IDs churn; re-check `ai.google.dev/gemini-api/docs/models` before hard-coding.
 - Do quote exact text and describe the font. Don't ask for novel text and a new image in one first shot.
 
 **Pitfalls**: keyword soup; vague style words; dense infographics can mix up facts (human check); lowercase `1k` rejected; dropping `thoughtSignature` is a hard failure.
+
+## xAI Grok Imagine image
+
+Fetched 2026-11-04 from docs.x.ai image generation, the image prompting guide, and the Imagine overview. The OpenAI and Google sections above were not re-fetched. They stay as of 2026-09-03.
+
+**Model.** `grok-imagine-image-2.0`. `POST /v1/images/generations`. Edits use `/v1/images/edits` with up to 5 reference images (Imagine overview). OpenAI's multipart `images.edit()` is not the xAI path. xAI wants JSON.
+
+**Controls**
+- `aspect_ratio`: `1:1`, `16:9`, `9:16`, `4:3`, `3:4`, `3:2`, `2:3`, `2:1`, `1:2`, `19.5:9`, `9:19.5`, `20:9`, `9:20`, `21:9`, `5:2`, `auto` (default). The prompting guide says lock one ratio across a series. `3:2` suits most photographs.
+- `resolution`: `1k` (default) or `2k`. Pin `2k` when fine detail has to hold.
+- `quality`: `low`, `medium`, or `auto`. `auto` currently serves `low` on generation and `medium` on edit. Pin `medium` for a still you will keep.
+- `n`: `1` to `10`. Same prompt, one request.
+- `response_format`: `url` (default, temporary) or `b64_json` when you will keep the file.
+- Price on the Imagine overview: $0.04 per image.
+
+**Prompt shape** (prompting guide). The score that matters is whether the subject in the picture matches the subject in the prompt. Palette and grain come after that.
+
+1. Subject. One sentence: what it is, the form it is in, what holds it, the setting.
+2. Details and focal point. Materials, count, and the camera angle, written once and repeated in the same words in the composition line.
+3. Art direction. The color fields and two or three named props.
+4. Light. Source, direction, how hard it is, and an exposure bright enough to read the subject.
+5. Color. Subject colors and background colors as separate fields.
+6. Composition. Crop, what the frame cuts off, what stays sharp. One scene.
+
+Write one photograph in full sentences. A keyword list is the failure mode. Describe the material you want to see. A long avoid list spends the prompt on objects that then show up. Keep a constraint when it is a count or a specific object, and pair it with the thing you want.
+
+**Do / Don't**
+- Do open with the subject. Don't lead with mood, film stock, or a list of things to avoid.
+- Do pin `aspect_ratio`, `resolution`, and `quality` on a series. Don't leave `quality` on `auto` when the still is customer-facing. `auto` serves `low` on a new image.
+- Do ask for `b64_json` or download the URL immediately. Don't treat the hosted URL as permanent.
+- Do edit one to three changes on a still whose subject is already right. Don't re-roll the whole picture to move one object.
+
+**Pitfalls**: a prompt that leads with style produces a styled stand-in. URLs expire. `quality: auto` is not a high-quality setting on generation.
 
